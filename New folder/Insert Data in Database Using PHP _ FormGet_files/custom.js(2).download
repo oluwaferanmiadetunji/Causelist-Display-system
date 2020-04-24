@@ -1,0 +1,465 @@
+jQuery(document).ready(function() {
+    //Javascript for stars
+    // Check Radio-box
+    jQuery(".rating input[name='overall_quality']:radio").attr("checked", false);
+    jQuery("#floating_prod_tab div#main_product_table").css({ "padding-top": "0px", "background-color": "none!important" });
+    jQuery('#recipient_email .af-label.acf-label label').append('<span class="acf-required-email">*</span>');
+
+    jQuery(".rating input[name='overall_quality']:radio").click(function() {
+        jQuery(".rating input[name='overall_quality']:radio").removeClass('checked');
+        jQuery(".rating input[name='overall_quality']:radio").parent().removeClass('checked');
+        jQuery(this).parent().addClass('checked');
+    });
+
+
+
+    jQuery(".rating input[name='overall_quality']:radio").change(
+        function() {
+            var overall_quality = this.value;
+            jQuery('input#acf-field_5c948b2f3b196').val(overall_quality);
+            //alert(userRating);
+        });
+
+    //Javascript to get field iunput and place it in another field
+    jQuery('.review-pros textarea').on('keyup', function() {
+        var pros_val = jQuery(this).val();
+        var strlength_limit = 30;
+        var strtemp = pros_val.substr(0, strlength_limit);
+        var pros_str_ecllipses = '';
+        var pros_str_regex = /[^,\$\.\:\-\!]*/.exec(strtemp)[0];
+        pros_str_ecllipses = pros_str_regex.substr(0, Math.min(pros_str_regex.length))
+        if (pros_str_regex.length >= strlength_limit) {
+            pros_str_ecllipses = pros_str_regex.substr(0, Math.min(pros_str_regex.length)) + '...';
+        }
+        jQuery('.review-title input').val(pros_str_ecllipses);
+    });
+
+
+    if (jQuery('#social_login', window.parent.document).length) {
+        //parent.check_auth_login();
+        //jQuery('#social_login', window.parent.document).remove();
+    }
+
+    //fetch image validation
+    jQuery("#form_5cebc1de47054 .af-submit-button").attr('onclick', 'create_listing_chk(this,event)');
+    jQuery("#featch_img_src input[type='radio']").attr('onclick', 'featch_img_src_fun()');
+
+    if (jQuery('#mb_product_table_id').length) {
+
+        jQuery('#mb_product_table_id').dataTable({
+            "bPaginate": false,
+            "oLanguage": {
+                "sSearch": " "
+            },
+            "aaSorting": [
+                [0, 'desc']
+            ]
+        });
+
+        jQuery('#mb_product_table_id_filter').prepend("<span class='tabel_head'>Product Information</span>");
+        jQuery('#mb_product_table_id_filter label input').attr('placeholder', 'Search Product');
+
+        var total_table_product = jQuery('#side_bar_product_table #mb_product_table_sidebar_id tbody tr').length;
+        if (total_table_product == 3) {
+            jQuery('#side_bar_product_table .mb_product_table_div_id').css('height', '310px');
+        }
+
+        var total_product = jQuery('#mb_product_table_id tbody tr').length;
+        if (total_product == 1) {
+            jQuery('.mb_product_table_div_id').css('height', '235px');
+        } else if (total_product == 2) {
+            jQuery('.mb_product_table_div_id').css('height', '370px');
+        }
+
+        var total_table_product = jQuery('#floating_prod_tab #mb_product_table_sidebar_id tbody tr').length;
+        if (total_table_product == 3) {
+            jQuery('#floating_prod_tab .mb_product_table_div_id').css('height', '300px');
+        }
+
+
+
+    }
+
+
+
+
+    //auto expand textarea for pros like facebook
+    // jQuery.each(jQuery('.post-content .review-pros textarea'), function () {
+    //     var offset = this.offsetHeight - this.clientHeight;
+    //     var resizeTextarea = function (el) {
+    //         jQuery(el).css('height', 'auto').css('height', el.scrollHeight + offset);
+    //     };
+    //     jQuery(this).on('keyup input', function () {
+    //         resizeTextarea(this);
+    //     }).removeAttr('data-autoresize');
+    // });
+
+    //auto expand textarea for cons like facebook
+    //     jQuery.each(jQuery('.post-content .review-cons textarea'), function () {
+    //         var offset = this.offsetHeight - this.clientHeight;
+    //         var resizeTextarea = function (el) {
+    //             jQuery(el).css('height', 'auto').css('height', el.scrollHeight + offset);
+    //         };
+    //         jQuery(this).on('keyup input', function () {
+    //             resizeTextarea(this);
+    //         }).removeAttr('data-autoresize');
+    //     });
+
+});
+
+var textarea_pro_cons = document.querySelectorAll('.post-content .review-pros textarea, .post-content .review-cons textarea');
+
+for (var i = 0; i < textarea_pro_cons.length; i++) {
+    textarea_pro_cons[i].addEventListener('keydown', textarea_autosize);
+    textarea_pro_cons[i].addEventListener('change', textarea_autosize);
+    textarea_pro_cons[i].addEventListener('keyup', textarea_autosize);
+    textarea_pro_cons[i].addEventListener('paste', textarea_autosize);
+    textarea_pro_cons[i].addEventListener('cut', textarea_autosize);
+}
+
+//Validation in fetch image button.
+var chk_featch_img = 'no';
+
+function featch_img_src_fun() {
+    chk_url = jQuery("#web_site_url input[type='url']").val();
+    if (chk_url.trim() != '') {
+        chk_featch_img = 'yes';
+    }
+}
+
+var allow_new_product = '';
+
+
+function create_listing_chk(curr, e) {
+
+    if (allow_new_product == '') {
+        e.preventDefault();
+        var curr_product_title = jQuery('#post_title').val();
+        if (curr_product_title.trim() == '') {
+            jQuery('.fetch_image_validation').remove();
+            jQuery('#post_title').after('<div class="fetch_image_validation"><p>Please Enter Valid Product Name</p></div>');
+            return true;
+        }
+        jQuery.ajax({
+            url: follow_ajax.ajax_url,
+            type: 'post',
+            data: {
+                action: 'mb_chk_product_title',
+                product_title: curr_product_title
+            },
+            success: function(response_json) {
+                response = JSON.parse(response_json);
+                if (response.exists == 'yes') {
+                    allow_new_product = '';
+                    jQuery('.fetch_image_validation').remove();
+                    jQuery('#post_title').after('<div class="fetch_image_validation"><p>This Product is Already Exists</p></div>');
+                    return true;
+                } else {
+                    allow_new_product = 'yep';
+                    jQuery('#form_5cebc1de47054 .af-submit-button').click();
+                }
+            },
+            complete: function(data) {
+                //jQuery(".ajax-filter-spinner").removeClass("loading");
+            },
+            error: function(errorThrown) {
+                alert(errorThrown);
+            }
+        });
+    }
+
+    if (chk_featch_img == 'no') {
+        e.preventDefault();
+        jQuery("#featch_img_src").append('<div class="fetch_image_validation"><p> Click here to fetch image</p></div>');
+        if (jQuery('.fetch_image_validation').length > 1) {
+            jQuery('#featch_img_src .fetch_image_validation ~.fetch_image_validation').remove();
+        }
+    }
+
+    if (!jQuery("ul").has("li.multipleInput-email ").length) {
+        e.preventDefault();
+        jQuery("#recipient_email").append('<div class="fetch_image_validation"><p>Please enter valid email</p></div>');
+        if (jQuery('.fetch_image_validation').length > 1) {
+            jQuery('#recipient_email .fetch_image_validation ~.fetch_image_validation').remove();
+        }
+    }
+}
+
+var curr_listing_post_id = '';
+
+function submit_post_review(curr, e) {
+    /* Modal Popup jQuery*/
+    var modal = document.getElementById('myModal');
+    modal.style.display = "none";
+    var siteurl = jQuery(curr).attr('site-url');
+    var post_id = jQuery(curr).attr('post-id');
+    //Clear cache nginx ajax
+    jQuery.ajax({
+        url: follow_ajax.ajax_url,
+        type: 'post',
+        data: {
+            action: 'clear_nginx_cache_by_post_id',
+            post_id: post_id
+        },
+        success: function(response_json) {
+            response_json = JSON.parse(response_json.trim());
+            console.log(response_json);
+            console.log("Cleared server cache for this post: " + post_id);
+        },
+        complete: function(data) {
+            //jQuery(".ajax-filter-spinner").removeClass("loading");
+        },
+        error: function(errorThrown) {
+            alert(errorThrown);
+        }
+    });
+    //////////	
+    if (follow_ajax.user_email != '') {
+
+
+        jQuery(curr).closest('.af-form.acf-form').find('.af-field-type-email input[type="email"]').val(follow_ajax.user_email);
+        jQuery(curr).closest('.af-form.acf-form').find('.af-field-review-first-name input[type="text"]').val(follow_ajax.user_first_name);
+        jQuery(curr).closest('.af-form.acf-form').find('.af-field-review-last-name input[type="text"]').val(follow_ajax.user_last_name);
+    } else {
+        e.preventDefault();
+        curr_id = jQuery(curr).closest('.af-form.acf-form').attr('id');
+        curr_listing_post_id = curr_id;
+        content = '<div class="embed-container1"><iframe width="100%" height="609px" id="social_login" src="' + siteurl + '/sign-up/?login_chk=no"></iframe><span class="close-btn"><span class="close">×</span></span></div>';
+        jQuery(".modal-content").empty();
+        //jQuery(".modal-content").css('height', '650px');
+        jQuery(".modal-content").append(content);
+
+        modal.style.display = "block";
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                // jQuery(".modal-content").empty();
+            }
+        }
+        jQuery('.close-btn .close').click(function() {
+            jQuery('#myModal').css('display', 'none');
+        });
+    }
+
+}
+
+
+function check_auth_login() {
+    jQuery.ajax({
+        url: follow_ajax.ajax_url,
+        type: 'post',
+        data: {
+            action: 'mb_chk_user_login'
+        },
+        beforeSend: function() {
+            jQuery(".ajax-filter-spinner").addClass("loading");
+        },
+        success: function(response_json) {
+            response = JSON.parse(response_json);
+            if (response.status == 'login') {
+                jQuery('#' + curr_listing_post_id).find('.af-field-type-email input[type="email"]').val(response.user_email);
+                jQuery('#' + curr_listing_post_id).find('.af-field-review-first-name input[type="text"]').val(response.first_name);
+                jQuery('#' + curr_listing_post_id).find('.af-field-review-last-name input[type="text"]').val(response.last_name);
+                var modal = document.getElementById('myModal');
+                modal.style.display = "none";
+                follow_ajax.user_email = response.user_email;
+                follow_ajax.user_first_name = response.first_name;
+                follow_ajax.user_last_name = response.last_name;
+                jQuery('#' + curr_listing_post_id + ' .af-submit-button').click();
+            }
+        },
+        complete: function(data) {
+            jQuery(".ajax-filter-spinner").removeClass("loading");
+        },
+        error: function(errorThrown) {
+            alert(errorThrown);
+        }
+    });
+}
+
+
+//jQuery for getting more reviews
+jQuery(document).ready(function() {
+    jQuery('.toggle_reviews').click(function() {
+        var btn = jQuery(this);
+
+        var review_pid = jQuery(this).attr('review-pid');
+        var listing_pid = jQuery(this).attr('listing-pid');
+        var curr_post = jQuery(this).attr('data_curr_post');
+        if (btn.attr('data_review_less') == 'hide') {
+            jQuery('#reviews-for-' + listing_pid).html('');
+            btn.removeAttr('data_review_less');
+            btn.attr('data_curr_post', 2);
+            btn.text('View More Reviews');
+            jQuery('html, body').animate({
+                scrollTop: btn.offset().top - 600
+            }, 1000);
+            return;
+        }
+        curr_post = parseInt(curr_post);
+        jQuery.ajax({
+            url: follow_ajax.ajax_url,
+            type: 'post',
+            data: {
+                action: 'load_more_reviews',
+                offset: curr_post,
+                review_pid: review_pid,
+                listing_pid: listing_pid
+            },
+            beforeSend: function() {
+                btn.append('<div class="review_loader_loading"></div>');
+            },
+            success: function(response) {
+                if (response.trim() == 'no_data') {
+                    btn.attr('data_review_less', 'hide');
+                    jQuery('#reviews-for-' + listing_pid).append('<h3>No more review left</h3>');
+                    btn.text('View less Reviews');
+                } else {
+                    btn.attr('data_curr_post', (curr_post + 4));
+                    jQuery('#reviews-for-' + listing_pid).append(response);
+                }
+
+            },
+            complete: function(data) {
+                //btn.addClass('remove_dropicon');
+                jQuery('.review_loader_loading').remove();
+
+            }
+        });
+
+    });
+
+});
+
+jQuery("#social_login").on("load", function() {
+    //jQuery(".modal-content").css('height', 'auto');
+    //jQuery('.review_loader_loading').css('display', 'none');
+    //jQuery("#social_login").css('display', 'block');
+});
+jQuery('.acf-field-5ce283b0c0953').after('<div class="loader_image_wrap"></div>');
+jQuery('.loader_image_wrap').append('<div class="image_container"></div>');
+// Create listing featching feature image website url
+jQuery(".acf-field-5ce283b0c0953 input").on('click', function() {
+    jQuery('.fetch_image_validation').remove();
+    var websiteurl = jQuery('#acf-field_5c94b26b550e7').val();
+    var productname = jQuery('.listing-title-wrap #post_title').val();
+    if (websiteurl == "" || productname == "") {
+        alert('Product Name or Website Url are empty\nPlease fill them to fetch image');
+    }
+    if (websiteurl !== "" && productname !== "") {
+        jQuery.ajax({
+            beforeSend: function() {
+                //if (jQuery('.image_container').length <= 0) {
+                jQuery('.loader_image_wrap').prepend('<div class="loader_woofresh"></div>');
+                jQuery('.loader_woofresh').addClass("loader_loading");
+                jQuery('.loader_image_wrap').css({ '-webkit-box-shadow': 'none', '-moz-box-shadow': 'none', 'box-shadow': 'none', 'border': 'none', 'padding': '10px 0px 10px 0px', 'height': 'auto' });
+                //}
+            },
+            url: follow_ajax.ajax_url,
+            type: "POST",
+            data: {
+                action: 'display_website_featuredimg',
+                websiteurl: websiteurl,
+                productname: productname
+            },
+            success: function(response) {
+                var res = JSON.parse(response);
+                //if (jQuery('.image_container').length <= 0) {
+                jQuery('.loader_image_wrap').css({ '-webkit-box-shadow': '0px 0px 6px 0px #ccc', '-moz-box-shadow': '0px 0px 6px 0px #ccc', 'box-shadow': '0px 0px 6px 0px #ccc', 'border': '1px solid #eee' });
+                jQuery('.image_container').empty();
+                jQuery('.image_container').append(res.message);
+
+                //}
+
+            },
+
+            complete: function() {
+                jQuery('.loader_woofresh').removeClass("loader_loading");
+                jQuery('.loader_woofresh').remove();
+            },
+
+        });
+    }
+
+});
+
+
+
+////////////////
+
+var prod_key_features_iframe = jQuery("#acf-editor-32_ifr").contents().find("body#tinymce");
+
+prod_key_features_iframe.on('change keyup paste', function() {
+    var prod_key_features_text = prod_key_features_iframe.text();
+    if (prod_key_features_text.trim() == '') {
+        var bullist = jQuery('#product_key_feature_section button .mce-i-bullist');
+        bullist.trigger("click");
+    }
+});
+
+////////////////
+
+function textarea_autosize() {
+    var el = this;
+    setTimeout(function() {
+        el.style.cssText = 'height:auto';
+        // for box-sizing other than "content-box" use:
+        // el.style.cssText = '-moz-box-sizing:content-box';
+        el.style.cssText = 'height:' + el.scrollHeight + 'px';
+    }, 0);
+}
+
+jQuery(document).ready(function() {
+    function validateEmail(email) {
+        var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+        return re.test(email);
+    }
+    (function($) {
+        $.fn.multipleInput = function() {
+            return this.each(function() {
+                // list of email addresses as unordered list
+                $list = $('<ul/>');
+                // input
+                var $input = $('<input type="email" id="email_search" name="acf[field_5d07212d44a9b]" class="email_search multiemail" placeholder="You can provide multiple emails by comma separation"/>').on("keyup focusout", function(event) {
+                    if (event.which == 13 || event.which == 32 || event.which == 188 || event.type == 'focusout') {
+                        $('#recipient_email .fetch_image_validation').remove();
+                        if (event.which == 188) {
+                            var val = $(this).val().slice(0, -1); // remove space/comma from value
+                        } else {
+                            var val = $(this).val(); // key press is space or comma                        
+                        }
+                        if (validateEmail(val)) {
+                            // append to list of emails with remove button
+                            $list.append($('<li class="multipleInput-email"><span>' + val + '</span><input type="hidden" name="author_email_input[]" value="' + val + '"/></li>')
+                                .append($('<a href="#" class="multipleInput-close" title="Remove"><i class="fa fa-times-circle-o" aria-hidden="true"></i></a>')
+                                    .click(function(e) {
+                                        $(this).parent().remove();
+                                        e.preventDefault();
+                                    })
+                                )
+                            );
+                            $(this).attr('placeholder', ' ');
+                            // empty input
+                            $(this).val('');
+                        } else {
+                            if (event.type != 'focusout') {
+                                alert('Please enter valid email id, Thanks!');
+                            }
+                        }
+                    }
+                });
+                // container div
+                var $container = $('<div class="multipleInput-container"/>').click(function() {
+                    $input.focus();
+                });
+                // insert elements into DOM
+                $container.append($list).append($input).insertAfter($(this));
+                //return $(this).hide();
+
+
+            });
+        };
+    })(jQuery);
+    jQuery('#form_5cebc1de47054 #recipient_email #acf-field_5d07212d44a9b').multipleInput();
+});

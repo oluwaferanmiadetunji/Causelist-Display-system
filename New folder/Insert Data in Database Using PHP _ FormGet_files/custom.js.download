@@ -1,0 +1,233 @@
+var list_item_data = [];
+
+function save_listing_post_data(post_data) {
+    var result_val = '';
+    jQuery.ajax({
+        url: ink_set_listing_post_save_navigate_data.ajax_url,
+        type: 'POST',
+        data: {
+            action: 'ink_set_listing_post_action',
+            post_data: post_data
+        },
+        success: function(data) {
+            data = data.trim();
+            if (data.indexOf("error") == -1) {
+                result_val = 'success';
+            } else {
+                result_val = 'error';
+            }
+        },
+        error: function() {
+            alert("Some Error...");
+            result_val = 'error';
+        }
+    });
+    return result_val;
+}
+
+function update_new_post_data(post_id) {
+    var iBody = jQuery("#content_ifr").contents().find("body");
+    var iBody_html = iBody.html();
+    var result_val = '';
+    var redirect_url = ink_set_listing_post_save_navigate_data.admin_url + 'admin.php?page=ink_set_listing_post_setting_page&ink_set_listing_post_id=' + post_id + '&ink_set_listing_post_get_list_btn=Get+Listing';
+    jQuery.ajax({
+        url: ink_set_listing_post_save_navigate_data.ajax_url,
+        type: 'POST',
+        data: {
+            action: 'ink_set_update_new_post',
+            post_data: {
+                curr_post_id: post_id,
+                curr_post_content: iBody_html
+            }
+        },
+        success: function(data) {
+            data = data.trim();
+            data = JSON.parse(data);
+
+            if (data.status == 'success') {
+                window.location = redirect_url;
+            } else {
+                Swal.fire({
+                    title: data.title,
+                    html: data.msg,
+                    icon: 'error'
+                });
+            }
+        },
+        error: function() {
+            alert("Some Error...");
+            result_val = 'error';
+        }
+    });
+    return result_val;
+}
+
+function insert_ur_list_items() {
+    jQuery.ajax({
+        url: ink_set_listing_post_save_navigate_data.ajax_url,
+        type: 'POST',
+        data: {
+            action: 'ink_set_show_listing_category',
+        },
+        success: function(data) {
+            data = data.trim();
+            data = JSON.parse(data);
+
+            if (data.status == 'success') {
+                list_item_data = data.list_item_data;
+                Swal.fire({
+                    title: 'Select List Item Category',
+                    html: data.html,
+                    icon: '',
+                    customClass: 'swal-wide-800',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Insert shortcode'
+                }).then((result) => {
+                    if (result.value) {
+                        var insert_list_item_shortcode = '[ur_list_items ids="';
+                        var all_pids = [];
+                        var cnt = 1;
+                        jQuery("#all_listing_posts label input[type='checkbox']").each(function(index, element) {
+                            if (element.checked) {
+                                if (cnt == 1) {
+                                    all_pids.push(element.value);
+                                    insert_list_item_shortcode += element.value;
+                                } else {
+                                    all_pids.push(element.value);
+                                    insert_list_item_shortcode += ',' + element.value;
+                                }
+                                cnt++;
+                            }
+                        });
+                        insert_list_item_shortcode += '"]';
+                        if (all_pids.length) {
+                            tinyMCE.activeEditor.execCommand('mceInsertContent', false, insert_list_item_shortcode);
+                        } else {
+                            var curr_cate_slug = jQuery('#list_item_category').val();
+                            insert_list_item_shortcode = '[ur_list_items category="' + curr_cate_slug + '"]';
+                            tinyMCE.activeEditor.execCommand('mceInsertContent', false, insert_list_item_shortcode);
+                        }
+
+                    }
+                });
+
+            } else {
+                Swal.fire({
+                    title: 'Oops!',
+                    html: data.msg,
+                    icon: 'error'
+                });
+            }
+        },
+        error: function() {
+            alert("Some Error...");
+        }
+    });
+}
+
+function change_curr_list_item_category(curr) {
+    if (jQuery('.error_notice').length) {
+        jQuery('#search_listing_post_items_word').removeClass('error_notice');
+        jQuery('.error_notice').remove();
+    }
+    jQuery("#list_item_loader").css('display', 'block');
+    var curr_cate_slug = jQuery(curr).val();
+    jQuery.ajax({
+        url: ink_set_listing_post_save_navigate_data.ajax_url,
+        type: 'POST',
+        data: {
+            action: 'ink_set_change_curr_category',
+            post_data: {
+                curr_cate_slug: curr_cate_slug
+            }
+        },
+        success: function(data) {
+            jQuery("#list_item_loader").css('display', 'none');
+            data = data.trim();
+            data = JSON.parse(data);
+
+            if (data.status == 'success') {
+                jQuery('#all_listing_posts').html(data.html);
+                list_item_data = data.list_item_data;
+            } else {
+                jQuery('#all_listing_posts').html(data.msg);
+            }
+
+        },
+        error: function() {
+            alert("Some Error...");
+        }
+    });
+}
+
+
+function search_keyword_list_item_post() {
+
+    if (jQuery('.error_notice').length) {
+        jQuery('#search_listing_post_items_word').removeClass('error_notice');
+        jQuery('.error_notice').remove();
+    }
+    var list_item_keyword_search = jQuery('#search_listing_post_items_word').val();
+    if (list_item_keyword_search.trim() == '') {
+        jQuery('#search_listing_post_items_word').addClass('error_notice');
+        jQuery('.serch-box').append('<span class="error_notice">Enter Some Text</span>');
+        return true;
+    }
+    jQuery("#list_item_loader").css('display', 'block');
+    jQuery.ajax({
+        url: ink_set_listing_post_save_navigate_data.ajax_url,
+        type: 'POST',
+        data: {
+            action: 'ink_set_search_keyword_in_list_item_post',
+            post_data: {
+                keyword_search: list_item_keyword_search.trim(),
+                all_list_item_ids: list_item_data
+            }
+        },
+        success: function(data) {
+            jQuery("#list_item_loader").css('display', 'none');
+            data = data.trim();
+            jQuery('#all_listing_posts').html(data);
+        },
+        error: function() {
+            alert("Some Error...");
+        }
+    });
+}
+
+function clear_search_keyword_list_item_post() {
+    jQuery("#search_listing_post_items_word").val('');
+    jQuery("#list_item_category").trigger("change");
+}
+
+function enter_search_keyword_list_item_post(event) {
+    if (event.which == 13 && !event.shiftKey) {
+        search_keyword_list_item_post();
+    }
+}
+
+function check_all_list_items_post(curr) {
+    var check_status = true;
+    if (jQuery(curr).context.checked == true) {
+        check_status = true;
+    } else {
+        check_status = false;
+    }
+    jQuery("#all_listing_posts label input[type='checkbox']").each(function() {
+        this.checked = check_status;
+    });
+
+}
+
+function change_status_of_list_item_checkbox() {
+    var check_status = true;
+    jQuery("#all_listing_posts label input[type='checkbox']").each(function(index, element) {
+        if (!(element.checked)) {
+            check_status = false;
+        }
+    });
+    jQuery("#check_all_list_items_id").prop('checked', check_status);
+
+}

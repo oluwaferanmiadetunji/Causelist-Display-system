@@ -1,0 +1,116 @@
+jQuery( document ).ready(function() {
+  //jQuery('#floating_prod_tab #main_product_table').prepend("<span class='tabel_cross'><img src='https://reapon.com/wp-content/uploads/2019/06/table_cross_img.png' title='Close' alt='close' /></span>");
+ 
+  var sticky = jQuery('#floating_prod_tab');
+  if (sticky.length) {      
+  var stickyTop = (sticky.offset().top);
+    jQuery(window).on('resize scroll', function() {
+      var windowTop = jQuery(window).scrollTop(); // returns number
+      var scrollBottom = jQuery(document).height() - jQuery(window).height() - jQuery(window).scrollTop();
+      if (jQuery('#footer_aboutus_sec').isInViewport()) {
+       //sticky.css({position: 'absolute',bottom: scrollBottom + 100});	
+       sticky.css({position: 'absolute'});	
+      }else if(windowTop >= stickyTop){         
+		sticky.css({ position: 'fixed',top:'60px'});   
+      }else {  
+        sticky.css({position: 'absolute', top: '60px'});
+      }
+    });
+  }
+  
+	jQuery.fn.isInViewport = function() {
+		var elementTop = stickyTop;
+		var elementBottom = elementTop + jQuery(this).outerHeight();
+		var viewportTop = jQuery(window).scrollTop();
+		var viewportBottom = viewportTop + jQuery(window).height();
+		return elementBottom > viewportTop && elementTop < viewportBottom;
+	};
+});
+ jQuery( document ).ready(function() {
+  var sticky_left = jQuery('#floating_left_bar_wrap');
+  if (sticky_left.length) {
+  var stickyTop = (sticky_left.offset().top);
+     jQuery(window).on('resize scroll', function() {
+      var windowTop = jQuery(window).scrollTop(); // returns number
+      var scrollBottom = jQuery(document).height() - jQuery(window).height() - jQuery(window).scrollTop();
+      if (jQuery('.try_for_free').isInViewport_left()) {
+      //sticky.css({position: 'absolute',bottom: scrollBottom + 100});	
+      sticky_left.css({position: 'relative'});	
+      }else if(windowTop >= stickyTop){         
+		sticky_left.css({position: 'fixed',top: '220px', width: '309.344px', 'margin-top': '0px', 'margin-bottom': '0px'});   
+      }else {  
+        sticky_left.css({position: 'relative', top: '0px', 'margin-top': '40px', 'margin-bottom': '0px'});
+      }
+     });
+  }
+  
+ 	jQuery.fn.isInViewport_left = function() {
+ 		var elementTop = jQuery(this).offset().top;
+ 		var elementBottom = elementTop + jQuery(this).outerHeight();
+ 		var viewportTop = jQuery(window).scrollTop();
+ 		var viewportBottom = viewportTop + jQuery(window).height();
+ 		return elementBottom > viewportTop && elementTop < viewportBottom;
+	};
+ });
+ 
+ jQuery( document ).ready(function() {
+  var sticky_left = jQuery('#right_sticky_bar');
+  if (sticky_left.length) {
+  var stickyTop = (sticky_left.offset().top);
+     jQuery(window).on('resize scroll', function() {
+      var windowTop = jQuery(window).scrollTop(); // returns number
+      var scrollBottom = jQuery(document).height() - jQuery(window).height() - jQuery(window).scrollTop();
+      if (jQuery('#next_level_block').isInViewport_left()) {
+      //sticky.css({position: 'absolute',bottom: scrollBottom + 100});	
+      sticky_left.css({position: 'relative'});	
+      }else if(windowTop >= stickyTop - 110){         
+		sticky_left.css({position: 'fixed',top: '150px', width: '100%', 'margin-top': '0px', 'margin-bottom': '0px', 'max-width': '282px'});   
+      }else {  
+        sticky_left.css({position: 'relative', top: '0px', 'margin-top': '0px', 'margin-bottom': '0px'});
+      }
+     });
+  }
+  
+ 	jQuery.fn.isInViewport_left = function() {
+ 		var elementTop = jQuery(this).offset().top;
+ 		var elementBottom = elementTop + jQuery(this).outerHeight();
+ 		var viewportTop = jQuery(window).scrollTop();
+ 		var viewportBottom = viewportTop + jQuery(window).height();
+ 		return elementBottom > viewportTop && elementTop < viewportBottom;
+	};
+ });
+ 
+ jQuery( document ).ready(function() {
+  var sticky_left = jQuery('#right_sticky_bar_sec');
+  var elementer_wrap = jQuery('.elementor-column.elementor-col-100#right_sticky_bar_sec, .elementor-column[data-col="100"]#right_sticky_bar_sec');
+  if (sticky_left.length) {
+  var stickyTop = (sticky_left.offset().top);
+     jQuery(window).on('resize scroll', function() {
+      var windowTop = jQuery(window).scrollTop(); // returns number
+      var scrollBottom = jQuery(document).height() - jQuery(window).height() - jQuery(window).scrollTop();
+      if (jQuery('#footer_products').isInViewport_left()) {
+      //sticky.css({position: 'absolute',bottom: scrollBottom + 100});	
+      sticky_left.css({position: 'relative'});	
+      }else if(windowTop >= stickyTop - 110){         
+		sticky_left.css({position: 'fixed',top: '150px', width: '100%','margin-top': '0px', 'margin-bottom': '0px', 'max-width': '282px'}); 
+		//elementer_wrap.css({width: '100%'});
+      }else {  
+        sticky_left.css({position: 'relative', top: '0px', 'margin-top': '0px', 'margin-bottom': '0px'});
+      }
+     });
+  }
+  
+ 	jQuery.fn.isInViewport_left = function() {
+ 		var elementTop = jQuery(this).offset().top;
+ 		var elementBottom = elementTop + jQuery(this).outerHeight();
+ 		var viewportTop = jQuery(window).scrollTop();
+ 		var viewportBottom = viewportTop + jQuery(window).height();
+ 		return elementBottom > viewportTop && elementTop < viewportBottom;
+	};
+ });
+
+
+
+
+
+ 

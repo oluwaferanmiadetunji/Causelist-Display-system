@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)https://www.hostinger.com/tutorials/how-to-use-php-to-insert-data-into-mysql-database -->
+<html lang="en-US" prefix="og: http://ogp.me/ns#" class="" slick-uniqueid="3"><span class="notranslate" style="display: none" id="a-sp-root-template"><div class="a-sp-feedback a-sp-feedback-hidden" id="a-sp-feedback-container">
+<div id="a-sp-feedback-action-question" class="a-sp-feedback-question">
+<img ondragstart="return false;" class="a-sp-feedback-question-logo" src="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/logo-safe-price-32.png" onerror="this.src=&#39;chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/logo-safe-price-32.png&#39;;">
+<p class="a-sp-feedback-question-text">Enjoy using <br> Avast SafePrice?</p>
+<div class="a-sp-feedback-question-buttons-container">
+<div class="a-sp-feedback-question-buttons-yes">yes</div>
+<div class="a-sp-feedback-question-buttons-no">no</div>
+</div>
+<div class="a-sp-feedback-question-later">Ask me later</div>
+</div>
+<div id="a-sp-feedback-action-positive" class="a-sp-feedback-action a-sp-feedback-hidden">
+<div class="a-sp-feedback-action-header">
+<div></div>
+<img ondragstart="return false;" id="a-sp-feedback-action-close-positive" class="a-sp-feedback-action-close-img" src="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/sp-settings-close.png" onerror="this.src=&#39;chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/sp-settings-close.png&#39;;">
+</div>
+<div class="a-sp-feedback-action-img-container">
+<img ondragstart="return false;" class="a-sp-feedback-action-img" src="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/img-positive.png" onerror="this.src=&#39;chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/img-positive.png&#39;;">
+</div>
+<div class="a-sp-feedback-action-text-container">
+<span class="a-sp-feedback-action-text-content">Glad you like it!</span>
+</div>
+<div class="a-sp-feedback-action-description-container">
+<span class="a-sp-feedback-action-description-content">Leave us a rating to show your love.</span>
+</div>
+<div class="a-sp-feedback-action-button-container">
+<span id="a-sp-feedback-action-button-positive" class="a-sp-feedback-action-button-content">Rate now</span>
+</div>
+</div>
+<div id="a-sp-feedback-action-negative" class="a-sp-feedback-action a-sp-feedback-hidden">
+<div class="a-sp-feedback-action-header">
+<div></div>
+<img ondragstart="return false;" id="a-sp-feedback-action-close-negative" class="a-sp-feedback-action-close-img" src="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/sp-settings-close.png" onerror="this.src=&#39;chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/sp-settings-close.png&#39;;">
+</div>
+<div class="a-sp-feedback-action-img-container">
+<img ondragstart="return false;" class="a-sp-feedback-action-img" src="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/img-negative.png" onerror="this.src=&#39;chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/img-negative.png&#39;;">
+</div>
+<div class="a-sp-feedback-action-text-container">
+<span class="a-sp-feedback-action-text-content">Sorry to hear that</span>
+</div>
+<div class="a-sp-feedback-action-description-container">
+<span class="a-sp-feedback-action-description-content">What could we do to improve?</span>
+</div>
+<div class="a-sp-feedback-action-button-container">
+<span id="a-sp-feedback-action-button-negative" class="a-sp-feedback-action-button-content">give feedback</span>
+</div>
+</div>
+</div><div class="a-sp-panel" id="a-panel" style="top: 16px; right: 16px;">
+<div class="a-sp-panel-header" id="a-panel-header">
+<img ondragstart="return false;" class="a-sp-header-top-left" src="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/logo-safeprice-48.png" onerror="this.src=&#39;chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/logo-safeprice-48.png&#39;;">
+<div class="a-sp-header-top-right">
+<div class="sp-header-top-close" id="closePanel" style="background-image: url(chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/close-icon-copy-8.png);" title="Close"></div>
+<div class="sp-header-top-min" id="minPanel" style="background-image: url(chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/minimise-icon.png);" title="Minimize"></div>
+<div class="sp-header-top-help" id="helpPanel" style="background-image: url(chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/help-icon.png);" title="Help"></div>
+<div class="sp-header-top-settings" id="settingsPanel" style="background-image: url(chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/settings-icon.png);" title="Settings"></div>
+</div>
+<div class="a-sp-header-bottom-col1" id="offersTab">Offers<span id="offersTabState" class="a-sp-shown"></span>
+</div>
+<div class="a-sp-header-bottom-separator-1-2">
+</div>
+<div class="a-sp-header-bottom-col2-selected" id="couponsTab">Coupons<span id="couponsTabState" class="a-sp-shown"></span>
+</div>
+<div class="a-sp-header-bottom-separator-2-3">
+</div>
+<div class="a-sp-header-bottom-col3" id="othersTab">Others<span id="othersTabState" class="a-sp-shown"></span>
+</div>
+</div>
+<div class="a-sp-items-wrapper">
+<div class="a-sp-offers-items-wrapper" id="offersItemsWrapper">
+<div id="searchOffersWrapper">
+<div class="a-sp-search-box">
+<input autocomplete="off" type="text" class="a-sp-search-input" id="query-search-offers" value="" placeholder="Search products">
+<img ondragstart="return false;" class="a-sp-search-image" id="a-sp-search-image-offers-expanded" src="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/search-icon.svg" onerror="this.src=&#39;chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/search-icon.svg&#39;;">
+<div class="a-sp-search-loading asp-sas-display-none" id="a-sp-search-loading-offers"></div>
+</div>
+</div>
+<div id="offersWrapper">
+<div class="asp-search-for">
+<img class="asp-search-for-icon" ondragstart="return false;" src="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/search-offers.png" onerror="this.src=&#39;chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/search-offers.png&#39;;">
+<div class="asp-search-for-text">To get offers, search for <br> a product</div>
+</div>
+</div>
+</div>
+<div class="a-sp-coupons-items-wrapper" id="couponsItemsWrapper">
+<div id="searchCouponsWrapper">
+<div class="a-sp-search-box">
+<input autocomplete="off" type="text" class="a-sp-search-input" id="query-search-coupons" value="" placeholder="Search brands or online stores">
+<img ondragstart="return false;" class="a-sp-search-image" id="a-sp-search-image-coupons-expanded" src="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/search-icon.svg" onerror="this.src=&#39;chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/search-icon.svg&#39;;">
+<div class="a-sp-search-loading asp-sas-display-none" id="a-sp-search-loading-coupons"></div>
+</div>
+</div>
+<div id="couponsWrapper">
+<div class="asp-search-for">
+<img class="asp-search-for-icon" ondragstart="return false;" src="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/search-coupons.png" onerror="this.src=&#39;chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/search-coupons.png&#39;;">
+<div class="asp-search-for-text">To get coupons, search <br> for a brand or an online store</div>
+</div>
+</div>
+</div>
+<div class="a-sp-others-items-wrapper" id="othersItemsWrapper">
+<div id="othersWrapper">
+<div class="asp-nothing-found-60">
+<img class="asp-nothing-found-icon" ondragstart="return false;" src="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/no-offers.png" onerror="this.src=&#39;chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/no-offers.png&#39;;">
+<div class="asp-nothing-found-text">No special deals found <br> at the moment</div>
+</div>
+</div>
+</div>
+</div>
+<div class="a-sp-panel-security" id="a-sp-panel-security">
+<div id="asp-not-verified-panel">
+<div class="asp-hover-text">
+This website has been identified as untrustworthy. Every deal we find comes from a safe website, so we suggest you click one of the offers above, or simply try somewhere else.
+</div>
+</div>
+<div class="asp-security-left ">
+<div class="asp-security-left-safe">
+<img ondragstart="return false;" class="asp-security-image" src="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/shield.png" onerror="this.src=&#39;chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/shield.png&#39;;">
+<div class="asp-security-description">This site is verified, and safe to shop on</div>
+</div>
+</div>
+<div class="asp-security-right">
+<div class="asp-feedback-text">Feedback</div>
+</div>
+</div>
+<div class="a-sp-rate-panel" id="ratePanel">
+<div class="a-sp-rate-panel-feedback-share">
+<div class="a-sp-rate-top-title">Share your feedback</div>
+<img ondragstart="return false;" class="a-sp-rate-top-icon" src="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/arrow-rate.png" onerror="this.src=&#39;chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/arrow-rate.png&#39;;">
+<div class="a-sp-rate-middle-container" id="share">
+<div class="asp-general-feedback-container">
+<div class="asp-feedback-white-container-left">
+<div class="asp-feedback-white-container-title">General feedback</div>
+<div class="asp-feedback-white-container-title-desc">Tell us about your SafePrice experience, what you liked, and what we can improve.</div>
+</div>
+<img ondragstart="return false;" class="asp-feedback-white-container-icon" src="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/arrow-feedback.png" onerror="this.src=&#39;chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/arrow-feedback.png&#39;;">
+</div>
+<div class="asp-online-shop-container">
+<div class="asp-feedback-white-container-left">
+<div class="asp-feedback-white-container-title">Report online store</div>
+<div class="asp-feedback-white-container-title-desc">Tell us about untrustworthy or fake sites that could put others at risk.</div>
+</div>
+<img ondragstart="return false;" class="asp-feedback-white-container-icon" src="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/arrow-feedback.png" onerror="this.src=&#39;chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/arrow-feedback.png&#39;;">
+</div>
+</div>
+</div>
+<div class="a-sp-rate-panel-feedback-general a-sp-rate-panel-hidden">
+<div class="a-sp-rate-top-title">General feedback</div>
+<img ondragstart="return false;" class="a-sp-rate-top-icon" src="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/arrow-rate.png" onerror="this.src=&#39;chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/arrow-rate.png&#39;;">
+<div class="a-sp-rate-middle-container" id="general">
+<div class="asp-general-container-title">Tell us about your SafePrice experience:</div>
+<div class="asp-general-wrapper-text-area">
+<textarea data-gramm_editor="false" data-gramm="false autocomplete=" off"="" autocorrect="off" autocapitalize="off" spellcheck="false" class="asp-general-text-area" placeholder="Write a comment"></textarea>
+</div>
+</div>
+<div class="a-sp-rate-bottom">
+<div class="a-sp-rate-button-green a-sp-rate-button-green-disabled" id="generalSend"><div class="a-sp-rate-button-green-text">send</div></div>
+<div class="a-sp-rate-button-transparent" id="generalBack"><div class="a-sp-rate-button-transparent-text">back</div></div>
+</div>
+</div>
+<div class="a-sp-rate-panel-feedback-report-shop-1 a-sp-rate-panel-hidden">
+<div class="a-sp-rate-top-title">Report online store</div>
+<img ondragstart="return false;" class="a-sp-rate-top-icon" src="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/arrow-rate.png" onerror="this.src=&#39;chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/arrow-rate.png&#39;;">
+<div class="a-sp-rate-middle-container" id="shop1">
+<div class="asp-shop1-title">Which online store are you reporting? <span class="asp-required-span">(*required)</span></div>
+<div class="asp-shop1-title-online-store">Online store name*</div>
+<div class="asp-shop1-input-box-online-store">
+<input autocomplete="off" type="text" class="asp-shop1-input-online-store" placeholder="Retailer or merchant">
+</div>
+<div class="asp-shop1-title-product">Product ordered</div>
+<div class="asp-shop1-input-box-product">
+<input autocomplete="off" type="text" class="asp-shop1-input-product" placeholder="Link to a product page">
+</div>
+</div>
+<div class="a-sp-rate-bottom">
+<div class="a-sp-rate-button-green a-sp-rate-button-green-disabled" id="shop1Next"><div class="a-sp-rate-button-green-text">next</div></div>
+<div class="a-sp-rate-button-transparent" id="shop1Back"><div class="a-sp-rate-button-transparent-text">back</div></div>
+</div>
+</div>
+<div class="a-sp-rate-panel-feedback-report-shop-2 a-sp-rate-panel-hidden">
+<div class="a-sp-rate-top-title">Report online store</div>
+<img ondragstart="return false;" class="a-sp-rate-top-icon" src="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/arrow-rate.png" onerror="this.src=&#39;chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/arrow-rate.png&#39;;">
+<div class="a-sp-rate-middle-container" id="shop2">
+<div class="asp-shop2-top">
+<div class="asp-shop2-title">What was the problem?  <span class="asp-required-span">(required)</span></div>
+<div class="asp-shop2-something-different">
+<input type="radio" name="aspInputShop2" class="asp-shop2-radiobutton-something-different" id="shop2SomethingDiff">
+<label for="shop2SomethingDiff" class="asp-shop2-label-something-different">I got something different from what I ordered.</label>
+</div>
+<div class="asp-shop2-paid-not-get">
+<input type="radio" name="aspInputShop2" class="asp-shop2-radiobutton-paid-not-get" id="shop2PaidNotGet">
+<label for="shop2PaidNotGet" class="asp-shop2-label-paid-not-get">I paid for a product and didn’t get it.</label>
+</div>
+<div class="asp-shop2-other">
+<input type="radio" name="aspInputShop2" class="asp-shop2-radiobutton-other" id="shop2Other">
+<label for="shop2Other" class="asp-shop2-label-other">Other</label>
+</div>
+</div>
+<div class="asp-shop2-text-area-other">
+<textarea data-gramm_editor="false" data-gramm="false autocomplete=" off"="" autocorrect="off" autocapitalize="off" spellcheck="false" class="asp-shop2-text-area asp-shop2-text-area-hidden" placeholder="Briefly explain what was the problem."></textarea>
+</div>
+</div>
+<div class="a-sp-rate-bottom">
+<div class="a-sp-rate-button-green a-sp-rate-button-green-disabled" id="shop2Send"><div class="a-sp-rate-button-green-text">send</div></div>
+<div class="a-sp-rate-button-transparent" id="shop2Back"><div class="a-sp-rate-button-transparent-text">back</div></div>
+</div>
+</div>
+<div class="a-sp-rate-panel-feedback-thanks a-sp-rate-panel-hidden">
+<img ondragstart="return false;" class="a-sp-rate-top-icon" src="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/arrow-rate.png" onerror="this.src=&#39;chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/arrow-rate.png&#39;;">
+<div class="a-sp-rate-middle-container" id="thanks">
+<img ondragstart="return false;" class="a-sp-rated-thanks-icon" src="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/rate-check-gif.gif" onerror="this.src=&#39;chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/icons/rate-check-gif.gif&#39;;">
+<div class="a-sp-rated-thanks-title">Thank you for your feedback!</div>
+</div>
+</div>
+</div>
+<div class="a-sp-items-wrapper-resize" id="panel-resize">
+<div class="a-sp-resize-handle-1"></div>
+<div class="a-sp-resize-handle-2"></div>
+</div>
+</div></span><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="profile" href="http://gmpg.org/xfn/11"><link type="text/css" media="all" href="./How to Use PHP to Insert Data Into MySQL Database_files/autoptimize_d3247d72a7ffda7340ca81656903f0dc.css" rel="stylesheet"><link type="text/css" media="screen" href="./How to Use PHP to Insert Data Into MySQL Database_files/autoptimize_652c7d0ad6045946c4805b0428f92165.css" rel="stylesheet"><title>How to Use PHP to Insert Data Into MySQL Database</title><meta name="description" content="In this tutorial you will learn how to use PHP to insert data into MySQL database using PDO or MySQLi. Complete code snippets for copy/paste."><link rel="canonical" href="https://www.hostinger.com/tutorials/how-to-use-php-to-insert-data-into-mysql-database"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="How to Use PHP to Insert Data Into MySQL Database"><meta property="og:description" content="In this tutorial you will learn how to use PHP to insert data into MySQL database using PDO or MySQLi. Complete code snippets for copy/paste."><meta property="og:url" content="https://www.hostinger.com/tutorials/how-to-use-php-to-insert-data-into-mysql-database"><meta property="og:site_name" content="Hostinger Tutorials"><meta property="article:tag" content="database"><meta property="article:tag" content="insert"><meta property="article:tag" content="mysql"><meta property="article:tag" content="mysqli"><meta property="article:tag" content="php"><meta property="article:section" content="PHP"><meta property="article:published_time" content="2017-01-23T00:00:00+00:00"><meta property="article:modified_time" content="2019-02-04T16:39:49+00:00"><meta property="og:updated_time" content="2019-02-04T16:39:49+00:00"><meta property="og:image" content="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/06/how-to-use-php-to-insert-data-into-mysql-database.jpg"><meta property="og:image:secure_url" content="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/06/how-to-use-php-to-insert-data-into-mysql-database.jpg"><meta property="og:image:width" content="900"><meta property="og:image:height" content="560"><meta property="og:image:alt" content="How to Use PHP to Insert Data Into MySQL Database"><meta name="twitter:card" content="summary"><meta name="twitter:description" content="In this tutorial you will learn how to use PHP to insert data into MySQL database using PDO or MySQLi. Complete code snippets for copy/paste."><meta name="twitter:title" content="How to Use PHP to Insert Data Into MySQL Database"><meta name="twitter:image" content="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/06/how-to-use-php-to-insert-data-into-mysql-database.jpg"> <script src="./How to Use PHP to Insert Data Into MySQL Database_files/bat.js.download" async=""></script><script type="text/javascript" async="" src="./How to Use PHP to Insert Data Into MySQL Database_files/f.txt"></script><script type="text/javascript" async="" src="./How to Use PHP to Insert Data Into MySQL Database_files/analytics.js.download"></script><script type="text/javascript" async="" src="./How to Use PHP to Insert Data Into MySQL Database_files/js"></script><script src="./How to Use PHP to Insert Data Into MySQL Database_files/233182517365050" async=""></script><script src="./How to Use PHP to Insert Data Into MySQL Database_files/301499733514427" async=""></script><script src="./How to Use PHP to Insert Data Into MySQL Database_files/identity.js.download" async=""></script><script async="" src="./How to Use PHP to Insert Data Into MySQL Database_files/fbevents.js.download"></script><script async="" src="./How to Use PHP to Insert Data Into MySQL Database_files/gtm.js.download"></script><script async="" src="./How to Use PHP to Insert Data Into MySQL Database_files/analytics.js.download"></script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","url":"https://www.hostinger.com/tutorials/","sameAs":[],"@id":"https://www.hostinger.com/tutorials/#organization","name":"Hostinger","logo":"https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/04/hostinger-logo.png"}</script> <link rel="amphtml" href="https://www.hostinger.com/tutorials/how-to-use-php-to-insert-data-into-mysql-database/amp/"><meta name="generator" content="AMP for WP 0.9.98.14"><link rel="dns-prefetch" href="https://s.w.org/"><link href="https://fonts.gstatic.com/" crossorigin="anonymous" rel="preconnect"><link href="https://ajax.googleapis.com/" rel="preconnect"><link href="https://fonts.googleapis.com/" rel="preconnect"><link rel="alternate" type="application/rss+xml" title="Hostinger Tutorials » Feed" href="https://www.hostinger.com/tutorials/feed/"><link rel="alternate" type="application/rss+xml" title="Hostinger Tutorials » Comments Feed" href="https://www.hostinger.com/tutorials/comments/feed/"><link rel="alternate" type="application/rss+xml" title="Hostinger Tutorials » How to Use PHP to Insert Data Into MySQL Database Comments Feed" href="https://www.hostinger.com/tutorials/how-to-use-php-to-insert-data-into-mysql-database/feed/"> <script type="text/javascript">window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.hostinger.com\/tutorials\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.4"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);</script><script src="./How to Use PHP to Insert Data Into MySQL Database_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script> <style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style><link rel="stylesheet" id="enlighter-local-css" href="./How to Use PHP to Insert Data Into MySQL Database_files/EnlighterJS.min.css" type="text/css" media="all"><style id="wpgdprc.css-inline-css" type="text/css">div.wpgdprc .wpgdprc-switch .wpgdprc-switch-inner:before { content: 'Yes'; }
+            div.wpgdprc .wpgdprc-switch .wpgdprc-switch-inner:after { content: 'No'; }</style> <script type="text/javascript">var iworks_upprev = { animation: 'flyout', position: 'left', offset_percent: 100, offset_element: '#related', css_width: 260, css_side: 5, compare: 'category', url_new_window: 0, ga_track_views: 0, ga_track_clicks: 0, ga_opt_noninteraction: 0, title: 'How to Use PHP to Insert Data Into MySQL Database' };</script> <script type="text/javascript" src="./How to Use PHP to Insert Data Into MySQL Database_files/jquery.js.download"></script> <link rel="https://api.w.org/" href="https://www.hostinger.com/tutorials/wp-json/"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.hostinger.com/tutorials/xmlrpc.php?rsd"><link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.hostinger.com/tutorials/wp-includes/wlwmanifest.xml"><meta name="generator" content="WordPress 5.2.4"><link rel="shortlink" href="https://www.hostinger.com/tutorials/?p=747"><link rel="alternate" type="application/json+oembed" href="https://www.hostinger.com/tutorials/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.hostinger.com%2Ftutorials%2Fhow-to-use-php-to-insert-data-into-mysql-database"><link rel="alternate" type="text/xml+oembed" href="https://www.hostinger.com/tutorials/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.hostinger.com%2Ftutorials%2Fhow-to-use-php-to-insert-data-into-mysql-database&amp;format=xml"><style>.async-hide { opacity: 0 !important}</style> <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-MS6HPNX':true});</script> <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-26575989-4', 'auto');
+        ga('require', 'GTM-MS6HPNX');</script>  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KL4FQVG');</script>  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '301499733514427', {
+em: 'insert_email_variable,'
+});
+fbq('track', 'PageView');</script>  <script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.hostinger.com/tutorials/how-to-use-php-to-insert-data-into-mysql-database"
+    },
+    "headline": "How to Use PHP to Insert Data Into MySQL Database",
+    "datePublished": "2017-01-23T00:00:00+0000",
+    "dateModified": "2019-02-04T16:39:49+0000",
+    "author": {
+        "@type": "Person",
+        "name": "Tautvydas V."
+    },
+    "description": "In this tutorial, you will learn how to start managing a database from your PHP scripts. You will learn how to",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/06/how-to-use-php-to-insert-data-into-mysql-database.jpg",
+        "width": 900,
+        "height": 560
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Hostinger Tutorials",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/04/hostinger-tutorials-logo-retina.png",
+            "width": 452,
+            "height": 56
+        }
+    }
+}</script> <link rel="alternate" hreflang="x-default" href="https://www.hostinger.com/tutorials/how-to-use-php-to-insert-data-into-mysql-database"><link rel="alternate" hreflang="en-us" href="https://www.hostinger.com/tutorials/how-to-use-php-to-insert-data-into-mysql-database"><link rel="alternate" hreflang="en-gb" href="https://www.hostinger.co.uk/tutorials/how-to-use-php-to-insert-data-into-mysql-database"><link rel="alternate" hreflang="en-in" href="https://www.hostinger.in/tutorials/how-to-use-php-to-insert-data-into-mysql-database"><link rel="alternate" hreflang="en-my" href="https://www.hostinger.my/tutorials/how-to-use-php-to-insert-data-into-mysql-database"><link rel="alternate" hreflang="en-ph" href="https://www.hostinger.ph/tutorials/how-to-use-php-to-insert-data-into-mysql-database"><link rel="icon" href="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/04/cropped-hostinger-fav-32x32.png" sizes="32x32"><link rel="icon" href="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/04/cropped-hostinger-fav-192x192.png" sizes="192x192"><link rel="apple-touch-icon-precomposed" href="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/04/cropped-hostinger-fav-180x180.png"><meta name="msapplication-TileImage" content="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/04/cropped-hostinger-fav-270x270.png"><style type="text/css">#upprev_box{bottom:5px;width:260px;left:5px;display:block;left:-315px;display:block;}
+ #upprev_box .upprev_thumb img { float: none!important; } #upprev_box a.upprev_thumbnail img { float: none!important;}</style><style type="text/css">.on-sale[data-v-7ff806fc] {
+  color: #FFC800;
+  position: absolute;
+  transform: translate(0, -37px);
+}
+.menu-text:hover div p[data-v-7ff806fc] {
+  color: #6747c7;
+}
+.dropdown-holder[data-v-7ff806fc] {
+  width: 400px;
+  top: 35px;
+  left: 50%;
+  box-shadow: 0 4px 9px 0 rgba(67, 65, 79, 0.1);
+  transform: translate(-50%, 0);
+}
+.dropdown-holder li:last-child a[data-v-7ff806fc] {
+  margin-bottom: 0 !important;
+}
+.dropdown-holder[data-v-7ff806fc]::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  width: 17px;
+  height: 17px;
+  transform: translate(-50%, 0) rotate(-315deg);
+  border-radius: 3px;
+  background-color: white;
+}
+.login-style[data-v-7ff806fc] {
+  border: 1px #ffffff solid;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 35px;
+  min-width: 130px;
+  max-width: 130px;
+  word-break: break-word;
+}
+.login-style[data-v-7ff806fc]:hover {
+  background-color: #ffffff;
+  color: #6747C7;
+  opacity: 1;
+}
+</style><style type="text/css">.cl-d-none[data-v-6a6fe458] {
+  display: none;
+}
+.on-sale[data-v-6a6fe458] {
+  color: #FFC800;
+  position: absolute;
+  transform: translate(0, -13px);
+}
+.close-btn[data-v-6a6fe458] {
+  top: 10px;
+  right: 10px;
+  margin-left: 10px;
+}
+.mobile-holder[data-v-6a6fe458] {
+  right: 1%;
+  top: 10px;
+  width: 98%;
+  border-radius: 3px;
+  max-height: 95vh;
+  overflow-y: auto;
+}
+.logo[data-v-6a6fe458] {
+  height: 28px !important;
+}
+.transparent[data-v-6a6fe458] {
+  background: transparent;
+  position: absolute;
+}
+.colored[data-v-6a6fe458] {
+  background: #6747c7;
+  position: fixed;
+  padding: 20px 0 !important;
+}
+.cart-transform[data-v-6a6fe458] {
+  transform: translate(-60%, -50%);
+}
+.header-logo[data-v-6a6fe458] {
+  width: 250px;
+  flex-wrap: wrap;
+  overflow-y: hidden;
+  height: 28px;
+}
+.header-logo__blog[data-v-6a6fe458]:hover {
+  opacity: 1;
+  font-weight: 500 !important;
+  transition: ease .1s;
+}
+.header-logo__com:hover .header-logo-com__toggle[data-v-6a6fe458] {
+  display: block !important;
+}
+</style><style type="text/css">.cookie-consent[data-v-4952eb4f] {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999999999;
+}
+</style><link id="avast_os_ext_custom_font" href="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/fonts/fonts.css" rel="stylesheet" type="text/css"><script src="./How to Use PHP to Insert Data Into MySQL Database_files/f(1).txt"></script></head><body class="post-template-default single single-post postid-747 single-format-standard wp-embed-responsive"><div id="navigation"><div data-v-6a6fe458=""><div data-v-6a6fe458="" class="wm-main-div w-100 d-flex align-items-center justify-content-center pt-40 z-index-200 menu text-uppercase colored"><div data-v-6a6fe458="" class="wm-container container d-flex align-items-center text-white"><div data-v-6a6fe458="" class="header-logo d-flex align-items-center"><a data-v-6a6fe458="" href="https://www.hostinger.com/" class="header-logo__com d-flex align-items-center"><img data-v-6a6fe458="" src="./How to Use PHP to Insert Data Into MySQL Database_files/hostinger-logo.svg" class="logo"> <span data-v-6a6fe458="" class="pl-5 header-logo-com__toggle fw-300 fs-15 d-none">
+                        .COM
+                    </span></a> <a data-v-6a6fe458="" href="https://www.hostinger.com/tutorials" class="pl-5 header-logo__blog fw-300 fs-15 opacity-6">
+                    TUTORIALS
+                </a></div> <ul data-v-6a6fe458="" class="ml-auto d-none d-xl-flex fw-500 align-items-center"><li data-v-6a6fe458="" class="mr-15 ml-15"><div data-v-7ff806fc="" data-v-6a6fe458="" class="position-relative"><a data-v-7ff806fc="" class="d-flex align-items-center cursor-pointer hover-opacity-6">Products
+            <i data-v-7ff806fc="" class="ml-5 material-icons">keyboard_arrow_down</i></a> <!----></div></li><li data-v-6a6fe458="" class="mr-15 ml-15"><div data-v-7ff806fc="" data-v-6a6fe458="" class=""><a data-v-7ff806fc="" href="https://www.hostinger.com/pricing" class="hover-opacity-6 wm-login"><!---->Pricing
+        <span data-v-7ff806fc="" class="text-uppercase fs-8 label on-sale d-flex position-absolute">On Sale</span></a></div></li><li data-v-6a6fe458="" class="mr-15 ml-15"><div data-v-7ff806fc="" data-v-6a6fe458="" class="position-relative"><a data-v-7ff806fc="" href="https://www.hostinger.com/technology" class="hover-opacity-6 wm-login"><!---->Technology
+        <!----></a></div></li><li data-v-6a6fe458="" class="mr-15 ml-15"><div data-v-7ff806fc="" data-v-6a6fe458="" class="position-relative"><a data-v-7ff806fc="" href="https://www.hostinger.com/make-money-online" class="hover-opacity-6 wm-login"><!---->Affiliates
+        <!----></a></div></li><li data-v-6a6fe458="" class="mr-15 ml-15"><div data-v-7ff806fc="" data-v-6a6fe458="" class="position-relative"><a data-v-7ff806fc="" href="https://www.hostinger.com/cpanel-login" class="hover-opacity-6 wm-login login-style"><i data-v-7ff806fc="" class="material-icons fs-14 pr-10"> lock </i>Login
+        <!----></a></div></li></ul> <div data-v-6a6fe458="" class="ml-xl-auto ml-0 d-xl-none d-flex order-4 order-xl-3"><i data-v-6a6fe458="" class="material-icons mb-0 cursor-pointer hover-opacity-6 d-xl-none">
+                    menu
+                </i> <!----></div> <a data-v-6a6fe458="" href="https://www.hostinger.com/cart" class="ml-auto ml-xl-0 d-flex order-3 order-xl-4 cursor-pointer transition-3 hover-opacity-6"><i data-v-6a6fe458="" class="material-icons">
+                    shopping_cart
+                </i> <!----></a></div></div></div></div><div class="h-pb-2 h-pt-2 primary l700 holder-shadow position-relative" id="submenu"><div class="container d-none d-xl-flex align-items-center height-16px"><ul class="label text-uppercase d-flex align-items-center text-white font-weight-bold"><li class="h-mr-3 transition-all-3 letter-spacing-1px
+ hover-opacity-6"> <a href="https://www.hostinger.com/tutorials/wordpress/">WordPress</a></li><li class="h-mr-3 transition-all-3 letter-spacing-1px
+ hover-opacity-6"> <a href="https://www.hostinger.com/tutorials/vps/">VPS</a></li><li class="h-mr-3 transition-all-3 letter-spacing-1px
+ hover-opacity-6"> <a href="https://www.hostinger.com/tutorials/joomla/">Joomla!</a></li><li class="h-mr-3 transition-all-3 letter-spacing-1px
+ hover-opacity-6"> <a href="https://www.hostinger.com/tutorials/drupal">Drupal</a></li><li class="h-mr-3 transition-all-3 letter-spacing-1px
+ hover-opacity-6"> <a href="https://www.hostinger.com/tutorials/email/">Email</a></li><li class="h-mr-3 transition-all-3 letter-spacing-1px
+ hover-opacity-6"> <a href="https://www.hostinger.com/tutorials/glossary/">Glossary</a></li></ul> <i onclick="toggleSearch()" class="material-icons ml-auto cursor-pointer"> search </i></div><div class="container d-flex d-xl-none align-items-center height-16px label text-uppercase d-flex align-items-center text-white font-weight-bold"><ul id="submenu-m-list" class="navbar-collapse collapse mobile-m-holder h-pb-2 h-pt-2 primary l700 holder-shadow position-relative"><li class="h-mr-3 transition-all-3 letter-spacing-1px
+ hover-opacity-6"> <a href="https://www.hostinger.com/tutorials/wordpress/">WordPress</a></li><li class="h-mr-3 transition-all-3 letter-spacing-1px
+ hover-opacity-6"> <a href="https://www.hostinger.com/tutorials/vps/">VPS</a></li><li class="h-mr-3 transition-all-3 letter-spacing-1px
+ hover-opacity-6"> <a href="https://www.hostinger.com/tutorials/joomla/">Joomla!</a></li><li class="h-mr-3 transition-all-3 letter-spacing-1px
+ hover-opacity-6"> <a href="https://www.hostinger.com/tutorials/drupal">Drupal</a></li><li class="h-mr-3 transition-all-3 letter-spacing-1px
+ hover-opacity-6"> <a href="https://www.hostinger.com/tutorials/email/">Email</a></li><li class="h-mr-3 transition-all-3 letter-spacing-1px
+ hover-opacity-6"> <a href="https://www.hostinger.com/tutorials/glossary/">Glossary</a></li></ul><div class="mr-auto d-flex align-items-center"><p>Topics</p> <i id="submenu-m-trigger" class="material-icons mb-0 cursor-pointer hover-opacity-6 navbar-toggler" data-target="#submenu-m-list" data-toggle="collapse" onclick="changeSubMenuIcon()">menu</i></div> <i onclick="toggleSearch()" class="material-icons ml-auto cursor-pointer"> search </i></div></div><div class="bg-white searchbox-holder holder-shadow" id="searchbox" style="display: none;"><div class="container d-flex align-items-center"><form method="get" action="https://www.hostinger.com/tutorials/" role="search" class="w-100"> <input class="h-pl-1 label text-content-grey w-100 border-0" id="s" name="s" type="text" placeholder="Type your keyword (vps, wordpress hosting, domain)" value=""></form> <i onclick="toggleSearch()" class="material-icons ml-auto cursor-pointer"> close </i></div></div> <script>var searchbox = document.getElementById("searchbox");
+    searchbox.style.display = "none";
+
+    function toggleSearch() {
+        var searchbox = document.getElementById("searchbox");
+
+        if (submenu.style.display === "none") {
+            submenu.classList.add("fade-in");
+            submenu.style.display = "block";
+            searchbox.style.display = "none";
+        } else {
+            submenu.style.display = "none";
+            searchbox.classList.add("fade-in");
+            searchbox.style.display = "block";
+        }
+    }
+
+    function changeSubMenuIcon(){
+        if(document.getElementById("submenu-m-trigger").innerText == "menu"){
+            document.getElementById("submenu-m-trigger").innerText = "close";
+        }
+        else{
+            document.getElementById("submenu-m-trigger").innerText = "menu";
+        }
+    }</script><div class="dark h-pt-3"><div class="container"><div class="row col-12 col-lg-9"><div class="text-h-primary label position-relative top-3rem"></div></div></div></div><div class="dark h-pt-5 h-pt-lg-0 h-pb-4"><div id="blog-post-container" class="container flex-column flex-lg-row d-flex position-relative"><div class="w-100"><div id="thumbnail-image" class="d-flex justify-content-center"> <noscript><img width="730" height="454" src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/06/how-to-use-php-to-insert-data-into-mysql-database.jpg" class="attachment-1110x454 size-1110x454 wp-post-image" alt="How to Use PHP to Insert Data Into MySQL Database" srcset="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/06/how-to-use-php-to-insert-data-into-mysql-database.jpg 900w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/06/how-to-use-php-to-insert-data-into-mysql-database-150x93.jpg 150w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/06/how-to-use-php-to-insert-data-into-mysql-database-300x187.jpg 300w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/06/how-to-use-php-to-insert-data-into-mysql-database-768x478.jpg 768w" sizes="(max-width: 730px) 100vw, 730px" /></noscript><img width="730" height="454" src="./How to Use PHP to Insert Data Into MySQL Database_files/how-to-use-php-to-insert-data-into-mysql-database.jpg" data-src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/06/how-to-use-php-to-insert-data-into-mysql-database.jpg" class="attachment-1110x454 size-1110x454 wp-post-image lazyloaded" alt="How to Use PHP to Insert Data Into MySQL Database" data-srcset="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/06/how-to-use-php-to-insert-data-into-mysql-database.jpg 900w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/06/how-to-use-php-to-insert-data-into-mysql-database-150x93.jpg 150w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/06/how-to-use-php-to-insert-data-into-mysql-database-300x187.jpg 300w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/06/how-to-use-php-to-insert-data-into-mysql-database-768x478.jpg 768w" data-sizes="(max-width: 730px) 100vw, 730px" sizes="(max-width: 730px) 100vw, 730px" srcset="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/06/how-to-use-php-to-insert-data-into-mysql-database.jpg 900w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/06/how-to-use-php-to-insert-data-into-mysql-database-150x93.jpg 150w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/06/how-to-use-php-to-insert-data-into-mysql-database-300x187.jpg 300w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/06/how-to-use-php-to-insert-data-into-mysql-database-768x478.jpg 768w"></div><div class="d-flex flex-column flex-lg-row"><div class="col-12 d-flex flex-row align-items-center justify-content-center flex-lg-column justify-content-lg-start
+ align-items-lg-start h-pt-4 h-pb-2 h-pt-4-lg h-pl-0-lg col-lg-1 order-1 order-lg-0 social-sticky"> <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.hostinger.com%2Ftutorials%2Fhow-to-use-php-to-insert-data-into-mysql-database" class="text-light-black hover-opacity-6" target="_blank" rel="nofollow noopener noreferrer"> <noscript><img src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/facebook.svg" class="h-pl-1 h-pr-1 h-p-0-lg h-pb-3-lg" alt="Facebook logo"></noscript><img src="./How to Use PHP to Insert Data Into MySQL Database_files/facebook.svg" data-src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/facebook.svg" class="h-pl-1 h-pr-1 h-p-0-lg h-pb-3-lg lazyloaded" alt="Facebook logo"> </a> <a href="https://twitter.com/intent/tweet?text=How%20to%20Use%20PHP%20to%20Insert%20Data%20Into%20MySQL%20Database&amp;url=https%3A%2F%2Fwww.hostinger.com%2Ftutorials%2Fhow-to-use-php-to-insert-data-into-mysql-database" class="text-light-black hover-opacity-6" target="_blank" rel="nofollow noopener noreferrer"> <noscript><img src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/twitter.svg" class="h-pl-1 h-pr-1 h-p-0-lg h-pb-3-lg" alt="Twitter logo"></noscript><img src="./How to Use PHP to Insert Data Into MySQL Database_files/twitter.svg" data-src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/twitter.svg" class="h-pl-1 h-pr-1 h-p-0-lg h-pb-3-lg ls-is-cached lazyloaded" alt="Twitter logo"> </a> <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.hostinger.com%2Ftutorials%2Fhow-to-use-php-to-insert-data-into-mysql-database" class="text-light-black hover-opacity-6" target="_blank" rel="nofollow noopener noreferrer"> <noscript><img src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/linkedin.svg" class="h-pl-1 h-pr-1 h-p-0-lg h-pb-3-lg" alt="LinkedIn logo"></noscript><img src="./How to Use PHP to Insert Data Into MySQL Database_files/linkedin.svg" data-src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/linkedin.svg" class="h-pl-1 h-pr-1 h-p-0-lg h-pb-3-lg ls-is-cached lazyloaded" alt="LinkedIn logo"> </a> <a href="mailto:?subject=How%20to%20Use%20PHP%20to%20Insert%20Data%20Into%20MySQL%20Database&amp;body=Article:%20https%3A%2F%2Fwww.hostinger.com%2Ftutorials%2Fhow-to-use-php-to-insert-data-into-mysql-database" class="text-light-black hover-opacity-6" target="_blank" rel="nofollow noopener noreferrer"> <noscript><img src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/email.svg" class="h-pl-1 h-pr-1 h-p-0-lg h-pb-3-lg" alt="Email icon"></noscript><img src="./How to Use PHP to Insert Data Into MySQL Database_files/email.svg" data-src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/email.svg" class="h-pl-1 h-pr-1 h-p-0-lg h-pb-3-lg ls-is-cached lazyloaded" alt="Email icon"> </a> <a onclick="copyToClipboard(&#39;https://www.hostinger.com/tutorials/how-to-use-php-to-insert-data-into-mysql-database&#39;);" class="text-light-black hover-opacity-6 cursor-pointer"> <noscript><img src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/link.svg" class="h-pl-1 h-pr-1 h-p-0-lg h-pb-3-lg" alt="Link icon"></noscript><img src="./How to Use PHP to Insert Data Into MySQL Database_files/link.svg" data-src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/link.svg" class="h-pl-1 h-pr-1 h-p-0-lg h-pb-3-lg ls-is-cached lazyloaded" alt="Link icon"> </a></div> <script>function copyToClipboard(str) {
+    var el = document.createElement('textarea');
+    el.value = str;
+    el.setAttribute('readonly', '');
+    el.style = {
+       position: 'absolute',
+       left: '-9999px'
+    };
+
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+}</script> <div id="post" class="col-12 col-lg-11 shadow-box h-p-2 h-pb-4 h-p-5-lg h-pb-10-lg order-0 order-lg-1 bg-white height-100p position-relative "><div class="d-flex label text-content-grey h-mb-3 flex-wrap"><p class="text-h-primary text-uppercase font-weight-bold h-mr-2 post-info"> <a href="https://www.hostinger.com/tutorials/php/"> PHP </a></p><div class=" d-flex align-items-center h-mr-2"> <i class="material-icons"> access_time </i><p class="ml-2 post-info"> February 4, 2019</p></div><div class="d-flex align-items-center h-mr-2"> <i class="material-icons"> hourglass_empty </i><p class="ml-2 post-info">6 min                                    Read</p></div><div class="d-flex align-items-center"> <i class="material-icons"> person_outline </i><p class="ml-2 post-info"> Tautvydas V.</p></div></div><h1>How to Use PHP to Insert Data Into MySQL Database</h1><p>In this tutorial, you will learn how to start managing a database from your <strong>PHP</strong> scripts. You will learn how to use <strong>PHP</strong> to <strong>INSERT</strong>&nbsp;into <strong>MySQL</strong> database. Before proceeding, you should check out our other tutorial which covers the most important step of working with PHP and databases – <a href="https://www.hostinger.com/tutorials/how-to-connect-php-to-mysql">connecting PHP to a database</a>.</p><h2>What you’ll need</h2><p>Before you begin this guide you’ll need the following:</p><ul><li>Access to your hosting control panel</li></ul><h2>Step 1 — Creating a table</h2><p>First of all, we have to create a table for your data. It is a very simple procedure that you can do with <strong>phpMyAdmin</strong>, which is located your hosting control panel. We already covered the process of creating MySQL database in <a href="https://www.hostinger.com/tutorials/how-to-connect-php-to-mysql">the previous tutorial</a>, so it will be skipped here.</p><p><noscript><img class="aligncenter" src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/03/hostinger-control-panel-phpmyadmin.png" alt="Hostinger Control Panel phpMyAdmin Icon" /></noscript><img class="aligncenter lazyloaded" src="./How to Use PHP to Insert Data Into MySQL Database_files/hostinger-control-panel-phpmyadmin.png" data-src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/03/hostinger-control-panel-phpmyadmin.png" alt="Hostinger Control Panel phpMyAdmin Icon"></p><p>After entering your phpMyAdmin page, you should see something similar to this:</p><p><noscript><img class="aligncenter" src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/03/hostinger-phpmyadmin-view.png" alt="phpmyadmin_main page" /></noscript><img class="aligncenter lazyloaded" src="./How to Use PHP to Insert Data Into MySQL Database_files/hostinger-phpmyadmin-view.webp" data-src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/03/hostinger-phpmyadmin-view.png" alt="phpmyadmin_main page"></p><p>We will create a table named <strong>Students</strong> for our database <strong>u266072517_name</strong>. You can create a new table by clicking <strong>Create Table</strong> button. After that, you will see this new page where you can enter all the needed information for your table:</p><p><noscript><img class="aligncenter" src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/03/hostinger-phpmy-admin-create-database.png" alt="phpmyadmin_setup" /></noscript><img class="lazyload aligncenter" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/03/hostinger-phpmy-admin-create-database.png" alt="phpmyadmin_setup"></p><p>This is the most simple setup that you can use for a table, for more information regarding the structure of table/database and what kind of settings you can use with those columns, refer to the official documentation of <a href="https://www.phpmyadmin.net/docs/" target="_blank" rel="nofollow noopener">phpMyAdmin</a>.</p><p>For now, here are a few simple explanations of the columns that we used:</p><ul><li><strong>Name</strong> – This is the name of your column. It will be displayed at the top of your table.</li><li><strong>Type</strong> – You can set a column type here. For example, we selected <strong>varchar</strong> because we need to enter a string type of name here (which has letters, not numbers).</li><li><strong>Length/Values</strong> – Used to specify the maximum length your entry in this column can have.</li><li><strong>Index</strong> – We used “Primary” index for our “ID” field. When creating a table, it is recommended to have one ID column. It is used to enumerate table entries and required when configuring table relationships. I also marked <strong>“A_I”</strong>, which means <strong>Auto Increment</strong>. This will automatically enumerate the entries (1,2,3,4…).</li></ul><p>Click <strong>Save</strong> and your table will be created.</p><h2>Step 2 — Writing PHP code to INSERT data into MySQL database</h2><h3>Option 1 – MySQLi Method</h3><p>First of all, you should establish a connection to a database based on our <a href="https://www.hostinger.com/tutorials/how-to-connect-php-to-mysql">previous tutorial</a>. After that is done, we can proceed with the SQL query <strong>INSERT</strong>. Here is a full example code with the basic connection and insertion methods:<br> <script src="./How to Use PHP to Insert Data Into MySQL Database_files/7f41dfcc42913cc44d658a60913b163f.js.download"></script><link rel="stylesheet" href="./How to Use PHP to Insert Data Into MySQL Database_files/gist-embed-123720f37c57ce9a8f29de081c38ed61.css"></p><div id="gist73625648" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-mysqli-insert-into-students" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-text ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-mysqli-insert-into-students-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-mysqli-insert-into-students-LC1" class="blob-code blob-code-inner js-file-line">&lt;?php</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-mysqli-insert-into-students-LC2" class="blob-code blob-code-inner js-file-line">$servername = "mysql.hostinger.co.uk";</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-mysqli-insert-into-students-LC3" class="blob-code blob-code-inner js-file-line">$database = "u266072517_name";</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-mysqli-insert-into-students-LC4" class="blob-code blob-code-inner js-file-line">$username = "u266072517_user";</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-mysqli-insert-into-students-LC5" class="blob-code blob-code-inner js-file-line">$password = "buystuffpwd";</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="file-mysqli-insert-into-students-LC6" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="file-mysqli-insert-into-students-LC7" class="blob-code blob-code-inner js-file-line">// Create connection</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="file-mysqli-insert-into-students-LC8" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="file-mysqli-insert-into-students-LC9" class="blob-code blob-code-inner js-file-line">$conn = mysqli_connect($servername, $username, $password, $database);</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="file-mysqli-insert-into-students-LC10" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="file-mysqli-insert-into-students-LC11" class="blob-code blob-code-inner js-file-line">// Check connection</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="file-mysqli-insert-into-students-LC12" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="file-mysqli-insert-into-students-LC13" class="blob-code blob-code-inner js-file-line">if (!$conn) {</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="file-mysqli-insert-into-students-LC14" class="blob-code blob-code-inner js-file-line">      die("Connection failed: " . mysqli_connect_error());</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="file-mysqli-insert-into-students-LC15" class="blob-code blob-code-inner js-file-line">}</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="file-mysqli-insert-into-students-LC16" class="blob-code blob-code-inner js-file-line"> </td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="file-mysqli-insert-into-students-LC17" class="blob-code blob-code-inner js-file-line">echo "Connected successfully";</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L18" class="blob-num js-line-number" data-line-number="18"></td>
+        <td id="file-mysqli-insert-into-students-LC18" class="blob-code blob-code-inner js-file-line"> </td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L19" class="blob-num js-line-number" data-line-number="19"></td>
+        <td id="file-mysqli-insert-into-students-LC19" class="blob-code blob-code-inner js-file-line">$sql = "INSERT INTO Students (name, lastname, email) VALUES ('Thom', 'Vial', 'thom.v@some.com')";</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L20" class="blob-num js-line-number" data-line-number="20"></td>
+        <td id="file-mysqli-insert-into-students-LC20" class="blob-code blob-code-inner js-file-line">if (mysqli_query($conn, $sql)) {</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L21" class="blob-num js-line-number" data-line-number="21"></td>
+        <td id="file-mysqli-insert-into-students-LC21" class="blob-code blob-code-inner js-file-line">      echo "New record created successfully";</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L22" class="blob-num js-line-number" data-line-number="22"></td>
+        <td id="file-mysqli-insert-into-students-LC22" class="blob-code blob-code-inner js-file-line">} else {</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L23" class="blob-num js-line-number" data-line-number="23"></td>
+        <td id="file-mysqli-insert-into-students-LC23" class="blob-code blob-code-inner js-file-line">      echo "Error: " . $sql . "&lt;br&gt;" . mysqli_error($conn);</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L24" class="blob-num js-line-number" data-line-number="24"></td>
+        <td id="file-mysqli-insert-into-students-LC24" class="blob-code blob-code-inner js-file-line">}</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L25" class="blob-num js-line-number" data-line-number="25"></td>
+        <td id="file-mysqli-insert-into-students-LC25" class="blob-code blob-code-inner js-file-line">mysqli_close($conn);</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L26" class="blob-num js-line-number" data-line-number="26"></td>
+        <td id="file-mysqli-insert-into-students-LC26" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-mysqli-insert-into-students-L27" class="blob-num js-line-number" data-line-number="27"></td>
+        <td id="file-mysqli-insert-into-students-LC27" class="blob-code blob-code-inner js-file-line">?&gt;</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/domantasg/7f41dfcc42913cc44d658a60913b163f/raw/73884daf6428d57aa52fc27c8947478f38bd2f22/MySQLi%20INSERT%20INTO%20Students%20" style="float:right">view raw</a>
+        <a href="https://gist.github.com/domantasg/7f41dfcc42913cc44d658a60913b163f#file-mysqli-insert-into-students">MySQLi INSERT INTO Students </a>
+        hosted with <img draggable="false" class="emoji" alt="❤" src="./How to Use PHP to Insert Data Into MySQL Database_files/2764.svg"> by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<br> So the first part of the code (<strong>3 – 18</strong> lines) is meant for the actual connection to the database. We will not go through this part again, if you wish to know what each line of code means, check out our previous <a href="https://www.hostinger.com/tutorials/how-to-connect-php-to-mysql">how to connect to a database tutorial</a>.<p></p><p>Let’s start with line number <strong>19</strong>:<br> <script src="./How to Use PHP to Insert Data Into MySQL Database_files/2466c24b677548d6fd6514d1fa212b6c.js.download"></script><link rel="stylesheet" href="./How to Use PHP to Insert Data Into MySQL Database_files/gist-embed-123720f37c57ce9a8f29de081c38ed61.css"></p><div id="gist73625716" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-insert-into-students" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-text ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-insert-into-students-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-insert-into-students-LC1" class="blob-code blob-code-inner js-file-line">$sql = "INSERT INTO Students (name, lastname, email) VALUES ('Thom', 'Vial', 'thom.v@some.com')";</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/domantasg/2466c24b677548d6fd6514d1fa212b6c/raw/6298a385039a18800fcb12cec07aff0059d17579/INSERT%20INTO%20Students" style="float:right">view raw</a>
+        <a href="https://gist.github.com/domantasg/2466c24b677548d6fd6514d1fa212b6c#file-insert-into-students">INSERT INTO Students</a>
+        hosted with <img draggable="false" class="emoji" alt="❤" src="./How to Use PHP to Insert Data Into MySQL Database_files/2764.svg"> by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<br> This is the most important line of our code, it does everything we want to learn in this tutorial – inserts data into MySQL database. The <strong>INSERT INTO</strong> is a statement which adds data into the specified database table. In our example, we are adding data to the table <strong>Students</strong>.<p></p><p>Going further, between the brackets, we have table columns specified to which we want to add the values: <strong>(name, lastname, email)</strong>. Data will be added in the specified order. If we wrote <strong>(email, lastname, name)</strong>, values would be added in a different order.</p><p>So next part is <strong>VALUES</strong> statement. Here we specify our values to the previously specified columns. That way, each column represents a specific value. For example, in our case it would be like this: <strong>name = Thom, lastname = Vial, email = thom.v@some.com</strong>.</p><p>Another thing worth mentioning is that we just ran an <strong>SQL query</strong> using PHP code, SQL queries must be set between the quotes. In our example, everything between quotes and going after <code>$sql =</code> is an SQL query.</p><p>Next part of the code (<strong>20 – 22</strong> lines) checks if our query was successful:<br> <script src="./How to Use PHP to Insert Data Into MySQL Database_files/dc4ce6d0b82e5516f9118690854d843f.js.download"></script><link rel="stylesheet" href="./How to Use PHP to Insert Data Into MySQL Database_files/gist-embed-123720f37c57ce9a8f29de081c38ed61.css"></p><div id="gist73625799" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-check-if-connection-is-successful" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-text ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-check-if-connection-is-successful-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-check-if-connection-is-successful-LC1" class="blob-code blob-code-inner js-file-line">if (mysqli_query($conn, $sql)) {</td>
+      </tr>
+      <tr>
+        <td id="file-check-if-connection-is-successful-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-check-if-connection-is-successful-LC2" class="blob-code blob-code-inner js-file-line">     echo "New record created successfully";</td>
+      </tr>
+      <tr>
+        <td id="file-check-if-connection-is-successful-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-check-if-connection-is-successful-LC3" class="blob-code blob-code-inner js-file-line">}</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/domantasg/dc4ce6d0b82e5516f9118690854d843f/raw/d3d4e14344b14fd1517ca63e73a2436840312a1f/Check%20if%20Connection%20is%20Successful%20" style="float:right">view raw</a>
+        <a href="https://gist.github.com/domantasg/dc4ce6d0b82e5516f9118690854d843f#file-check-if-connection-is-successful">Check if Connection is Successful </a>
+        hosted with <img draggable="false" class="emoji" alt="❤" src="./How to Use PHP to Insert Data Into MySQL Database_files/2764.svg"> by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<br> It simply displays a success message if the query which we ran was successful.<p></p><p>And the final part (<strong>22 – 24</strong> lines) displays a different message in case our query wasn’t successful:<br> <script src="./How to Use PHP to Insert Data Into MySQL Database_files/f4acb2898d54a56b31613facad5205a3.js.download"></script><link rel="stylesheet" href="./How to Use PHP to Insert Data Into MySQL Database_files/gist-embed-123720f37c57ce9a8f29de081c38ed61.css"></p><div id="gist73625870" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-if-query-is-unsuccessful" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-text ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-if-query-is-unsuccessful-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-if-query-is-unsuccessful-LC1" class="blob-code blob-code-inner js-file-line">else {</td>
+      </tr>
+      <tr>
+        <td id="file-if-query-is-unsuccessful-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-if-query-is-unsuccessful-LC2" class="blob-code blob-code-inner js-file-line">     echo "Error: " . $sql . "&lt;br&gt;" . mysqli_error($conn);</td>
+      </tr>
+      <tr>
+        <td id="file-if-query-is-unsuccessful-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-if-query-is-unsuccessful-LC3" class="blob-code blob-code-inner js-file-line">}</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/domantasg/f4acb2898d54a56b31613facad5205a3/raw/6692e6f0554254f8f5ee3e31976f4e6354e998ee/If%20query%20is%20unsuccessful%20" style="float:right">view raw</a>
+        <a href="https://gist.github.com/domantasg/f4acb2898d54a56b31613facad5205a3#file-if-query-is-unsuccessful">If query is unsuccessful </a>
+        hosted with <img draggable="false" class="emoji" alt="❤" src="./How to Use PHP to Insert Data Into MySQL Database_files/2764.svg"> by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<br> It will provide us an error message in case something is wrong.<p></p><h3>Option 2 – PHP Data Object (PDO) Method</h3><p>As with the previous example, we need a connection to the database first which is done by creating a new PDO object – the <a href="https://www.hostinger.com/tutorials/how-to-connect-php-to-mysql">previous tutorial</a> will show you how. As the connection to the MySQL database is a PDO object, you must use various PDO ‘methods’ (any function that is part of any object) to prepare and run queries. Methods of objects are called like this:<br> <script src="./How to Use PHP to Insert Data Into MySQL Database_files/294559090a39fee10e5bc6663e71f41b.js.download"></script><link rel="stylesheet" href="./How to Use PHP to Insert Data Into MySQL Database_files/gist-embed-123720f37c57ce9a8f29de081c38ed61.css"></p><div id="gist73626006" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-calling-object" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-text ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-calling-object-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-calling-object-LC1" class="blob-code blob-code-inner js-file-line">$the_Object-&gt;the_Method();</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/domantasg/294559090a39fee10e5bc6663e71f41b/raw/1c1d70c253acb1a04fa604bc7d2713f1832fe07e/Calling%20Object" style="float:right">view raw</a>
+        <a href="https://gist.github.com/domantasg/294559090a39fee10e5bc6663e71f41b#file-calling-object">Calling Object</a>
+        hosted with <img draggable="false" class="emoji" alt="❤" src="./How to Use PHP to Insert Data Into MySQL Database_files/2764.svg"> by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<p></p><p>PDO allows you to ‘prepare’ SQL code before it is executed. The SQL query is evaluated and ‘corrected’ before being run. A simplified SQL injection attack could be done just by typing SQL code in to a field on a form. For example:<br> <script src="./How to Use PHP to Insert Data Into MySQL Database_files/d44e243c52527736b011e0f10bf4ee2c.js.download"></script><link rel="stylesheet" href="./How to Use PHP to Insert Data Into MySQL Database_files/gist-embed-123720f37c57ce9a8f29de081c38ed61.css"></p><div id="gist73626115" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-sql-attack-example" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-text ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-sql-attack-example-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-sql-attack-example-LC1" class="blob-code blob-code-inner js-file-line">// User writes this in the username field of a login form</td>
+      </tr>
+      <tr>
+        <td id="file-sql-attack-example-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-sql-attack-example-LC2" class="blob-code blob-code-inner js-file-line">john"; DROP DATABASE user_table;</td>
+      </tr>
+      <tr>
+        <td id="file-sql-attack-example-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-sql-attack-example-LC3" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-sql-attack-example-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-sql-attack-example-LC4" class="blob-code blob-code-inner js-file-line">// The final query becomes this</td>
+      </tr>
+      <tr>
+        <td id="file-sql-attack-example-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-sql-attack-example-LC5" class="blob-code blob-code-inner js-file-line">"SELECT * FROM user_table WHERE username = john"; DROP DATABASE user_table;</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/domantasg/d44e243c52527736b011e0f10bf4ee2c/raw/68ea05126ef05152d802d24fce8caa1af99b2978/SQL%20Attack%20Example" style="float:right">view raw</a>
+        <a href="https://gist.github.com/domantasg/d44e243c52527736b011e0f10bf4ee2c#file-sql-attack-example">SQL Attack Example</a>
+        hosted with <img draggable="false" class="emoji" alt="❤" src="./How to Use PHP to Insert Data Into MySQL Database_files/2764.svg"> by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<br> As there is syntactically correct SQL code, the semi-colon makes <strong>DROP DATABASE user_table</strong>&nbsp;a new SQL query, and your user table is deleted. Prepared statements do not allow the <strong>“</strong> and <strong>;</strong> characters to end the original query and the malicious instruction <strong>DROP DATABASE</strong> will never be executed.<br><div class="protip text-light-black light-red-box"><p>You should <strong>always</strong> use prepared statements when sending or receiving data from the database with PDO.</p></div> To use prepared statements, you must write a new variable that calls the <strong>prepare()</strong>&nbsp;method of the database object.<p></p><p>On to the correct code:<br> <script src="./How to Use PHP to Insert Data Into MySQL Database_files/58f84e1a0485a33b8bc0acd9b7b5180c.js.download"></script><link rel="stylesheet" href="./How to Use PHP to Insert Data Into MySQL Database_files/gist-embed-123720f37c57ce9a8f29de081c38ed61.css"></p><div id="gist73626250" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-pdo-example" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-text ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-pdo-example-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-pdo-example-LC1" class="blob-code blob-code-inner js-file-line">&lt;?php</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-pdo-example-LC2" class="blob-code blob-code-inner js-file-line">$servername = "mysql.hostinger.com";</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-pdo-example-LC3" class="blob-code blob-code-inner js-file-line">$database = "u266072517_name"; </td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-pdo-example-LC4" class="blob-code blob-code-inner js-file-line">$username = "u266072517_user";</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-pdo-example-LC5" class="blob-code blob-code-inner js-file-line">$password = "buystuffpwd";</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="file-pdo-example-LC6" class="blob-code blob-code-inner js-file-line">$sql = "mysql:host=$servername;dbname=$database;";</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="file-pdo-example-LC7" class="blob-code blob-code-inner js-file-line">$dsn_Options = [PDO::ATTR_ERRMODE =&gt; PDO::ERRMODE_EXCEPTION];</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="file-pdo-example-LC8" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="file-pdo-example-LC9" class="blob-code blob-code-inner js-file-line">// Create a new connection to the MySQL database using PDO, $my_Db_Connection is an object</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="file-pdo-example-LC10" class="blob-code blob-code-inner js-file-line">try { </td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="file-pdo-example-LC11" class="blob-code blob-code-inner js-file-line">  $my_Db_Connection = new PDO($sql, $username, $password, $dsn_Options);</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="file-pdo-example-LC12" class="blob-code blob-code-inner js-file-line">  echo "Connected successfully";</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="file-pdo-example-LC13" class="blob-code blob-code-inner js-file-line">} catch (PDOException $error) {</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="file-pdo-example-LC14" class="blob-code blob-code-inner js-file-line">  echo 'Connection error: ' . $error-&gt;getMessage();</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="file-pdo-example-LC15" class="blob-code blob-code-inner js-file-line">}</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="file-pdo-example-LC16" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="file-pdo-example-LC17" class="blob-code blob-code-inner js-file-line">// Set the variables for the person we want to add to the database</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L18" class="blob-num js-line-number" data-line-number="18"></td>
+        <td id="file-pdo-example-LC18" class="blob-code blob-code-inner js-file-line">$first_Name = "Thom";</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L19" class="blob-num js-line-number" data-line-number="19"></td>
+        <td id="file-pdo-example-LC19" class="blob-code blob-code-inner js-file-line">$last_Name = "Vial";</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L20" class="blob-num js-line-number" data-line-number="20"></td>
+        <td id="file-pdo-example-LC20" class="blob-code blob-code-inner js-file-line">$email = "thom.v@some.com";</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L21" class="blob-num js-line-number" data-line-number="21"></td>
+        <td id="file-pdo-example-LC21" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L22" class="blob-num js-line-number" data-line-number="22"></td>
+        <td id="file-pdo-example-LC22" class="blob-code blob-code-inner js-file-line">// Here we create a variable that calls the prepare() method of the database object</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L23" class="blob-num js-line-number" data-line-number="23"></td>
+        <td id="file-pdo-example-LC23" class="blob-code blob-code-inner js-file-line">// The SQL query you want to run is entered as the parameter, and placeholders are written like this :placeholder_name</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L24" class="blob-num js-line-number" data-line-number="24"></td>
+        <td id="file-pdo-example-LC24" class="blob-code blob-code-inner js-file-line">$my_Insert_Statement = $my_Db_Connection-&gt;prepare("INSERT INTO Students (name, lastname, email) VALUES (:first_name, :last_name, :email)");</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L25" class="blob-num js-line-number" data-line-number="25"></td>
+        <td id="file-pdo-example-LC25" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L26" class="blob-num js-line-number" data-line-number="26"></td>
+        <td id="file-pdo-example-LC26" class="blob-code blob-code-inner js-file-line">// Now we tell the script which variable each placeholder actually refers to using the bindParam() method</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L27" class="blob-num js-line-number" data-line-number="27"></td>
+        <td id="file-pdo-example-LC27" class="blob-code blob-code-inner js-file-line">// First parameter is the placeholder in the statement above - the second parameter is a variable that it should refer to</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L28" class="blob-num js-line-number" data-line-number="28"></td>
+        <td id="file-pdo-example-LC28" class="blob-code blob-code-inner js-file-line">$my_Insert_Statement-&gt;bindParam(:first_name, $first_Name);</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L29" class="blob-num js-line-number" data-line-number="29"></td>
+        <td id="file-pdo-example-LC29" class="blob-code blob-code-inner js-file-line">$my_Insert_Statement-&gt;bindParam(:last_name, $last_Name);</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L30" class="blob-num js-line-number" data-line-number="30"></td>
+        <td id="file-pdo-example-LC30" class="blob-code blob-code-inner js-file-line">$my_Insert_Statement-&gt;bindParam(:email, $email);</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L31" class="blob-num js-line-number" data-line-number="31"></td>
+        <td id="file-pdo-example-LC31" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L32" class="blob-num js-line-number" data-line-number="32"></td>
+        <td id="file-pdo-example-LC32" class="blob-code blob-code-inner js-file-line">// Execute the query using the data we just defined</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L33" class="blob-num js-line-number" data-line-number="33"></td>
+        <td id="file-pdo-example-LC33" class="blob-code blob-code-inner js-file-line">// The execute() method returns TRUE if it is successful and FALSE if it is not, allowing you to write your own messages here</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L34" class="blob-num js-line-number" data-line-number="34"></td>
+        <td id="file-pdo-example-LC34" class="blob-code blob-code-inner js-file-line">if ($my_Insert_Statement-&gt;execute()) {</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L35" class="blob-num js-line-number" data-line-number="35"></td>
+        <td id="file-pdo-example-LC35" class="blob-code blob-code-inner js-file-line">  echo "New record created successfully";</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L36" class="blob-num js-line-number" data-line-number="36"></td>
+        <td id="file-pdo-example-LC36" class="blob-code blob-code-inner js-file-line">} else {</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L37" class="blob-num js-line-number" data-line-number="37"></td>
+        <td id="file-pdo-example-LC37" class="blob-code blob-code-inner js-file-line">  echo "Unable to create record";</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L38" class="blob-num js-line-number" data-line-number="38"></td>
+        <td id="file-pdo-example-LC38" class="blob-code blob-code-inner js-file-line">}</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L39" class="blob-num js-line-number" data-line-number="39"></td>
+        <td id="file-pdo-example-LC39" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L40" class="blob-num js-line-number" data-line-number="40"></td>
+        <td id="file-pdo-example-LC40" class="blob-code blob-code-inner js-file-line">// At this point you can change the data of the variables and execute again to add more data to the database</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L41" class="blob-num js-line-number" data-line-number="41"></td>
+        <td id="file-pdo-example-LC41" class="blob-code blob-code-inner js-file-line">$first_Name = "John";</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L42" class="blob-num js-line-number" data-line-number="42"></td>
+        <td id="file-pdo-example-LC42" class="blob-code blob-code-inner js-file-line">$last_Name = "Smith";</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L43" class="blob-num js-line-number" data-line-number="43"></td>
+        <td id="file-pdo-example-LC43" class="blob-code blob-code-inner js-file-line">$email = "john.smith@email.com";</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L44" class="blob-num js-line-number" data-line-number="44"></td>
+        <td id="file-pdo-example-LC44" class="blob-code blob-code-inner js-file-line">$my_Insert_Statement-&gt;execute();</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L45" class="blob-num js-line-number" data-line-number="45"></td>
+        <td id="file-pdo-example-LC45" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L46" class="blob-num js-line-number" data-line-number="46"></td>
+        <td id="file-pdo-example-LC46" class="blob-code blob-code-inner js-file-line">// Execute again now that the variables have changed</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L47" class="blob-num js-line-number" data-line-number="47"></td>
+        <td id="file-pdo-example-LC47" class="blob-code blob-code-inner js-file-line">if ($my_Insert_Statement-&gt;execute()) {</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L48" class="blob-num js-line-number" data-line-number="48"></td>
+        <td id="file-pdo-example-LC48" class="blob-code blob-code-inner js-file-line">  echo "New record created successfully";</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L49" class="blob-num js-line-number" data-line-number="49"></td>
+        <td id="file-pdo-example-LC49" class="blob-code blob-code-inner js-file-line">} else {</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L50" class="blob-num js-line-number" data-line-number="50"></td>
+        <td id="file-pdo-example-LC50" class="blob-code blob-code-inner js-file-line">  echo "Unable to create record";</td>
+      </tr>
+      <tr>
+        <td id="file-pdo-example-L51" class="blob-num js-line-number" data-line-number="51"></td>
+        <td id="file-pdo-example-LC51" class="blob-code blob-code-inner js-file-line">}</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/domantasg/58f84e1a0485a33b8bc0acd9b7b5180c/raw/581564f6897bd3b552d7ba21c0bbf7d080a7bdc7/PDO%20Example" style="float:right">view raw</a>
+        <a href="https://gist.github.com/domantasg/58f84e1a0485a33b8bc0acd9b7b5180c#file-pdo-example">PDO Example</a>
+        hosted with <img draggable="false" class="emoji" alt="❤" src="./How to Use PHP to Insert Data Into MySQL Database_files/2764.svg"> by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<br> On lines 28, 29 and 30, we use the <strong>bindParam()</strong> method of the database object. There is also the <strong>bindValue()&nbsp;</strong>method which is very different.<p></p><ul><li><strong>bindParam() –&nbsp;</strong>This method evaluates data when the <strong>execute()</strong> method is reached. The first time the script reaches an <strong>execute()</strong> method it sees that <strong>$first_Name</strong> corresponds to “Thom”, binds that value and runs the query. When the script reaches the second <strong>execute()</strong> method, it sees that <strong>$first_Name</strong> now corresponds to “John”, binds that value and runs the query again with the new values. The important thing to remember is that we defined the query once and reused it with different data at different points in the script.</li><li><strong>bindValue() –&nbsp;</strong>This method evaluates the data as soon as <strong>bindValue()</strong> is reached. As the value of <strong>$first_Name</strong> was set to “Thom” when the <strong>bindValue()</strong> was reached, it will be used every time an<strong> execute()</strong> method is called for <strong>$my_Insert_Statement</strong>.</li></ul><p>Notice that we reuse the <strong>$first_Name</strong> variable and give it a new value the second time. If you check your database after running this script, you have both of the defined names, despite the <strong>$first_Name</strong> variable equalling “John” at the end of the script. Remember that PHP evaluates an entire script before actually running it.</p><p>If you update the script to replace <strong>bindParam</strong> with <strong>bindValue</strong>, you will insert into MySQL “Thom Vial” twice in the database and John Smith will be ignored.</p><h2>Step 3 — Confirming the success and solving common issues</h2><p>If the query that we ran and insert into MySQL database was successful, we will see the following message:</p><p><noscript><img class="alignnone" src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/03/script_success.png" alt="insert into mysql successful " width="258" height="77" /></noscript><img class="lazyload alignnone" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20258%2077%22%3E%3C/svg%3E" data-src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/03/script_success.png" alt="insert into mysql successful " width="258" height="77"></p><h3>Troubleshooting common errors</h3><h4><strong>MySQLi</strong></h4><p>In any other case, an error message will be displayed instead. For example, let’s make one syntax error in our code and we get this:</p><p><noscript><img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/03/script_fail.png" alt="fail message" /></noscript><img class="lazyload" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/03/script_fail.png" alt="fail message"></p><p>As we see, the first part of the code is good, the connection was established successfully, but our SQL query ran into a wall.</p><pre class="theme:classic striped:false marking:false ranges:false wrap:false scroll:true lang:default highlight:0 decode:true">"Error: INSERT INTO Students {name, lastname, email} VALUES ('Thom', 'Vial', 'thom.v@some.com')
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '{name, lastname, email} VALUES ('Thom', 'Vial', 'thom.v@some.com')' at line 1"
+</pre><p>There is a syntax error which unfortunately, caused our script to fail. The error was here:<br> <script src="./How to Use PHP to Insert Data Into MySQL Database_files/110fe876de3d3a8a1eb1c54199829b3f.js.download"></script><link rel="stylesheet" href="./How to Use PHP to Insert Data Into MySQL Database_files/gist-embed-123720f37c57ce9a8f29de081c38ed61.css"></p><div id="gist73626796" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-insert-into-students" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-text ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-insert-into-students-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-insert-into-students-LC1" class="blob-code blob-code-inner js-file-line">$sql = "INSERT INTO Students {name, lastname, email} VALUES ('Thom', 'Vial', 'thom.v@some.com')";</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/domantasg/110fe876de3d3a8a1eb1c54199829b3f/raw/ec57cb47c2511e4d1b208525608f97310a70735c/INSERT%20INTO%20Students" style="float:right">view raw</a>
+        <a href="https://gist.github.com/domantasg/110fe876de3d3a8a1eb1c54199829b3f#file-insert-into-students">INSERT INTO Students</a>
+        hosted with <img draggable="false" class="emoji" alt="❤" src="./How to Use PHP to Insert Data Into MySQL Database_files/2764.svg"> by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<br> As you can see, we used curly brackets instead of the simple ones. This is not correct and caused our script to throw a syntax error.<p></p><h4>PDO</h4><p>On line 7 of the PDO connection, the error mode is set to ‘display all exceptions’. If this was left out of the script and the query failed, you would not received any error messages. With exceptions enabled, the specific problem is shown. This should generally only be used when developing a script as it can expose the database and table names, which you may prefer to hide from anyone who is trying to maliciously access your data. In the case above where curly braces were used instead of brackets, the error looks similar to this:</p><pre class="theme:classic striped:false marking:false ranges:false wrap:false scroll:true lang:default highlight:0 decode:true">Fatal error: Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; &lt;code&gt;check the manual that corresponds to your MySQL server version for the right syntax to use near '{name, lastname, email} VALUES ('Thom', 'Vial', 'thom.v@some.com')' at line 1"&lt;/code&gt;</pre><p><strong>Other possible problems you might run into:</strong></p><ul><li>Incorrect columns specified (non-existent columns or a spelling mistake).</li><li>One type of value being assigned to another type of column. For example, if we tried to assign a number <strong>47</strong> into a <strong>Name</strong> column, we would get an error because it is supposed to be a string value. But if we assigned a number between quotes, for example, <strong>“47”</strong>, that would work because our number would be assigned as a string to the column.</li><li>Trying to enter data into a table which does not exist or making a spelling mistake of the table.</li></ul><p>All of those errors can be fixed easily by following the error message guidelines or <a href="https://www.hostinger.com/tutorials/website/how-to-check-your-website-error-log">checking error_log</a>.</p><p>After a successful data entry, we should see it added to our database. Here is an example of the table to which we added our data when viewed from <strong>phpMyAdmin</strong>.</p><p><noscript><img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/03/hositnger-phpmyadmin-php-insert-into-mysql-final.png" alt="phpMyAdmin Data inserted into MySQL using PHP" /></noscript><img class="lazyload" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/03/hositnger-phpmyadmin-php-insert-into-mysql-final.png" alt="phpMyAdmin Data inserted into MySQL using PHP"></p><h2>Conclusion</h2><p>In this tutorial, you have learned how to use <strong>PHP to INSERT data into MySQL</strong> database using <strong>MySQLi</strong> and <strong>PDO</strong>. You have also learned how to troubleshoot common connection errors. Knowing how to use PHP to add data into MySQL database is useful whether you are learning how to code or building your website.</p></div></div><div id="the-author-section" class="col-12 col-lg-11 offset-lg-1 shadow-box bg-white h-p-3 h-pb-4 h-pl-4 text-light-black d-flex flex-column h-mt-4  "><h3 class="font-weight-bold h-mb-1">The Author</h3><div class="d-flex align-items-center"><div class="h-mr-2 height-65px width-65px"> <noscript><img src="https://secure.gravatar.com/avatar/9243691c8a9cd5802a38a4dbadba1739?s=96&d=mm&r=g"
+ class="border-radius-50p min-width-65px"
+ alt="Author"></noscript><img src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/9243691c8a9cd5802a38a4dbadba1739?s=96&amp;d=mm&amp;r=g" class="lazyload border-radius-50p min-width-65px" alt="Author"></div><div class="d-flex flex-column label"><p class="mb-1">Tautvydas V. / <span class="text-h-primary"> <a class="links-hover" href="https://www.hostinger.com/tutorials/author/tautvydas/"> @tautvydas </a> </span></p><p>Tautvydas started his career as a technical support agent and now walks the path of full-stack development. He strives to produce top-notch features, improvements, and outstanding user experience with every line of code. In his free time, Tautvydas likes to travel and play old school video games.</p></div></div></div></div><div class="stories-margin col-12 col-lg-3 h-pl-0 ml-lg-4 pr-lg-4 d-lg-flex flex-column order-2"><h4 class="font-weight-bold text-light-black h-mb-3 text-center text-lg-left"> Featured tutorials</h4><div class="d-flex flex-column bg-white shadow-box h-mb-3"><div class="height-15rem"> <a class="height-inherit" href="https://www.hostinger.com/tutorials/how-to-make-a-website"> <noscript><img
+ src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/11/how-to-make-a-website-1.jpg"
+ class="h-mb-3 h-p-0 min-width-100p object-fit-cover"
+ alt="How to Make a Website &#8211; The All-in-One Guide"
+ /></noscript><img src="./How to Use PHP to Insert Data Into MySQL Database_files/how-to-make-a-website-1.jpg" data-src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/11/how-to-make-a-website-1.jpg" class="h-mb-3 h-p-0 min-width-100p object-fit-cover lazyloaded" alt="How to Make a Website – The All-in-One Guide"> </a></div><div class="h-pr-3 h-pb-3 h-pl-3 d-flex flex-column h-mt-2"><p class="label text-content-grey h-mb-1"> 14 Nov • <a class="text-h-primary text-uppercase font-weight-bold links-hover" href="https://www.hostinger.com/tutorials/guides-drupal"> Drupal </a> <a class="text-h-primary text-uppercase font-weight-bold links-hover" href="https://www.hostinger.com/tutorials/joomla-tutorials/"> Joomla! </a> <a class="text-h-primary text-uppercase font-weight-bold links-hover" href="https://www.hostinger.com/tutorials/wordpress/"> WordPress </a></p><h3 class="font-weight-bold text-light-black h-mb-3"> <a href="https://www.hostinger.com/tutorials/how-to-make-a-website"> How to Make a Website – The All-in-One Guide </a></h3> <a class="subtitle text-h-primary font-weight-bold hover-text-primary-400 transition-all-3" href="https://www.hostinger.com/tutorials/how-to-make-a-website"> Read More →</a></div></div><div class="d-flex flex-column bg-white shadow-box h-mb-3"><div class="height-15rem"> <a class="height-inherit" href="https://www.hostinger.com/tutorials/how-to-start-a-blog"> <noscript><img
+ src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/08/how-to-start-a-blog-1024x359.jpg"
+ class="h-mb-3 h-p-0 min-width-100p object-fit-cover"
+ alt="How to Start a Blog &#8211; The Complete Guide"
+ /></noscript><img src="./How to Use PHP to Insert Data Into MySQL Database_files/how-to-start-a-blog-1024x359.jpg" data-src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/08/how-to-start-a-blog-1024x359.jpg" class="h-mb-3 h-p-0 min-width-100p object-fit-cover lazyloaded" alt="How to Start a Blog – The Complete Guide"> </a></div><div class="h-pr-3 h-pb-3 h-pl-3 d-flex flex-column h-mt-2"><p class="label text-content-grey h-mb-1"> 21 Aug • <a class="text-h-primary text-uppercase font-weight-bold links-hover" href="https://www.hostinger.com/tutorials/website/"> Website </a></p><h3 class="font-weight-bold text-light-black h-mb-3"> <a href="https://www.hostinger.com/tutorials/how-to-start-a-blog"> How to Start a Blog – The Complete Guide </a></h3> <a class="subtitle text-h-primary font-weight-bold hover-text-primary-400 transition-all-3" href="https://www.hostinger.com/tutorials/how-to-start-a-blog"> Read More →</a></div></div><div class="d-flex flex-column bg-white shadow-box h-mb-3"><div class="height-15rem"> <a class="height-inherit" href="https://www.hostinger.com/tutorials/how-to-buy-a-domain-name"> <noscript><img
+ src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/07/how-to-buy-a-domain-name.jpg"
+ class="h-mb-3 h-p-0 min-width-100p object-fit-cover"
+ alt="How to Buy a Domain Name &#8211; A Simple Guide"
+ /></noscript><img src="./How to Use PHP to Insert Data Into MySQL Database_files/how-to-buy-a-domain-name.jpg" data-src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/07/how-to-buy-a-domain-name.jpg" class="h-mb-3 h-p-0 min-width-100p object-fit-cover lazyloaded" alt="How to Buy a Domain Name – A Simple Guide"> </a></div><div class="h-pr-3 h-pb-3 h-pl-3 d-flex flex-column h-mt-2"><p class="label text-content-grey h-mb-1"> 12 Jul • <a class="text-h-primary text-uppercase font-weight-bold links-hover" href="https://www.hostinger.com/tutorials/domain/"> Domain </a></p><h3 class="font-weight-bold text-light-black h-mb-3"> <a href="https://www.hostinger.com/tutorials/how-to-buy-a-domain-name"> How to Buy a Domain Name – A Simple Guide </a></h3> <a class="subtitle text-h-primary font-weight-bold hover-text-primary-400 transition-all-3" href="https://www.hostinger.com/tutorials/how-to-buy-a-domain-name"> Read More →</a></div></div></div></div></div><div class="bg-white h-pt-10 h-pb-10"><div class="container"><div class="d-flex flex-column flex-sm-row align-items-center justify-content-between h-mb-5"><h3 class="h2-style font-weight-bold"> Related tutorials</h3></div><div class="row"><div class="d-flex flex-column col-12 col-sm-8 offset-sm-2 offset-md-0 col-md-6 col-lg-4 h-mb-3" id="post-17424"><div class="bg-white shadow-box"><div class="col-12 h-p-0 height-20rem"> <a class="height-inherit" href="https://www.hostinger.com/tutorials/what-is-php/"> <noscript><img class="width-100p object-fit-cover" src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/no_image.jpg"/></noscript><img class="lazyload width-100p object-fit-cover" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/no_image.jpg"> </a></div><div class="d-flex flex-column h-pt-2 h-pl-3 h-pb-3 h-pr-3"><div class="d-flex justify-content-between h-mb-1"><p class="label text-content-grey"> 30 Apr • <a class="text-h-primary text-uppercase font-weight-bold links-hover" href="https://www.hostinger.com/tutorials/glossary/"> Glossary </a> <a class="text-h-primary text-uppercase font-weight-bold links-hover" href="https://www.hostinger.com/tutorials/php/"> PHP </a></p></div><h3 class="h-mb-3 font-weight-bold height-8rem"> <a href="https://www.hostinger.com/tutorials/what-is-php/"> What is PHP? A Guide For Beginners </a></h3> <a class="subtitle text-h-primary font-weight-bold hover-text-primary-400 transition-all-3" href="https://www.hostinger.com/tutorials/what-is-php/"> Read More → </a></div></div></div><div class="d-flex flex-column col-12 col-sm-8 offset-sm-2 offset-md-0 col-md-6 col-lg-4 h-mb-3" id="post-11510"><div class="bg-white shadow-box"><div class="col-12 h-p-0 height-20rem"> <a class="height-inherit" href="https://www.hostinger.com/tutorials/best-php-framework"> <noscript><img width="640" height="224" src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/09/best-php-frameworks-1024x359.jpg" class="object-fit-cover wp-post-image" alt="8 Best PHP Frameworks for Web Developers" srcset="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/09/best-php-frameworks.jpg 1024w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/09/best-php-frameworks-150x53.jpg 150w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/09/best-php-frameworks-300x105.jpg 300w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/09/best-php-frameworks-768x269.jpg 768w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/09/best-php-frameworks-990x347.jpg 990w" sizes="(max-width: 640px) 100vw, 640px" /></noscript><img width="640" height="224" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20640%20224%22%3E%3C/svg%3E" data-src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/09/best-php-frameworks-1024x359.jpg" class="lazyload object-fit-cover wp-post-image" alt="8 Best PHP Frameworks for Web Developers" data-srcset="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/09/best-php-frameworks.jpg 1024w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/09/best-php-frameworks-150x53.jpg 150w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/09/best-php-frameworks-300x105.jpg 300w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/09/best-php-frameworks-768x269.jpg 768w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/09/best-php-frameworks-990x347.jpg 990w" data-sizes="(max-width: 640px) 100vw, 640px"> </a></div><div class="d-flex flex-column h-pt-2 h-pl-3 h-pb-3 h-pr-3"><div class="d-flex justify-content-between h-mb-1"><p class="label text-content-grey"> 10 Sep • <a class="text-h-primary text-uppercase font-weight-bold links-hover" href="https://www.hostinger.com/tutorials/php/"> PHP </a> <a class="text-h-primary text-uppercase font-weight-bold links-hover" href="https://www.hostinger.com/tutorials/website/"> Website </a></p></div><h3 class="h-mb-3 font-weight-bold height-8rem"> <a href="https://www.hostinger.com/tutorials/best-php-framework"> 8 Best PHP Frameworks for Web Developers </a></h3> <a class="subtitle text-h-primary font-weight-bold hover-text-primary-400 transition-all-3" href="https://www.hostinger.com/tutorials/best-php-framework"> Read More → </a></div></div></div><div class="d-flex flex-column col-12 col-sm-8 offset-sm-2 offset-md-0 col-md-6 col-lg-4 h-mb-3" id="post-8252"><div class="bg-white shadow-box"><div class="col-12 h-p-0 height-20rem"> <a class="height-inherit" href="https://www.hostinger.com/tutorials/phalcon-tutorial"> <noscript><img width="640" height="398" src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/01/phalcon-tutorial.jpg" class="object-fit-cover wp-post-image" alt="The Complete Phalcon Tutorial for Beginners" srcset="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/01/phalcon-tutorial.jpg 900w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/01/phalcon-tutorial-150x93.jpg 150w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/01/phalcon-tutorial-300x187.jpg 300w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/01/phalcon-tutorial-768x478.jpg 768w" sizes="(max-width: 640px) 100vw, 640px" /></noscript><img width="640" height="398" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20640%20398%22%3E%3C/svg%3E" data-src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/01/phalcon-tutorial.jpg" class="lazyload object-fit-cover wp-post-image" alt="The Complete Phalcon Tutorial for Beginners" data-srcset="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/01/phalcon-tutorial.jpg 900w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/01/phalcon-tutorial-150x93.jpg 150w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/01/phalcon-tutorial-300x187.jpg 300w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/01/phalcon-tutorial-768x478.jpg 768w" data-sizes="(max-width: 640px) 100vw, 640px"> </a></div><div class="d-flex flex-column h-pt-2 h-pl-3 h-pb-3 h-pr-3"><div class="d-flex justify-content-between h-mb-1"><p class="label text-content-grey"> 08 Feb • <a class="text-h-primary text-uppercase font-weight-bold links-hover" href="https://www.hostinger.com/tutorials/php/"> PHP </a></p></div><h3 class="h-mb-3 font-weight-bold height-8rem"> <a href="https://www.hostinger.com/tutorials/phalcon-tutorial"> The Complete Phalcon Tutorial for Beginners </a></h3> <a class="subtitle text-h-primary font-weight-bold hover-text-primary-400 transition-all-3" href="https://www.hostinger.com/tutorials/phalcon-tutorial"> Read More → </a></div></div></div></div></div></div><div class="dark"><div class="container"><div class="dark h-pb-10 h-pt-10"><div class="container"><div class="shadow-box bg-white h-pt-3 h-pr-5 h-pb-3 h-pl-5 h-mb-1
+ "><div class="d-flex align-items-center"><div class="h-mr-2 height-58px width-58px min-width-58px align-self-start"> <noscript><img src="https://secure.gravatar.com/avatar/d72e16c20626182387e60a04daf3405a?s=96&d=mm&r=g"
+ class="border-radius-50p"
+ alt="Author"></noscript><img src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/d72e16c20626182387e60a04daf3405a?s=96&amp;d=mm&amp;r=g" class="lazyload border-radius-50p" alt="Author"></div><div class="d-flex flex-column label w-100 h-ml-3"><h3 class="font-weight-bold text-h-primary h-mb-1 d-flex justify-content-between"> Robert_78 <a rel="nofollow" class="comment-reply-link hover-text-primary-400 text-uppercase label" href="https://www.hostinger.com/tutorials/how-to-use-php-to-insert-data-into-mysql-database#comment-9473" data-commentid="9473" data-postid="747" data-belowelement="comment-9473" data-respondelement="respond" aria-label="Reply to Robert_78">Reply</a></h3><p class="h-mb-2 text-content-grey"> September 23, 2017</p><p class="text-light-black comments-text">Hi,
+first and foremost, congratulations for your excellent tutorial.
+The only remark I feel like making is that in your tutorial it seems that it's necessary to use phpmyadmin  to use PHP to Insert Data Into MySQL Database.
+Probably my question is naive or a bit silly and for that I do apologize; I've been studying these subjects on my own with a great passion by the way.  So, please help me understand because I looked into many other tutorials on the Web without being able to find out the solution to my problem I had been looking for.
+Let me give you an example. 
+I have created a form (let's suppose with a textarea to fill out with the a comment); upon filling in the whole form I wish to click on the button "submit". Let's also suppose that 
+1) I use php instead of Perl, Phyton and so forth.
+2)  I WANT to use the Maria DB SQL DATABASE MANAGEMENT SYSTEM. I should stress that, as far as I know but if I go wrong don't hesitate to correct me, MySQL is the world's most popular open-source RDBMS. It is extremely fast and is used by some of the most frequently visited Web sites on the Internet, including Google, Facebook, Twitter, Yahoo, You Tube, and Wikipedia. Recently, HOWEVER, some of these companies HAVE MOVED TO MariaDB. Fedora/RHEL HAS REPLACED MySQL in its repositories with MariaDB, and Wikipedia has also converted. Ubuntu provides both version. 
+3) the HTML 5, CSS 3 and all possible other files have been placed in /var/www/html on my Debian 8 remote Server (where I have set up Apache and built a Website, which for now I prefer not to write in the textbox below). 
+4) Now, and THIS IS THE CRUCIAL POINT I WANT TO MAKE, I wish to write a PHP script that allows me to store all the form data I submitted INTO a table of a database of MariaDB. And I want to do that without using phpmyadmin, which of course would simplify my task, I'm fully aware of that. BUT, to didactic purposes I'll be willing to tell you if you want, I don't wish any graphic interface at all. Now, a system engineer told me that what I'm gonna do is realizable and to go to Google to look for video tutorials, articles  etc....  I wrote off and I hope to have made myself clear. In a few words I can't help wondering WHY in all the dozens and dozens of tutorials -that by the way are more or less copied out despite the Copyright laws- what is badly explained is how to get my target by using XAMPP, Windows, MySQL AND NOT MariaDB and php scripts that I tested but don't work - if you want I can email you them.  I do believe you could create an extremely original tutorial by explaining what I wrote / pointed out.  I thank you very much for your patience and I do hope to hear from you at your earliest convenience.  With kind regards,  Robert</p></div></div></div><ul class="children"><div class="shadow-box bg-white h-pt-3 h-pr-5 h-pb-3 h-pl-5 h-mb-1
+ reply-comment flex-column flex-md-row align-items-center"><div class="d-flex align-items-center"><div class="h-mr-2 height-29px width-29px min-width-29px align-self-start"> <noscript><img src="https://secure.gravatar.com/avatar/cb6624c68e146ee69dbea104d6350e5c?s=96&d=mm&r=g"
+ class="border-radius-50p"
+ alt="Author"></noscript><img src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/cb6624c68e146ee69dbea104d6350e5c?s=96&amp;d=mm&amp;r=g" class="lazyload border-radius-50p" alt="Author"></div><div class="d-flex flex-column label w-100 h-ml-3"><h3 class="font-weight-bold text-h-primary h-mb-1 d-flex justify-content-between"> J3</h3><p class="h-mb-2 text-content-grey"> Replied on December 19, 2017</p><p class="text-light-black comments-text">wtf! What a waste of perfectly good letters
+Joking, right?</p></div></div></div></ul><div class="shadow-box bg-white h-pt-3 h-pr-5 h-pb-3 h-pl-5 h-mb-1
+ "><div class="d-flex align-items-center"><div class="h-mr-2 height-58px width-58px min-width-58px align-self-start"> <noscript><img src="https://secure.gravatar.com/avatar/08dccc834c7eca7c2e562aee747b20fd?s=96&d=mm&r=g"
+ class="border-radius-50p"
+ alt="Author"></noscript><img src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/08dccc834c7eca7c2e562aee747b20fd?s=96&amp;d=mm&amp;r=g" class="lazyload border-radius-50p" alt="Author"></div><div class="d-flex flex-column label w-100 h-ml-3"><h3 class="font-weight-bold text-h-primary h-mb-1 d-flex justify-content-between"> Jerry Jubilant <a rel="nofollow" class="comment-reply-link hover-text-primary-400 text-uppercase label" href="https://www.hostinger.com/tutorials/how-to-use-php-to-insert-data-into-mysql-database#comment-95186" data-commentid="95186" data-postid="747" data-belowelement="comment-95186" data-respondelement="respond" aria-label="Reply to Jerry Jubilant">Reply</a></h3><p class="h-mb-2 text-content-grey"> October 10, 2018</p><p class="text-light-black comments-text">You are so great, the problem I have been facing for long has been resolved thanks to your guide... May God bless you!</p></div></div></div><div class="shadow-box bg-white h-pt-3 h-pr-5 h-pb-3 h-pl-5 h-mb-1
+ "><div class="d-flex align-items-center"><div class="h-mr-2 height-58px width-58px min-width-58px align-self-start"> <noscript><img src="https://secure.gravatar.com/avatar/f2b8574e627e7244d36c8266acee8d5d?s=96&d=mm&r=g"
+ class="border-radius-50p"
+ alt="Author"></noscript><img src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/f2b8574e627e7244d36c8266acee8d5d?s=96&amp;d=mm&amp;r=g" class="lazyload border-radius-50p" alt="Author"></div><div class="d-flex flex-column label w-100 h-ml-3"><h3 class="font-weight-bold text-h-primary h-mb-1 d-flex justify-content-between"> Aini Husna <a rel="nofollow" class="comment-reply-link hover-text-primary-400 text-uppercase label" href="https://www.hostinger.com/tutorials/how-to-use-php-to-insert-data-into-mysql-database#comment-103066" data-commentid="103066" data-postid="747" data-belowelement="comment-103066" data-respondelement="respond" aria-label="Reply to Aini Husna">Reply</a></h3><p class="h-mb-2 text-content-grey"> November 05, 2018</p><p class="text-light-black comments-text">I'm sorry.. but I've been following your suggestion but still cannot make it.</p></div></div></div><ul class="children"><div class="shadow-box bg-white h-pt-3 h-pr-5 h-pb-3 h-pl-5 h-mb-1
+ reply-comment flex-column flex-md-row align-items-center"><div class="d-flex align-items-center"><div class="h-mr-2 height-29px width-29px min-width-29px align-self-start"> <noscript><img src="https://secure.gravatar.com/avatar/8628c3f13f2882f24c39798405957bc9?s=96&d=mm&r=g"
+ class="border-radius-50p"
+ alt="Author"></noscript><img src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/8628c3f13f2882f24c39798405957bc9?s=96&amp;d=mm&amp;r=g" class="lazyload border-radius-50p" alt="Author"></div><div class="d-flex flex-column label w-100 h-ml-3"><h3 class="font-weight-bold text-h-primary h-mb-1 d-flex justify-content-between"> Gediminas B.</h3><p class="h-mb-2 text-content-grey"> Replied on November 06, 2018</p><p class="text-light-black comments-text">Hello, Aini. I'm sad to hear that you're having trouble :(  Where exactly do you get stuck? Do you get any specific error messages while inserting data? <a href="https://www.hostinger.com/tutorials/website/how-to-check-your-website-error-log">Checking the error log</a> could give you some good hints. Let me know how it goes ;)</p></div></div></div></ul><div class="shadow-box bg-white h-pt-3 h-pr-5 h-pb-3 h-pl-5 h-mb-1
+ "><div class="d-flex align-items-center"><div class="h-mr-2 height-58px width-58px min-width-58px align-self-start"> <noscript><img src="https://secure.gravatar.com/avatar/9eb0b18747a0ec3c209af9faff3db567?s=96&d=mm&r=g"
+ class="border-radius-50p"
+ alt="Author"></noscript><img src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/9eb0b18747a0ec3c209af9faff3db567?s=96&amp;d=mm&amp;r=g" class="lazyload border-radius-50p" alt="Author"></div><div class="d-flex flex-column label w-100 h-ml-3"><h3 class="font-weight-bold text-h-primary h-mb-1 d-flex justify-content-between"> Lucas <a rel="nofollow" class="comment-reply-link hover-text-primary-400 text-uppercase label" href="https://www.hostinger.com/tutorials/how-to-use-php-to-insert-data-into-mysql-database#comment-104802" data-commentid="104802" data-postid="747" data-belowelement="comment-104802" data-respondelement="respond" aria-label="Reply to Lucas">Reply</a></h3><p class="h-mb-2 text-content-grey"> March 18, 2019</p><p class="text-light-black comments-text">Thanks for tutorial, can you also create a tutorial on how to query data or view data</p></div></div></div><div class="shadow-box bg-white h-pt-3 h-pr-5 h-pb-3 h-pl-5 h-mb-1
+ "><div class="d-flex align-items-center"><div class="h-mr-2 height-58px width-58px min-width-58px align-self-start"> <noscript><img src="https://secure.gravatar.com/avatar/1fafff69431b1121166d710678d36ea1?s=96&d=mm&r=g"
+ class="border-radius-50p"
+ alt="Author"></noscript><img src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/1fafff69431b1121166d710678d36ea1?s=96&amp;d=mm&amp;r=g" class="lazyload border-radius-50p" alt="Author"></div><div class="d-flex flex-column label w-100 h-ml-3"><h3 class="font-weight-bold text-h-primary h-mb-1 d-flex justify-content-between"> Sean <a rel="nofollow" class="comment-reply-link hover-text-primary-400 text-uppercase label" href="https://www.hostinger.com/tutorials/how-to-use-php-to-insert-data-into-mysql-database#comment-105106" data-commentid="105106" data-postid="747" data-belowelement="comment-105106" data-respondelement="respond" aria-label="Reply to Sean">Reply</a></h3><p class="h-mb-2 text-content-grey"> April 13, 2019</p><p class="text-light-black comments-text">I tried using the PDO example but it fails. I used a clean new .php file and table.  I used a copy and paste with no modifications other than closing the  at the end.  Browser error:
+Parse error: syntax error, unexpected ':' in /var/www/html/hostinger.php on line 28  Line code:
+$my_Insert_Statement-&gt;bindParam(:first_name, $first_Name);  Thanks.</p></div></div></div><ul class="children"><div class="shadow-box bg-white h-pt-3 h-pr-5 h-pb-3 h-pl-5 h-mb-1
+ reply-comment flex-column flex-md-row align-items-center"><div class="d-flex align-items-center"><div class="h-mr-2 height-29px width-29px min-width-29px align-self-start"> <noscript><img src="https://secure.gravatar.com/avatar/1fafff69431b1121166d710678d36ea1?s=96&d=mm&r=g"
+ class="border-radius-50p"
+ alt="Author"></noscript><img src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://secure.gravatar.com/avatar/1fafff69431b1121166d710678d36ea1?s=96&amp;d=mm&amp;r=g" class="lazyload border-radius-50p" alt="Author"></div><div class="d-flex flex-column label w-100 h-ml-3"><h3 class="font-weight-bold text-h-primary h-mb-1 d-flex justify-content-between"> Sean</h3><p class="h-mb-2 text-content-grey"> Replied on April 13, 2019</p><p class="text-light-black comments-text">I'm developing this on my local machine, however I do have a paid account at Hostinger. My previous post was filtered at the end, it should say the only modification I made was closing the php section. The internet says the error likely corresponds to a missing or extra parenthesis. I'm not sure where that would be though.</p></div></div></div></ul><div class="shadow-box bg-white h-p-3 h-pt-7-lg h-pr-13-lg h-pb-7-lg h-pl-13-lg h-mt-2"><div class="d-flex flex-column"><div id="respond" class="comment-respond"><h3 class="text-uppercase text-h-primary font-weight-bold h-mb-3 links-hover">LEAVE A REPLY <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://www.hostinger.com/tutorials/how-to-use-php-to-insert-data-into-mysql-database#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://www.hostinger.com/tutorials/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate=""><textarea id="comment" name="comment" placeholder="Comment" class="w-100 dark noresize input-white-bg height-200px h-pl-2 h-pt-2 input-shadow label border-0 text-content-grey h-mb-1"></textarea><input class="dark height-46px input-white-bg w-100 input-shadow h-mb-4 h-pl-2 label border-0 text-content-grey" id="author" name="author" type="text" placeholder="Name*" value="" aria-required="true"> <input class="dark height-46px input-white-bg w-100 input-shadow h-mb-4 h-pl-2 label border-0 text-content-grey" id="email" name="email" placeholder="Email*" type="email" value="" aria-required="true"><p class="wpgdprc-checkbox"><label><input type="checkbox" name="wpgdprc" id="wpgdprc" value="1"> By using this form you agree with the storage and handling of your data by this website. <abbr class="wpgdprc-required" title="You need to accept this checkbox.">*</abbr></label></p><p class="form-submit"><input name="submit" type="submit" id="submit" class="h-button-primary button text-white" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="747" id="comment_post_ID"> <input type="hidden" name="comment_parent" id="comment_parent" value="0"></p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="9defaa8114"></p><p style="display: none;"></p><input type="hidden" id="ak_js" name="ak_js" value="1574176836706"></form></div><p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p></div></div></div></div></div></div><div class="h-pt-7 h-pb-7 h-pt-9-lg h-pb-9-lg part-of-hostinger-bg"><div class="container d-flex justify-content-center align-items-center flex-column"><h2 class="h-mb-3 text-white text-center"> <b>Become a part of Hostinger now!</b></h2><div class="h-button-wrapper w-60"> <a class="h-button-red" href="https://www.hostinger.com/web-hosting"> Get Started NOW </a></div></div></div><div id="cookie-consent"><div data-v-4952eb4f="" class="pl-15 pr-15 pt-5 pb-5 cookie-consent justify-content-between color-light-black border-top bg-white fs-12 d-none"><span data-v-4952eb4f=""><span data-v-4952eb4f="">We - and our partners - use cookies to deliver our services and to show you ads based on your interests. By using our website, you agree to the use of cookies as described in our Cookie Policy</span> <span data-v-4952eb4f="" class="text-h-primary"><a data-v-4952eb4f="" href="https://www.hostinger.com/privacy-policy" target="_blank" rel="nofollow">More.</a></span></span> <span data-v-4952eb4f=""><span data-v-4952eb4f="" class="cookie-consent-close pointer"><i data-v-4952eb4f="" class="material-icons fs-12">close</i></span></span></div></div><footer class="footer-new" id="footer"><div class="container"><div class="footer-new__holder"><div class="footer-new-holder__left"><div class="footer-new__list"><h5 class="footer-new-list__title">HOSTING</h5><ul class="footer-new-list__holder"><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/web-hosting"> Web Hosting </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/vps-hosting"> VPS Hosting </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/cloud-hosting"> Cloud Hosting </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/wordpress-hosting"> WordPress Hosting </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/email-hosting"> Email Hosting </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/cms-hosting"> CMS Hosting </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/ecommerce-hosting"> Ecommerce Hosting </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/cheap-web-hosting"> Cheap Web Hosting </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/free-hosting"> Free Website Hosting </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/free-hosting"> Free Website Builder </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/buy-hosting"> Buy Hosting </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/windows-vps"> Windows VPS </a></li></ul></div><div class="footer-new__list"><h5 class="footer-new-list__title">DOMAINS</h5><ul class="footer-new-list__holder"><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/domain-checker"> Domain Checker </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/transfer-domain"> Domain Transfer </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/free-domain"> Free Domain </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/free-xyz-domain"> XYZ Domain </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/buy-cheap-ssl-certificate"> Cheap SSL Certificate </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/domain-pricing"> Buy Domain Name </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/domain-name-search"> Domain Name Search </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/99-cent-domain"> 99 Cent Domains </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/free-ssl-certificate"> Free SSL Certificate </a></li></ul></div><div class="footer-new__list"><h5 class="footer-new-list__title">INFORMATION</h5><ul class="footer-new-list__holder"><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/domain-checker"> Domain Checker </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/transfer-domain"> Domain Transfer </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/free-domain"> Free Domain </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/free-xyz-domain"> XYZ Domain </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/buy-cheap-ssl-certificate"> Cheap SSL Certificate </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/domain-pricing"> Buy Domain Name </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/domain-name-search"> Domain Name Search </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/99-cent-domain"> 99 Cent Domains </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/free-ssl-certificate"> Free SSL Certificate </a></li></ul></div></div><div class="footer-new-holder__right"><div class="footer-new-holder-right__holder"> <noscript><img src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/logo.png" alt="Brand logo" class="footer-new-holder-right-holder__brand"></noscript><img src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/logo.png" alt="Brand logo" class="lazyload footer-new-holder-right-holder__brand"><p class="footer-new-holder-right-holder__text"> Hostinger is a leading worldwide cheap web hosting provider for millions of smart people, who really love to save a lot without losing high-quality &amp; premium webhosting features.</p><ul class="footer-new-holder-right-holder__payments"><li class="footer-new-holder-right-holder-payments__payment"> <noscript><img src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/payments/visa-g.png" alt="visa"></noscript><img class="lazyload" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/payments/visa-g.png" alt="visa"></li><li class="footer-new-holder-right-holder-payments__payment"> <noscript><img src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/payments/discover-g.png" alt="discover"></noscript><img class="lazyload" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/payments/discover-g.png" alt="discover"></li><li class="footer-new-holder-right-holder-payments__payment"> <noscript><img src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/payments/paypal-g.png" alt="paypal"></noscript><img class="lazyload" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/payments/paypal-g.png" alt="paypal"></li><li class="footer-new-holder-right-holder-payments__payment"> <noscript><img src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/payments/bitpay-g.png" alt="bitpay"></noscript><img class="lazyload" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/payments/bitpay-g.png" alt="bitpay"></li><li class="footer-new-holder-right-holder-payments__payment"> <noscript><img src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/payments/maestro-g.png" alt="maestro"></noscript><img class="lazyload" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/payments/maestro-g.png" alt="maestro"></li><li class="footer-new-holder-right-holder-payments__payment"> <noscript><img src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/payments/mastercard-g.png" alt="mastercard"></noscript><img class="lazyload" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/payments/mastercard-g.png" alt="mastercard"></li><li class="footer-new-holder-right-holder-payments__payment"> <noscript><img src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/payments/american-express-g.png" alt="american-express"></noscript><img class="lazyload" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/payments/american-express-g.png" alt="american-express"></li><li class="footer-new-holder-right-holder-payments__link"> <a href="https://www.hostinger.com/payments">And More</a></li></ul><div class="footer-new-holder-right-holder__socials"> <a href="https://www.linkedin.com/company/hostinger-international" target="_blank" rel="nofollow noopener noreferrer"> <noscript><img src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/socials/linked-in.svg" alt="Linked-in logo"></noscript><img class="lazyload" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/socials/linked-in.svg" alt="Linked-in logo"> </a> <a href="https://www.facebook.com/Hostinger" target="_blank" rel="nofollow noopener noreferrer"> <noscript><img src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/socials/facebook.svg" alt="Facebook logo"></noscript><img class="lazyload" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/socials/facebook.svg" alt="Facebook logo"> </a> <a href="https://twitter.com/hostingercom" target="_blank" rel="nofollow noopener noreferrer"> <noscript><img src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/socials/twitter.svg" alt="Twitter logo"></noscript><img class="lazyload" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/socials/twitter.svg" alt="Twitter logo"> </a> <a href="https://www.hostinger.com/blog/"> <noscript><img src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/socials/blog.svg" alt="Blog logo"></noscript><img class="lazyload" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E" data-src="https://www.hostinger.com/tutorials/wp-content/themes/tutorialstheme/public/images/socials/blog.svg" alt="Blog logo"> </a></div></div><div class="footer-new-holder-right__links"><div class="footer-new__list"><h5 class="footer-new-list__title">HELP</h5><ul class="footer-new-list__holder"><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/report-abuse"> Report Abuse </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/knowledge-base"> Knowledge Base </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/tutorials"> Tutorials </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/blog/"> Blog </a></li></ul></div><div class="footer-new__list"><h5 class="footer-new-list__title">COMPANY</h5><ul class="footer-new-list__holder"><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/about-us"> About Hostinger </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/contacts"> Contact Us </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/technology"> Our Technology </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/career"> Career </a></li></ul></div><div class="footer-new__list"><h5 class="footer-new-list__title">LEGAL</h5><ul class="footer-new-list__holder"><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/privacy"> Privacy Policy </a></li><li class="footer-new-list-holder__item"> <a href="https://www.hostinger.com/terms-of-use"> Terms of Service </a></li></ul></div></div></div></div><div class="footer-new__bottom"><p class="footer-new-bottom__copyright footer-new-bottom__text"> © 2004-2019 hostinger.com - Premium Web Hosting, Cloud, VPS &amp; Domain Registration Services.</p><p class="footer-new-bottom__no-vat footer-new-bottom__text"> Prices are listed without VAT</p></div></div></footer> <script id="hgr-widget-script-tag" src="./How to Use PHP to Insert Data Into MySQL Database_files/widget.js.download" data-variation="tutorials_com"></script>  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2FZTKT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=301499733514427&ev=PageView&noscript=1"
+/></noscript><style>.lazyload,.lazyloading{opacity:0;}.lazyloaded{opacity:1;transition:opacity 300ms;}</style><noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async="" data-noptimize="1" src="./How to Use PHP to Insert Data Into MySQL Database_files/lazysizes.min.js.download"></script><script type="text/javascript">var eafl_public = {"home_url":"https:\/\/www.hostinger.com\/tutorials\/","ajax_url":"https:\/\/www.hostinger.com\/tutorials\/wp-admin\/admin-ajax.php","nonce":"abacd78011"};</script> <script type="text/javascript">var tocplus = {"smooth_scroll":"1"};</script> <script type="text/javascript">var JQLBSettings = {"fitToScreen":"1","resizeSpeed":"400","displayDownloadLink":"0","navbarOnTop":"0","loopImages":"","resizeCenter":"","marginSize":"0","linkTarget":"","help":"","prevLinkTitle":"previous image","nextLinkTitle":"next image","prevLinkText":"\u00ab Previous","nextLinkText":"Next \u00bb","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","jqlb_overlay_opacity":"0","jqlb_overlay_color":"#000000","jqlb_overlay_close":"1","jqlb_border_width":"10","jqlb_border_color":"#ffffff","jqlb_border_radius":"0","jqlb_image_info_background_transparency":"100","jqlb_image_info_bg_color":"#ffffff","jqlb_image_info_text_color":"#000000","jqlb_image_info_text_fontsize":"10","jqlb_show_text_for_image":"1","jqlb_next_image_title":"next image","jqlb_previous_image_title":"previous image","jqlb_next_button_image":"https:\/\/www.hostinger.com\/tutorials\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/next.gif","jqlb_previous_button_image":"https:\/\/www.hostinger.com\/tutorials\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/prev.gif","jqlb_maximum_width":"","jqlb_maximum_height":"","jqlb_show_close_button":"1","jqlb_close_image_title":"close image gallery","jqlb_close_image_max_heght":"22","jqlb_image_for_close_lightbox":"https:\/\/www.hostinger.com\/tutorials\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/closelabel.gif","jqlb_keyboard_navigation":"1","jqlb_popup_size_fix":"0"};</script> <script type="text/javascript" src="./How to Use PHP to Insert Data Into MySQL Database_files/autoptimize_single_8decb0ce7eb8097d463a77d859a02725.js.download"></script> <script type="text/javascript" src="./How to Use PHP to Insert Data Into MySQL Database_files/EnlighterJS.min.js.download"></script> <script type="text/javascript">var wpgdprcData = {"ajaxURL":"https:\/\/www.hostinger.com\/tutorials\/wp-admin\/admin-ajax.php","ajaxSecurity":"4ab569aa32","isMultisite":"1","path":"\/tutorials\/","blogId":"2"};</script> <script type="text/javascript">EnlighterJS_Config = {"selector":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"language":"generic","theme":"classic","indent":2,"hover":"hoverEnabled","showLinenumbers":true,"rawButton":true,"infoButton":false,"windowButton":true,"rawcodeDoubleclick":false,"grouping":true,"cryptex":{"enabled":false,"email":"mail@example.tld"}};!function(){var a=function(a){var b="Enlighter Error: ";console.error?console.error(b+a):console.log&&console.log(b+a)};return window.addEvent?"undefined"==typeof EnlighterJS?void a("Javascript Resources not loaded yet!"):"undefined"==typeof EnlighterJS_Config?void a("Configuration not loaded yet!"):void window.addEvent("domready",function(){EnlighterJS.Util.Init(EnlighterJS_Config.selector.block,EnlighterJS_Config.selector.inline,EnlighterJS_Config)}):void a("MooTools Framework not loaded yet!")}();;</script><div id="upprev_box" class="category"><h6>More in <a href="https://www.hostinger.com/tutorials/php/" rel="How to Use PHP to Insert Data Into MySQL Database">PHP</a></h6><div class="upprev_excerpt upprev_thumbnail"><a href="https://www.hostinger.com/tutorials/php/increasing-upload-limit-in-cpanel" title="How to Increase PHP Upload Limit" class="upprev_thumbnail" rel="How to Use PHP to Insert Data Into MySQL Database"><noscript><img width="220" height="73" src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2016/06/how-to-increase-php-upload-limit-01.png" class="iworks_upprev_thumb wp-post-image" alt="" title="How to Increase PHP Upload Limit" srcset="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2016/06/how-to-increase-php-upload-limit-01.png 900w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2016/06/how-to-increase-php-upload-limit-01-150x50.png 150w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2016/06/how-to-increase-php-upload-limit-01-300x100.png 300w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2016/06/how-to-increase-php-upload-limit-01-768x256.png 768w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2016/06/how-to-increase-php-upload-limit-01-414x138.png 414w" sizes="(max-width: 220px) 100vw, 220px" /></noscript><img width="220" height="73" src="./How to Use PHP to Insert Data Into MySQL Database_files/how-to-increase-php-upload-limit-01.png" data-src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2016/06/how-to-increase-php-upload-limit-01.png" class="iworks_upprev_thumb wp-post-image lazyloaded" alt="" title="How to Increase PHP Upload Limit" data-srcset="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2016/06/how-to-increase-php-upload-limit-01.png 900w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2016/06/how-to-increase-php-upload-limit-01-150x50.png 150w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2016/06/how-to-increase-php-upload-limit-01-300x100.png 300w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2016/06/how-to-increase-php-upload-limit-01-768x256.png 768w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2016/06/how-to-increase-php-upload-limit-01-414x138.png 414w" data-sizes="(max-width: 220px) 100vw, 220px" sizes="(max-width: 220px) 100vw, 220px" srcset="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2016/06/how-to-increase-php-upload-limit-01.png 900w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2016/06/how-to-increase-php-upload-limit-01-150x50.png 150w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2016/06/how-to-increase-php-upload-limit-01-300x100.png 300w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2016/06/how-to-increase-php-upload-limit-01-768x256.png 768w, https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2016/06/how-to-increase-php-upload-limit-01-414x138.png 414w"></a><h5><a href="https://www.hostinger.com/tutorials/php/increasing-upload-limit-in-cpanel" rel="How to Use PHP to Insert Data Into MySQL Database">How to Increase PHP Upload Limit</a></h5><br></div><a id="upprev_close" href="https://www.hostinger.com/tutorials/how-to-use-php-to-insert-data-into-mysql-database#" rel="close">Close</a></div> <script type="text/javascript" defer="" src="./How to Use PHP to Insert Data Into MySQL Database_files/autoptimize_69bff11260038088133ebea6f917a517.js.download"></script><script defer="" src="./How to Use PHP to Insert Data Into MySQL Database_files/beacon.min.js.download" data-cf-beacon="{&quot;rayId&quot;:&quot;53832afb0a08c500&quot;,&quot;version&quot;:&quot;2019.10.2&quot;,&quot;startTime&quot;:1574176824216}"></script>
+
+
+<!-- Cache Enabler by KeyCDN @ 19.11.2019 08:53:38 (html) -->
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","233182517365050");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=233182517365050&amp;ev=PageView&amp;noscript=1"></noscript>
+<script type="text/javascript" id="">(function(b,c,e,f,d){b[d]=b[d]||[];var g=function(){var a={ti:"25052732"};a.q=b[d];b[d]=new UET(a);b[d].push("pageLoad")};var a=c.createElement(e);a.src=f;a.async=1;a.onload=a.onreadystatechange=function(){var b=this.readyState;b&&"loaded"!==b&&"complete"!==b||(g(),a.onload=a.onreadystatechange=null)};c=c.getElementsByTagName(e)[0];c.parentNode.insertBefore(a,c)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script><div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.17922842477150924"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.0980488161338704" width="0" height="0" alt="" src="./How to Use PHP to Insert Data Into MySQL Database_files/0"></div></body></html>

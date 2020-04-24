@@ -1,0 +1,1189 @@
+@font-face {
+    font-family: '"Avenir Next W01"';  
+    src:url('https://reapon.com/wp-content/uploads/2019/05/avenir300.woff2') format('woff2');   
+    src:url('https://reapon.com/wp-content/uploads/2019/05/avenir400.woff2') format('woff2');   
+    src:url('https://reapon.com/wp-content/uploads/2019/05/avenir600.woff2') format('woff2');   
+    src:url('https://reapon.com/wp-content/uploads/2019/05/avenir700.woff2') format('woff2');   
+}
+body,span, h1, h2, h3, a, p, li{
+        font-family: "Avenir Next W01", Sans-serif!important;
+    }
+/** Review form styles **/
+.rating {
+    float: left;
+    width: 226px;
+    margin-left: 12px;
+    margin-bottom: 0px;
+}
+.post-content .rating {
+    float: left;
+    width: 100%;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+.rating span { float:right; position:relative; }
+.rating span input {
+    position:absolute;
+    top:-3px;
+    left:0px;
+    opacity:0;
+	width:27px;
+	height:27px;
+	cursor: pointer;
+}
+.rating span label {
+display: inline-block;
+    width: 27px;
+    height: 27px;
+    color: #FFF;
+    background: url(https://reapon.com/wp-content/uploads/2019/06/no-star.png) no-repeat 0 0;
+    font-size: 30px;
+    margin-right: 2px;
+}
+.rating span:hover ~ span label,
+.rating span:hover label,
+.rating span.checked label,
+.rating span.checked ~ span label {
+    /*background:#F90;*/
+	background: url(https://reapon.com/wp-content/uploads/2019/06/star.png) no-repeat 0 0;
+    color:#FFF;
+    cursor: pointer
+}
+div#content_wrapper {
+    background: #f5f4f4;
+}
+.review-form-wrapper {
+    background: #fff;
+    border: 1px solid #e4e0e0;
+    margin: 70px -25px;
+    padding: 15px;
+}
+
+.review-form-wrapper input[type="text"],
+.review-form-wrapper input[type="email"],
+.review-form-wrapper .acf-field select
+{
+height:42px;   
+border-radius: 3px;
+}
+/* .review-star-rating span {
+    display: contents;
+} */
+
+img.tooltip-img{
+    width: 14px;
+    margin-bottom: 1px;
+}
+
+form.af-form.acf-form .tooltip {
+    position: relative;
+    display: inline-block;
+    opacity:1;
+}
+
+.tooltip .tooltiptext {
+visibility: hidden; 
+    width: 354px;
+    height: auto;
+    /* background-color: #fff; */
+    color: #0b0b0b;
+    text-align: center;
+    /* padding: 3px; */
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    opacity: 0; 
+    /* transform: translate(11%, 51%); */
+    left: 30%;
+    top: -95px;
+}
+
+.tooltip .tooltiptext::after {
+    /*  content: "";*/
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+.tt-text {
+    background: #ccc;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 1px solid #000;
+    padding: 0 25px;
+}
+
+.key-features-tooltip-wrapper{
+    position: absolute;
+    top: -28px;
+    left: 171px;
+}
+.website-tooltip-wrapper {
+    position: absolute;
+    top: -28px;
+    left: 75px;
+}
+.title-tooltip{
+    top: 3px;
+    left: 1px;
+}
+
+.pricing-tooltip-wrapper {
+    position: absolute;
+    top: -28px;
+    left: 68px;
+}
+
+@media only screen and (max-width: 560px) { 
+    .tooltip .tooltiptext {
+    width: 250px;
+    position: absolute;
+    top: 10px;
+    left: -70px;
+}
+
+form#form_5cebc1de47054 #featch_img_src .af-input.acf-input label {
+    width: 100%;
+    display: inline-block;
+    white-space: unset;
+    line-height: 1;
+    padding: 3px 10px;
+}
+    }
+
+.review-form-wrapper .acf-fields>.acf-field {
+    border-top: none;
+}
+.review_star-rate_wrap {
+/*     margin-top: 20px; */
+/*     border-top: 1px solid #eeeeee; */
+    padding-top: 20px;
+}
+.review-star-rating {
+    float: left;
+    margin-top: 0px;
+}
+
+.review-form-wrapper button.acf-button.af-submit-button,
+.post-content button.acf-button.af-submit-button  {
+  font-family: "Avenir Next W01", Sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    color: #ff0221;
+    border-radius: 2px 2px 2px 2px;
+    padding: 10px 16px 8px 17px;
+    float: right;
+    border-radius: 27px;
+    background-repeat: no-repeat;
+    background-image: url(https://reapon.com/wp-content/uploads/2019/05/send-icon2.png);
+    background-color: #f8f2f6;
+    background-position: 70% 55%;
+}
+
+.post-content button.acf-button.af-submit-button:hover {
+    
+    }
+.review-form-wrapper button.acf-button.af-submit-button:hover
+{
+    color: #ffffff;
+    background: linear-gradient(to top right, #ff0221 3%, #fc2578 83%);
+}
+
+.acf-field-5c948b5f3b198 .acf-label, .acf-field-5c94b98cfdb08 .acf-label{
+    display: none;
+    }
+.post-content .acf-fields>.acf-field.acf-field-5c948b5f3b198{
+    border-top:none;
+    border-left: none!important;
+    padding-left: 0px!important;
+    padding-top: 3px!important;
+    padding-bottom: 15px!important;
+    padding-right: 7px!important
+    }
+.post-content .acf-fields>.acf-field.acf-field-5c94b98cfdb08{
+    border-top:none;
+    border-left: none!important;
+    padding-left: 7px!important;
+    padding-top: 3px!important;
+    padding-bottom: 15px!important;
+    padding-right: 0px!important
+    }
+    
+.review-form-wrapper .acf-field[data-width]+.acf-field[data-width] {
+    border-left: none!important;
+    /* padding-left: 0px; */
+}
+.review-heading h1 {
+   font-size: 24px;
+    margin: 10px 0;
+}
+
+.review-heading h1 span {
+    font-size: 25px;
+    color: #000;
+    font-weight: 600;
+    line-height: 45px;
+}
+
+p.review-text {
+    font-size: 15px;
+    margin-top: 10px;
+}
+.review-thumb img {
+    border: 1px solid #ccc;
+    padding: 2px;
+    border-radius: 3px;
+	width:100%;
+	height:auto;
+}
+.review-form.template hr {
+    margin-top: 10px;
+    height: 2px;
+    width: 740px;
+    background: #f5f5f5;
+}
+
+.review-form-wrapper .af-field-how-frequently{
+    margin-bottom:10px!important;
+}
+.review-form-wrapper .af-field-review-title{
+    margin-top:10px!important;
+    border-top: 1px solid #eee!important;
+}
+.review-form.template {
+    margin-left: -3px;
+    margin-top: 10px;
+}
+
+.review-form-wrapper .af-submit {
+    padding: 10px 12px;
+}
+.af-page-wrap {    
+    clear: both;
+}
+button {
+    color: #fff;
+}
+
+.review-form-wrapper button.af-previous-button,
+.review-form-wrapper button.af-next-button{ 
+  font-family: "Avenir Next W01", Sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    color: #ffffff;
+    background-color: #0e4cb5;
+    border-radius: 2px 2px 2px 2px;
+    padding: 10px 14px 10px 14px;
+    border: none;
+    margin-right: 10px;
+    margin-top: 25px;
+}
+.review-form-wrapper button.af-previous-button:hover,
+.review-form-wrapper button.af-next-button:hover{
+    color: #ffffff;
+    background-color: #20cc98;
+}
+h2.af-form-title {
+    border-bottom: 2px solid #eee;
+    padding: 15px;
+}
+.review-thumb.col-md-3 img {
+    width: 100%;
+    height: auto;
+}
+
+.review-form-wrapper .af-page-wrap {
+    border: 1px solid #eee;
+    display: flex;
+    margin: 0 12px;
+}
+.review-form-wrapper .af-page-button.current .title {
+    color: #318cf3;
+}
+.review-form-wrapper .af-page-button.enabled {
+    background: #fff;
+    cursor: pointer;
+    color: #000;
+}
+.review-form-wrapper .af-page-button {
+    background: #f9f9f9;
+    color: inherit;
+    cursor: default;
+    flex: 1;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-right: 1px solid #eee;
+    position: relative;
+    text-decoration: none;
+}
+
+.review-form-wrapper textarea#acf-field_5c948b5f3b198, 
+.review-form-wrapper textarea#acf-field_5c94b98cfdb08 {
+    border-radius: 3px 3px 0 0;
+}
+
+.af-field-overall-quality,
+.af-field-ease-of-use,
+.af-field-features-functionality,
+.af-field-value-for-money,
+.af-field-customer-support{
+	display:none!important;
+}
+div#review_rel_field .af-label.acf-label {
+    display: none;
+}
+div#review_rel_field .af-input.acf-input {
+    display: none;
+}
+
+
+/* div#review_rel_field {
+    display: none;
+} */
+/*
+Listing style
+*/
+
+/* .listing_cat li {
+    display: inline-flex;
+    width: 239px;
+    border-radius: 3px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0px 2px 5px 0px #f1f1f1;
+    padding: 10px 10px;
+    margin-right: 7px;
+    margin-bottom: 5px;
+} */
+
+.listing_cat li:nth-child(4) {
+    clear: left;
+}
+
+.listing_cat li span:hover {
+    color: #063489;
+}
+
+.listing_cat .round {
+  position: relative;
+}
+
+.listing_cat .round label {
+background-color: #fff;
+    border: 1px solid #c1c1c1;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 3px;
+    width: 16px;
+}
+
+.listing_cat .round label:after {
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 5px;
+    left: 2px;
+    opacity: 0;
+    position: absolute;
+    top: 4px;
+    transform: rotate(-45deg);
+    width: 10px;
+}
+
+.listing_cat .round input[type="radio"] {
+  visibility: hidden;
+}
+
+.listing_cat .round input[type="radio"]:checked + label {
+background-color: #29aad0;
+    border-color: #2276d2;
+}
+
+.listing_cat .round input[type="radio"]:checked + label:after {
+  opacity: 1;
+}
+
+label.radio-mkt:hover {
+    border: 1px solid #29aad0;
+}
+
+.listing_cat ul li {
+    list-style: none;
+}
+
+#form_5cebc1de47054 .acf-fields>.acf-field{
+    border-top:none;
+    }
+	/*
+#form_5cebc1de47054 .acf-fields>.af-field-key-features.acf-field,
+#form_5cebc1de47054 .acf-fields>.af-field-pricing.acf-field,
+#form_5cebc1de47054 .acf-fields>.af-field-author-email.acf-field{
+    padding: 15px 0px 15px 0px;
+    }*/
+#form_5cebc1de47054 .af-field {
+    padding: 15px 0;
+}
+#form_5cebc1de47054 .acf-fields>.af-field-listing-website.acf-field{
+    padding-top: 15px;
+    padding-bottom: 25px;
+    padding-left: 0px;
+    padding-right: 12px
+    }
+#form_5cebc1de47054 .acf-fields>#featch_img_src.acf-field{
+    padding-top: 15px;
+    padding-bottom: 25px;
+    padding-left: 12px;
+    padding-right: 0px
+    }
+    
+#form_5cebc1de47054 .acf-field[data-width]+.acf-field[data-width] {
+    border-left: none;
+}
+.listing-title-wrap, .listing-content-wrap, .listing-cat-wrap, .listing-featured-img-wrap{
+         margin: 20px 0 30px 0px;
+}
+.listing-title-wrap label, .listing-content-wrap label, .listing-cat-wrap label, .listing-featured-img-wrap label{
+    font-weight: 600;
+    margin-bottom:3px;
+    display: inline-block
+}
+button.acf-button.af-submit-button {
+    font-family: "Avenir Next W01", Sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    color: #ffffff;
+    background-color: #0e4cb5;
+    border-radius: 4px;
+    padding: 10px 30px;
+    margin: 25px 0 12px 0px;
+    border:none;
+}
+#form_5cebc1de47054 input[type="text"],
+#form_5cebc1de47054 input[type="email"],
+#form_5cebc1de47054 input[type="number"],
+#form_5cebc1de47054 select,
+#form_5cebc1de47054 input[type="url"]{
+    height:40px
+}
+
+#form_5cebc1de47054 select#listing-cat {
+    font-family: "Avenir Next W01", sans-serif;
+}
+#form_5cebc1de47054 .acf-field .acf-label hr {    
+    /* border: 1px dotted #e2d8d8; */
+    /* margin-bottom: 25px; */
+}
+/* #form_5cebc1de47054 .acf-field .acf-label label {
+    font-weight: 400;   
+} */
+#form_5cebc1de47054 .acf-field .acf-label{
+    margin:0;
+   /*  margin-bottom: 10px; */
+    }
+#form_5cebc1de47054 .af-field-type-message .af-label label {
+    font-weight: 700;
+    font-size: 20px;
+}
+#form_5cebc1de47054 a.button.acf-add-checkbox {
+    font-family: "Avenir Next W01", Sans-serif;
+/*     font-size: 12px;
+font-weight: 400;
+color: #ffffff;
+background-color: #0e4cb5;
+border-radius: 2px 2px 2px 2px;
+padding: 5px 7px;
+position: relative;
+top: 10px; */
+    padding: 2px 4px;
+    border: 1px solid #b3b3b3;
+    float: left;
+    margin-right: 15px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 3px;
+}
+/* #form_5cebc1de47054 a.button.acf-add-checkbox:hover {
+      color: #ffffff;
+    background-color: #20cc98  
+    } */
+    
+ #form_5cebc1de47054 a.acf-button.button.button-primary{
+font-family: "Avenir Next W01", Sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    background-color: #0e4cb5;
+    border-radius: 2px 2px 2px 2px;
+    padding: 8px 12px;
+    position: relative;
+    top: 10px;
+    background: linear-gradient(to top, #cccccc 0%, #eeeeee 76%);
+    border: 1px solid #989898;
+     }
+     
+/* #form_5cebc1de47054 a.acf-button.button.button-primary:hover{
+      color: #ffffff;
+    background-color: #20cc98 
+     } */
+     
+    #form_5cebc1de47054 hr {
+    /* border: 1px dotted #e2d8d8; */
+    /* margin-bottom: 15px; */
+    margin-top: 0px;
+    width: 100%;
+    margin-left: 0px;
+    border:none;
+}
+span.cat_name {
+    font-size: 15px;
+}
+
+#form_5cebc1de47054 iframe#post_content_ifr{
+    width:99%!important;
+    }
+    
+p.help-text {
+ font-size: 14px;
+    margin-bottom: 15px;
+    margin-top: -5px;
+}
+/* form#form_5cebc1de47054 label{
+ margin:0;   
+ }*/
+
+form#form_5cebc1de47054 ul.acf-radio-list li,
+form#form_5cebc1de47054 ul.acf-checkbox-list li {
+    line-height: 30px;
+}
+form#form_5cebc1de47054 .af-label.acf-label label {
+    font-weight: 600!important;
+}
+form#form_5cebc1de47054 .af-input.acf-input label {
+    font-weight: 500!important;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+div.acf-button-group{
+    line-height: 1.5
+    }
+form#form_5cebc1de47054 i.acf-icon.-globe.-small {
+    display: none;
+}
+form#form_5cebc1de47054 .acf-url input[type="url"] {
+    padding-left: 12px;
+}
+
+/*  form#form_5cebc1de47054 button#post_content-tmce, form#form_5cebc1de47054 button#post_content-html {
+color: #555;
+   border-color: #ccc;
+   background: #f7f7f7;
+   box-shadow: 0 1px 0 #ccc;
+   vertical-align: top;
+   display: inline-block;
+   text-decoration: none;
+   font-size: 13px;
+   line-height: 26px;
+   height: 28px;
+   margin: 0;
+   padding: 0 10px 1px;
+   cursor: pointer;
+   border-width: 1px;
+   border-style: solid;
+   -webkit-appearance: none;
+   border-radius: 3px;
+   white-space: nowrap;
+   box-sizing: border-box;
+} */
+
+form#form_5cebc1de47054 button.su-generator-button.button,
+form#form_5cebc1de47054 button#insert-media-button,
+form#form_5cebc1de47054 button#post_content-html,
+form#form_5cebc1de47054 button#post_content-tmce{
+    font-weight:100;
+}
+
+
+ form#form_5cebc1de47054 .hide-if-value a.acf-button.button {
+    color: #555;
+    border-color: #ccc;
+     background: linear-gradient(to top, #cccccc 0%, #eeeeee 76%);
+    box-shadow: 0 1px 0 #ccc;
+    vertical-align: top;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 26px;
+    height: 28px;
+    margin: 0;
+    padding: 0 10px 1px;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    -webkit-appearance: none;
+    border-radius: 3px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    float: right;
+}
+
+
+ form#form_5cebc1de47054 button#post_content-tmce:hover, form#form_5cebc1de47054 button#post_content-html:hover {
+    background: #fafafa;
+    border-color: #999;
+    color: #23282d;
+} 
+
+.af-field-support a.button.acf-add-checkbox div span,
+.af-field-deployment a.button.acf-add-checkbox div span,
+.af-field-training a.button.acf-add-checkbox div span {
+    background: #e4e4e4;
+    border-radius: 15px;
+    margin-right: 5px;
+    margin-left: 1px;
+    padding-bottom: 1px;
+    padding-right: 4px;
+    padding-left: 3px;
+    padding-top: 0px;
+    color: #696969;
+}
+
+.af-field-support a.button.acf-add-checkbox div,
+.af-field-deployment a.button.acf-add-checkbox div,
+.af-field-training a.button.acf-add-checkbox div {
+    font-weight: 600; 
+}
+
+.listing-title-wrap input#post_title,
+.listing-content-wrap div#wp-post_content-wrap {
+    width: 100%;
+    }
+    
+form#form_5cebc1de47054 ul.acf-radio-list li, form#form_5c94bdaba228 ul.acf-checkbox-list li {
+    line-height:30px;
+}
+form#form_5cebc1de47054 .mce-tinymce {
+    box-shadow:none;
+}
+form#form_5cebc1de47054 button#post_content-tmce,
+form#form_5cebc1de47054 button#post_content-html{
+    background-color: #f5f5f5;
+    box-shadow: none;
+    color: #555!important;
+    font-weight: 100;
+    padding: 1px 15px;
+    border: 1px solid #ccc;
+}
+
+form#form_5cebc1de47054 .af-field-facebook-page input::placeholder,
+form#form_5cebc1de47054 .af-field-twitter-page input::placeholder,
+form#form_5cebc1de47054  .af-field-linkedin-page input::placeholder,
+form#form_5cebc1de47054 .af-field-listing-website input::placeholder,
+form#form_5cebc1de47054 .af-field-live-demo-url input::placeholder,
+form#form_5cebc1de47054 .af-field-type-of-software input::placeholder,
+form#form_5cebc1de47054 .af-field-starting-price input::placeholder,
+form#form_5cebc1de47054 .af-field-pricing-details input::placeholder,
+form#form_5cebc1de47054 .af-field-author-email input::placeholder{
+    color:#ccc;
+    }
+  input.select2-search__field::placeholder {
+    color: #444;
+}  
+/*   form#form_5cebc1de47054 ul.acf-checkbox-list.acf-bl li {
+  margin-top: 6px;
+} */
+form#form_5cebc1de47054 input[type=number]::-webkit-inner-spin-button, 
+form#form_5cebc1de47054 input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.listing-cat .parent-cate{
+    font-weight:600; 
+    }
+    
+form#form_5cebc1de47054 p.word-count,
+.review-form-wrapper p.word-count,
+.post-content p.word-count
+{
+    font-size: 12px!important;
+    padding-left: 5px;
+    border: 1px solid #bbb;
+    border-top: none;
+    background-color: #f7f7f7;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    margin: 0;
+    color: #408c1f!important;
+    line-height: 22px;
+}
+.listing-content-wrap p.word-count {
+    width: 100%;
+}
+
+textarea#post_content,
+form#form_5cebc1de47054 textarea#acf-field_5ca5bb3da8540{
+    border-radius: 3px 3px 0 0;
+}
+
+textarea#post_content{
+        width: 100%;
+    }
+
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea {
+    color: #666;
+    background: #fff;
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    border: 1px solid #bbb;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    display: block;
+    padding: 0.7em;
+}
+.listing-cat ul {
+    padding-left: 0;
+    margin: 0;
+}
+.listing-featured-img-wrap label {
+    margin-bottom: 10px;
+}
+
+form#form_5cebc1de47054 .af-field-single-page-images th.acf-th {
+    font-weight: 600;
+}
+/* span.select2-selection.select2-selection--multiple{
+    height:40px;
+    } */
+span.select2-selection.select2-selection--multiple {
+    height: auto;
+    min-height: 40px;
+}  
+span.select2-container:last-child span.select2-selection.select2-selection--multiple{
+    margin-top: 10px;
+    border: solid #aaaaaa 1px;
+}
+span.select2-selection.select2-selection--single {
+    height: 40px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    line-height:36px!important;
+    }
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+height:36px!important;
+}
+.select2-container--default .select2-search--inline .select2-search__field {
+    margin-top: 10px!important;
+}
+form.af-form.acf-form .af-success .add-more-button {
+    padding: 8px 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #0e4cb5;
+    border-radius: 3px 3px 3px 3px;
+}    
+
+form.af-form.acf-form .af-success .add-more-button:hover {
+    background-color: rgba(18, 60, 138, 0.57);
+}
+form.af-form.acf-form .af-success p:last-child {
+    margin-top: 25px;
+}
+form.af-form.acf-form button.af-previous-button:disabled {
+    display: none;
+}
+div#lblErrorMessageAuthorImage p {
+    padding: 8px 10px;
+    /* background: #ffe6e6; */
+    color: #d12626;
+}
+div#lblErrorMessageAuthorImage {
+    background: #ffe6e6;
+}
+h1.listing-form-heading {
+    font-family: "AvenirNextLTPro-Demi", Sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 45px;
+    color: #000;
+    margin-left: 0px;
+    margin-top: 10px;
+}
+p.listing-form-text {
+    font-family: "Avenir Next W01", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6em;
+    color: #000;
+    margin-left: 0px;
+}
+span.listing-heading-req-title {
+    font-family: "Avenir Next W01", Sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    margin-left: 12px;
+    line-height: 1;
+}
+hr.listing-div {
+    width: 729px;
+    margin-left: 0px!important;
+    border: 0.5px solid #ccc!important;
+    margin-bottom: 5px!important;
+}
+.listing-title-wrap {
+    margin-top: 30px;
+}
+hr.review-divr {
+    border: 1px solid #eee!important;
+    width: 685px!important;
+}
+a.af-page-button span.index {
+    background: #ccc;
+    padding: 1px 6px;
+    border-radius: 10px;
+}
+form#form_5cebc1de47054 .af-field-type-of-software{
+    display:none;
+    }
+    
+.acf-input-wrap.acf-url{
+    overflow: visible
+    }
+    
+.loader_woofresh {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0) url(https://reapon.com/wp-content/uploads/2019/05/loader_reapon.gif) 72% 50% no-repeat;
+}
+
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+  .loader_loading{
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0) url(https://reapon.com/wp-content/uploads/2019/05/loader_reapon.gif) 50% 4% no-repeat;
+} 
+
+.image_container {
+    display: inline-block;
+    clear: both;
+    width: 100%
+    }
+.image_container img.dwn{
+    border-radius: 3px;
+    /* border: 1px solid #eee; */
+/*     padding: 3px; */
+    }
+
+.acf-field-5ce283b0c0953 .acf-button-group label{
+    padding: 8px 10px;
+    }
+
+.acf-editor-wrap iframe {
+    width: 99.92%!important;
+/*     height: 172px!important; */
+}
+
+div#qt_acf-editor-30_toolbar {
+    display: none;
+}
+
+.acf-field-5c94b62f17c12, .acf-field-5c94b64817c13, .acf-field-5c948b1c3b195, .acf-field-5c948b513b197{
+    display:none;
+    }
+    
+div#review_rel_field {
+    /* margin-bottom: -29px; */
+}
+
+.post-content .acf-fields>div#review_rel_field.acf-field {
+  padding:0;
+  margin-top: 0px;
+}
+
+.acf-fields>div#review_rel_field.acf-field {
+    border-top: none;
+}
+
+.post-content p.word-count {
+    display: none
+    }
+.post-content button.acf-button.af-submit-button {
+    margin: -68px 0 0px 0px;
+    }
+.post-content .info-tooltip label {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 8px;
+    margin-top: 11px;
+}
+.post-content textarea::placeholder, 
+.acf-field input[type="url"]::placeholder,
+.acf-field input[type="text"]::placeholder{
+	 color: #515151;
+	 font-family: "Avenir Next W01", sans-serif;
+	 font-weight: 600
+}
+ .post-content .info-tooltip .tooltip{
+     display:none!important
+     }
+.post-content .review-pros textarea, .post-content .review-cons textarea{
+    color: #3a3535;
+    font-weight: 600;
+    /* border-color: #d6d0d0; */
+    border: none;
+    padding: 8px 10px 8px 15px!important;
+    overflow: hidden;
+    border-radius: 30px;
+    resize: none;
+    background: #f3f3f3;
+	height: 35px;
+    }
+    
+.toggle_reviews {
+    text-align: right;
+    padding: 0px 24px 36px 0px;
+    margin: 10px 0px 12px 0px;
+/*     border-bottom: 1px solid #eee; */
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    color: #131212;
+    font-weight: 500;
+}
+    
+/*.post-content .review-section .ae_data.elementor ~.ae_data.elementor {
+    display: none;
+} */   
+
+
+.review_loader_loading {
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0) url(https://reapon.com/wp-content/uploads/2019/05/loader_reapon.gif) 76% 6% no-repeat;
+}
+
+.toggle_reviews:after{
+    content: '\f078';
+    font: normal normal normal 13px/1 FontAwesome;
+    font-weight: 400;
+    color: #726c6c;
+    right: 4px;
+    top: 7px;
+    height: 34px;
+    padding: 0px 0px 0px 8px;
+    position: absolute;
+    pointer-events: none;
+}
+
+.toggle_reviews.remove_dropicon:after {
+    content: '';
+}
+
+.fetch_image_validation{
+    position: relative;
+    display: block;
+    padding: 3px 12px;
+	background: #ffe6e6;
+    color: #d12626;
+    }
+    
+.fetch_image_validation p{
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0.5em 0;
+    text-shadow: none;
+    color: inherit;
+    }
+    
+ ul#select2-listing-cat-results li {
+    margin-left: 0;
+}
+
+
+#featch_img_src div.acf-button-group, form#form_5cebc1de47054 #featch_img_src .af-input.acf-input label{
+    width: 100%;
+    background: #0e4cb5;
+    border: none;
+    border-color: transparent
+}
+    
+
+@media only screen and (max-width: 560px) {
+  .post-content .review-pros textarea, .post-content .review-cons textarea {
+    color: #3a3535;
+    font-weight: 600;
+    /* border-color: #d6d0d0; */
+    border: none;
+    padding: 5px 10px 13px 15px!important;
+    overflow: hidden;
+    border-radius: 12px;
+    resize: none;
+    background: #f3f3f3;
+    min-height: 55px;
+    font-size: 15px;
+    max-height:300px!important;
+}
+
+.post-content .acf-fields>.acf-field.acf-field-5c948b5f3b198, .post-content .acf-fields>.acf-field.acf-field-5c94b98cfdb08 {
+    width: 77%!important;
+}
+.post-content .acf-fields>.acf-field.acf-field-5c948b5f3b198{
+    border-top: none;
+    border-left: none!important;
+    padding-left: 0px!important;
+    padding-top: 3px!important;
+    padding-bottom: 15px!important;
+    padding-right: 0px!important;
+    }
+    
+.post-content .acf-fields>.acf-field.acf-field-5c94b98cfdb08{
+    border-top: none;
+    border-left: none!important;
+    padding-left: 0px!important;
+    padding-top: 3px!important;
+    padding-bottom: 15px!important;
+    padding-right: 0px!important;
+    }
+
+.review-form-wrapper button.acf-button.af-submit-button, .post-content button.acf-button.af-submit-button {
+    font-family: "Avenir Next W01", Sans-serif;
+    font-size: 0px!important;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    color: #ff0221;
+    padding: 26px 28px 26px 25px;
+    border-radius: 70%;
+    background-repeat: no-repeat;
+    background-image: url(https://reapon.com/wp-content/uploads/2019/05/send-icon2.png);
+    background-position: 60% 49%;
+}
+
+.post-content button.acf-button.af-submit-button {
+    margin: 7px 0 0px 0px;
+}
+
+
+}
+.loader_image_wrap{
+    position: relative;
+    clear: both;
+    border-radius: 5px;
+    /* padding: 10px 0px 10px 0px; */
+    height: 0px;
+}
+form#form_5cebc1de47054 .af-field-author-email input{
+	padding-left:12px;
+}
+
+.multipleInput-container {
+     border:1px #ccc solid!important;
+     padding:1px !important;
+     padding-bottom:0 !important;
+     cursor:text !important;
+     font-size:13px !important;
+     width:100% !important;
+     height: 42px !important;
+     overflow: auto !important;
+     background-color: white !important;
+   border-radius:3px !important;
+}
+ 
+.multipleInput-container input {
+     font-size:14px !important;
+     width:364px !important;
+     height:24px !important;
+     border:0 !important;
+     margin-bottom:1px !important;
+     outline: none;
+     font-family: "Avenir Next W01", Sans-serif;
+}
+
+.multipleInput-container input::placeholder {
+     width: 339px !important;
+     font-family: "Avenir Next W01", Sans-serif;
+     margin-top: -4px;
+}
+ 
+.multipleInput-container ul {
+     list-style-type:none;
+     padding-left: 0px !important;
+     margin-top: -4px;
+}
+ 
+li.multipleInput-email {
+     float: left;
+    margin-top: 8px;
+    margin-bottom: 6px;
+    margin-left: 6px;
+    border: 1px #BBD8FB solid;
+    padding: 2px;
+    background: #F3F7FD;
+    border-radius: 4px;
+}
+ 
+a.multipleInput-close {
+     width:16px;
+     height:16px;
+     /* background-image: url(http://13.235.99.85/wp-content/uploads/2019/06/email_close.png.png); */
+     display:block;
+     float:right;
+     margin:0 3px;
+     color: #309cf3
+}
+a.multipleInput-close:hover {
+color: #f14040;
+}
+.email_search{
+  width: 100% !important;
+}
+
+#form_5cebc1de47054 .acf-fields>#author_rec_email.acf-field{
+    padding: 15px 0px 15px 0px;
+}
+
+#form_5cebc1de47054 #acf-field_5d07212d44a9b{
+    display: none;
+    }
+    
+#recipient_email .af-field-instructions{
+    font-size: 14px;
+    margin: 0px!important;
+    line-height: 26px;
+    }
+.acf-required-email{
+    color: #f00;
+    margin-left: 5px;
+    }

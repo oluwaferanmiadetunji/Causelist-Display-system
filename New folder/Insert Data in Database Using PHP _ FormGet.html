@@ -1,0 +1,2343 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://www.formget.com/insert-data-in-database-using-php/ -->
+<html lang="en-US" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">		<script type="text/javascript" async="" src="./Insert Data in Database Using PHP _ FormGet_files/analytics.js.download"></script><script async="" charset="utf-8" src="./Insert Data in Database Using PHP _ FormGet_files/saved_resource" type="text/javascript"></script><script async="" src="./Insert Data in Database Using PHP _ FormGet_files/tag.js.download"></script><script type="text/javascript" async="" src="./Insert Data in Database Using PHP _ FormGet_files/heap-490363613.js.download"></script><script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Insert Data in Database Using PHP | FormGet</title>
+
+<!-- This site is optimized with the Yoast SEO Premium plugin v12.0 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="How to perform insert operation is been illustrated here with the help of an example. After reading you will learn inserting data into database using PHP.">
+<link rel="canonical" href="https://www.formget.com/insert-data-in-database-using-php/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Insert Data in Database Using PHP | FormGet">
+<meta property="og:description" content="How to perform insert operation is been illustrated here with the help of an example. After reading you will learn inserting data into database using PHP.">
+<meta property="og:url" content="https://www.formget.com/insert-data-in-database-using-php/">
+<meta property="og:site_name" content="FormGet">
+<meta property="article:publisher" content="https://www.facebook.com/FormGet/">
+<meta property="article:section" content="PHP">
+<meta property="article:published_time" content="2014-06-06T08:05:09+00:00">
+<meta property="article:modified_time" content="2018-03-22T11:26:38+00:00">
+<meta property="og:updated_time" content="2018-03-22T11:26:38+00:00">
+<meta property="og:image" content="https://www.formget.com/wp-content/uploads/2014/06/Insert-Data-in-Database-Using-PHP.png">
+<meta property="og:image:secure_url" content="https://www.formget.com/wp-content/uploads/2014/06/Insert-Data-in-Database-Using-PHP.png">
+<meta property="og:image:width" content="736">
+<meta property="og:image:height" content="300">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="How to perform insert operation is been illustrated here with the help of an example. After reading you will learn inserting data into database using PHP.">
+<meta name="twitter:title" content="Insert Data in Database Using PHP | FormGet">
+<meta name="twitter:site" content="@formgetcom">
+<meta name="twitter:image" content="https://www.formget.com/wp-content/uploads/2014/06/Insert-Data-in-Database-Using-PHP.png">
+<meta name="twitter:creator" content="@formgetcom">
+<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.formget.com/#organization","name":"FormGet","url":"https://www.formget.com/","sameAs":["https://www.facebook.com/FormGet/","https://twitter.com/formgetcom"],"logo":{"@type":"ImageObject","@id":"https://www.formget.com/#logo","url":"https://www.formget.com/wp-content/uploads/2018/07/FormGet-Logo-1.png","width":127,"height":50,"caption":"FormGet"},"image":{"@id":"https://www.formget.com/#logo"}},{"@type":"WebSite","@id":"https://www.formget.com/#website","url":"https://www.formget.com/","name":"FormGet","publisher":{"@id":"https://www.formget.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://www.formget.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://www.formget.com/insert-data-in-database-using-php/#primaryimage","url":"https://www.formget.com/wp-content/uploads/2014/06/Insert-Data-in-Database-Using-PHP.png","width":736,"height":300},{"@type":"WebPage","@id":"https://www.formget.com/insert-data-in-database-using-php/#webpage","url":"https://www.formget.com/insert-data-in-database-using-php/","inLanguage":"en-US","name":"Insert Data in Database Using PHP | FormGet","isPartOf":{"@id":"https://www.formget.com/#website"},"primaryImageOfPage":{"@id":"https://www.formget.com/insert-data-in-database-using-php/#primaryimage"},"datePublished":"2014-06-06T08:05:09+00:00","dateModified":"2018-03-22T11:26:38+00:00","description":"How to perform insert operation is been illustrated here with the help of an example. After reading you will learn inserting data into database using PHP.","breadcrumb":{"@id":"https://www.formget.com/insert-data-in-database-using-php/#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://www.formget.com/insert-data-in-database-using-php/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://www.formget.com/","url":"https://www.formget.com/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://www.formget.com/category/php/","url":"https://www.formget.com/category/php/","name":"PHP"}},{"@type":"ListItem","position":3,"item":{"@type":"WebPage","@id":"https://www.formget.com/insert-data-in-database-using-php/","url":"https://www.formget.com/insert-data-in-database-using-php/","name":"Insert Data in Database Using PHP"}}]},{"@type":"Article","@id":"https://www.formget.com/insert-data-in-database-using-php/#article","isPartOf":{"@id":"https://www.formget.com/insert-data-in-database-using-php/#webpage"},"author":{"@id":"https://www.formget.com/#/schema/person/a0e0bdf07ccf4fd86e8cf1ffeb5b1b81"},"headline":"Insert Data in Database Using PHP","datePublished":"2014-06-06T08:05:09+00:00","dateModified":"2018-03-22T11:26:38+00:00","commentCount":"44","mainEntityOfPage":{"@id":"https://www.formget.com/insert-data-in-database-using-php/#webpage"},"publisher":{"@id":"https://www.formget.com/#organization"},"image":{"@id":"https://www.formget.com/insert-data-in-database-using-php/#primaryimage"},"articleSection":"PHP"},{"@type":["Person"],"@id":"https://www.formget.com/#/schema/person/a0e0bdf07ccf4fd86e8cf1ffeb5b1b81","name":"Neeraj Agarwal","image":{"@type":"ImageObject","@id":"https://www.formget.com/#authorlogo","url":"https://www.formget.com/wp-content/uploads/2018/03/admin_profile_pic.png","caption":"Neeraj Agarwal"},"sameAs":[]}]}</script>
+<!-- / Yoast SEO Premium plugin. -->
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link href="https://fonts.gstatic.com/" crossorigin="" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="FormGet » Feed" href="https://www.formget.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="FormGet » Comments Feed" href="https://www.formget.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="FormGet » Insert Data in Database Using PHP Comments Feed" href="https://www.formget.com/insert-data-in-database-using-php/feed/">
+<link rel="stylesheet" id="wp-block-library-css" href="./Insert Data in Database Using PHP _ FormGet_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-theme-css" href="./Insert Data in Database Using PHP _ FormGet_files/theme.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="ae-pro-css-css" href="./Insert Data in Database Using PHP _ FormGet_files/ae-pro.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="vegas-css-css" href="./Insert Data in Database Using PHP _ FormGet_files/vegas.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="dlv-latofont-css" href="./Insert Data in Database Using PHP _ FormGet_files/fonts.css" type="text/css" media="all">
+<link rel="stylesheet" id="dlv-css-css" href="./Insert Data in Database Using PHP _ FormGet_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="sh_css-css" href="./Insert Data in Database Using PHP _ FormGet_files/sh.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpfront-scroll-top-css" href="./Insert Data in Database Using PHP _ FormGet_files/wpfront-scroll-top.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="parent-style-css" href="./Insert Data in Database Using PHP _ FormGet_files/style(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="rd-af-form-style-css" href="./Insert Data in Database Using PHP _ FormGet_files/af-form-style.css" type="text/css" media="all">
+<link rel="stylesheet" id="twentyseventeen-style-css" href="./Insert Data in Database Using PHP _ FormGet_files/style(2).css" type="text/css" media="all">
+<link rel="stylesheet" id="twentyseventeen-block-style-css" href="./Insert Data in Database Using PHP _ FormGet_files/blocks.css" type="text/css" media="all">
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyseventeen-ie8-css'  href='https://www.formget.com/wp-content/themes/twentyseventeen/assets/css/ie8.css' type='text/css' media='all' />
+<![endif]-->
+<link rel="stylesheet" id="elementor-icons-css" href="./Insert Data in Database Using PHP _ FormGet_files/elementor-icons.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-animations-css" href="./Insert Data in Database Using PHP _ FormGet_files/animations.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-frontend-css" href="./Insert Data in Database Using PHP _ FormGet_files/frontend.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-pro-css" href="./Insert Data in Database Using PHP _ FormGet_files/frontend.min(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="uael-frontend-css" href="./Insert Data in Database Using PHP _ FormGet_files/uael-frontend.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-5-all-css" href="./Insert Data in Database Using PHP _ FormGet_files/all.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-4-shim-css" href="./Insert Data in Database Using PHP _ FormGet_files/v4-shims.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-global-css" href="./Insert Data in Database Using PHP _ FormGet_files/global.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-79554-css" href="./Insert Data in Database Using PHP _ FormGet_files/post-79554.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-79562-css" href="./Insert Data in Database Using PHP _ FormGet_files/post-79562.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-94227-css" href="./Insert Data in Database Using PHP _ FormGet_files/post-94227.css" type="text/css" media="all">
+<link rel="stylesheet" id="af-form-style-css" href="./Insert Data in Database Using PHP _ FormGet_files/form.css" type="text/css" media="all">
+<link rel="stylesheet" id="prism-theme-css" href="./Insert Data in Database Using PHP _ FormGet_files/prism-css.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-shared-0-css" href="./Insert Data in Database Using PHP _ FormGet_files/fontawesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-fa-solid-css" href="./Insert Data in Database Using PHP _ FormGet_files/solid.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-fa-brands-css" href="./Insert Data in Database Using PHP _ FormGet_files/brands.min.css" type="text/css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+var uael_script = {"post_loader":"https:\/\/www.formget.com\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/post-loader.gif","url":"https:\/\/www.formget.com\/wp-admin\/admin-ajax.php","search_str":"Search:","table_length_string":"Show _MENU_ Entries","uael_particles_url":"https:\/\/www.formget.com\/wp-content\/plugins\/ultimate-elementor\/assets\/min-js\/uael-particles.min.js","particles_url":"https:\/\/www.formget.com\/wp-content\/plugins\/ultimate-elementor\/assets\/lib\/particles\/particles.min.js"};
+var uael = {"ajax_url":"https:\/\/www.formget.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/jquery.js.download"></script>
+<script type="text/javascript">
+window.scope_array = [];
+			window.backend = 0;
+		    jQuery( window ).on( "elementor/frontend/init", function() {
+				elementorFrontend.hooks.addAction( "frontend/element_ready/global", function( $scope, $ ){
+					if ( "undefined" == typeof $scope ) {
+							return;
+					}
+					if ( $scope.hasClass( "uael-particle-yes" ) ) {
+						window.scope_array.push( $scope );
+					}
+					if(elementorFrontend.isEditMode()){		
+						var uael_url = uael_script.uael_particles_url;
+						jQuery.cachedScript = function( url, options ) {
+							// Allow user to set any option except for dataType, cache, and url.
+							options = jQuery.extend( options || {}, {
+								dataType: "script",
+								cache: true,
+								url: url
+							});
+							// Return the jqXHR object so we can chain callbacks.
+							return jQuery.ajax( options );
+						};
+						jQuery.cachedScript( uael_url );
+						window.backend = 1;
+					}
+				});
+			});
+			jQuery(document).ready(function(){
+				if ( jQuery.find( ".uael-particle-yes" ).length < 1 ) {
+					return;
+				}
+				var uael_url = uael_script.uael_particles_url;
+				jQuery.cachedScript = function( url, options ) {
+					// Allow user to set any option except for dataType, cache, and url.
+					options = jQuery.extend( options || {}, {
+						dataType: "script",
+						cache: true,
+						url: url
+					});
+					// Return the jqXHR object so we can chain callbacks.
+					return jQuery.ajax( options );
+				};
+				jQuery.cachedScript( uael_url );
+			});	
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var ink_set_listing_post_save_navigate_data = {"ajax_url":"https:\/\/www.formget.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/custom.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/jquery.fileDownload.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/jquery.cookie.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var dlv_script = {"url":"https:\/\/www.formget.com\/wp-admin\/admin-ajax.php","plugin_path":"https:\/\/www.formget.com\/wp-content\/plugins\/content-upgrade\/","link_url":"https:\/\/www.formget.com\/app\/home\/?blog","post_id":"4857"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/custom.js(1).download"></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://www.formget.com/wp-content/themes/twentyseventeen/assets/js/html5.js'></script>
+<![endif]-->
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/v4-shims.min.js.download"></script>
+<meta name="ahrefs-site-verification" content="d712760752a4798cf68579707cbf694eaaaf24d02ee170ae598448429c45ae0d">
+<script type="text/javascript">
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+    heap.load("490363613");
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(50522944, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/50522944" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->		<!--Start of Zendesk Chat Script-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+$.src="https://v2.zopim.com/?3v6Wt211NZzn5JADq2jiEr4fulSEfJze";z.t=+new Date;$.
+type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+</script>
+<!--End of Zendesk Chat Script-->
+	<link rel="icon" href="https://www.formget.com/wp-content/uploads/2019/04/iconfav.png" sizes="32x32">
+<link rel="icon" href="https://www.formget.com/wp-content/uploads/2019/04/iconfav.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://www.formget.com/wp-content/uploads/2019/04/iconfav.png">
+<meta name="msapplication-TileImage" content="https://www.formget.com/wp-content/uploads/2019/04/iconfav.png">
+</head>
+<body class="post-template-default single single-post postid-4857 single-format-standard wp-embed-responsive group-blog has-header-image colors-light elementor-default elementor-template-full-width elementor-page-94227">
+
+		<div data-elementor-type="header" data-elementor-id="79554" class="elementor elementor-79554 elementor-location-header" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<div class="has_ae_slider elementor-element elementor-element-5a2fcbe2 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default ae-bg-gallery-type-default elementor-section elementor-top-section" data-id="5a2fcbe2" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="has_ae_slider elementor-element elementor-element-2306e487 ae-bg-gallery-type-default elementor-column elementor-col-25 elementor-top-column" data-id="2306e487" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7ccd9df8 elementor-widget elementor-widget-image" data-id="7ccd9df8" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a href="https://www.formget.com/" data-elementor-open-lightbox="">
+							<img width="127" height="50" src="./Insert Data in Database Using PHP _ FormGet_files/FormGet-Logo-1.png" class="attachment-full size-full" alt="FormGet Logo 1" sizes="100vw">								</a>
+											</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="has_ae_slider elementor-element elementor-element-402d1cb4 ae-bg-gallery-type-default elementor-column elementor-col-25 elementor-top-column" data-id="402d1cb4" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-18e9c5e8 elementor-nav-menu__align-right elementor-nav-menu--dropdown-mobile elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-nav-menu--indicator-angle elementor-hidden-phone optional elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="18e9c5e8" data-element_type="widget" data-settings="{&quot;full_width&quot;:&quot;stretch&quot;,&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+						<nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none"><ul id="menu-1-18e9c5e8" class="elementor-nav-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-36056"><a href="https://www.formget.com/formget/" class="elementor-item">Form Builder</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36121"><a href="https://www.formget.com/formget/" class="elementor-sub-item">Overview</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36095"><a target="_blank" rel="noopener noreferrer" href="https://www.formget.com/features/custom-branding-form/" class="elementor-sub-item">Features</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36096"><a href="https://www.formget.com/formget/#pricing" class="elementor-sub-item elementor-item-anchor">Pricing</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36097"><a target="_blank" rel="noopener noreferrer" href="https://www.formget.com/forms/" class="elementor-sub-item">Templates</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57980"><a target="_blank" rel="noopener noreferrer" href="https://www.formget.com/resources/" class="elementor-sub-item">Resources</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-36057"><a href="https://www.formget.com/mailget-app/" class="elementor-item">Email Marketing</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36122"><a target="_blank" rel="noopener noreferrer" href="https://www.formget.com/mailget-app/" class="elementor-sub-item">Overview</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36099"><a target="_blank" rel="noopener noreferrer" href="https://www.formget.com/email-template-builder/" class="elementor-sub-item">Features</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36100"><a href="https://www.formget.com/mailget-app/#pricing" class="elementor-sub-item elementor-item-anchor">Pricing</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52905"><a target="_blank" rel="noopener noreferrer" href="https://www.formget.com/market/" class="elementor-sub-item">Email Templates</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57979"><a href="https://www.formget.com/email-builder/" class="elementor-sub-item">Documentation</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-39684"><a href="https://www.formget.com/mailget-bolt/" class="elementor-item">MailGet Bolt</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52655"><a href="https://www.formget.com/mailget-bolt/" class="elementor-sub-item">Overview</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52656"><a target="_blank" rel="noopener noreferrer" href="https://www.formget.com/email-template-builder/" class="elementor-sub-item">Features</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52657"><a href="https://www.formget.com/mailget-bolt/#pricing" class="elementor-sub-item elementor-item-anchor">Pricing</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52904"><a target="_blank" rel="noopener noreferrer" href="https://www.formget.com/free-html-email-newsletter-templates/" class="elementor-sub-item">Email Templates</a></li>
+</ul>
+</li>
+</ul></nav>
+					<div class="elementor-menu-toggle">
+			<i class="eicon-menu-bar" aria-hidden="true"></i>
+			<span class="elementor-screen-only">Menu</span>
+		</div>
+			<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container"><ul id="menu-2-18e9c5e8" class="elementor-nav-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-36056"><a href="https://www.formget.com/formget/" class="elementor-item">Form Builder</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36121"><a href="https://www.formget.com/formget/" class="elementor-sub-item">Overview</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36095"><a target="_blank" rel="noopener noreferrer" href="https://www.formget.com/features/custom-branding-form/" class="elementor-sub-item">Features</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36096"><a href="https://www.formget.com/formget/#pricing" class="elementor-sub-item elementor-item-anchor">Pricing</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36097"><a target="_blank" rel="noopener noreferrer" href="https://www.formget.com/forms/" class="elementor-sub-item">Templates</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57980"><a target="_blank" rel="noopener noreferrer" href="https://www.formget.com/resources/" class="elementor-sub-item">Resources</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-36057"><a href="https://www.formget.com/mailget-app/" class="elementor-item">Email Marketing</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36122"><a target="_blank" rel="noopener noreferrer" href="https://www.formget.com/mailget-app/" class="elementor-sub-item">Overview</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36099"><a target="_blank" rel="noopener noreferrer" href="https://www.formget.com/email-template-builder/" class="elementor-sub-item">Features</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36100"><a href="https://www.formget.com/mailget-app/#pricing" class="elementor-sub-item elementor-item-anchor">Pricing</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52905"><a target="_blank" rel="noopener noreferrer" href="https://www.formget.com/market/" class="elementor-sub-item">Email Templates</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57979"><a href="https://www.formget.com/email-builder/" class="elementor-sub-item">Documentation</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-39684"><a href="https://www.formget.com/mailget-bolt/" class="elementor-item">MailGet Bolt</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52655"><a href="https://www.formget.com/mailget-bolt/" class="elementor-sub-item">Overview</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52656"><a target="_blank" rel="noopener noreferrer" href="https://www.formget.com/email-template-builder/" class="elementor-sub-item">Features</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52657"><a href="https://www.formget.com/mailget-bolt/#pricing" class="elementor-sub-item elementor-item-anchor">Pricing</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52904"><a target="_blank" rel="noopener noreferrer" href="https://www.formget.com/free-html-email-newsletter-templates/" class="elementor-sub-item">Email Templates</a></li>
+</ul>
+</li>
+</ul></nav>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="has_ae_slider elementor-element elementor-element-cdd22b2 ae-bg-gallery-type-default elementor-column elementor-col-25 elementor-top-column" data-id="cdd22b2" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-f8e79db elementor-nav-menu__align-center elementor-nav-menu--dropdown-mobile elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-hidden-phone fg-green-btn elementor-nav-menu--indicator-classic elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="f8e79db" data-element_type="widget" data-settings="{&quot;full_width&quot;:&quot;stretch&quot;,&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+						<nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none"><ul id="menu-1-f8e79db" class="elementor-nav-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-79608"><a rel="nofollow" target="_blank" href="https://accounts.pabbly.com/login/" class="elementor-item">Sign In</a></li>
+</ul></nav>
+					<div class="elementor-menu-toggle">
+			<i class="eicon-menu-bar" aria-hidden="true"></i>
+			<span class="elementor-screen-only">Menu</span>
+		</div>
+			<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container"><ul id="menu-2-f8e79db" class="elementor-nav-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-79608"><a rel="nofollow" target="_blank" href="https://accounts.pabbly.com/login/" class="elementor-item">Sign In</a></li>
+</ul></nav>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-2d79afe elementor-hidden-desktop elementor-hidden-tablet elementor-nav-menu--indicator-chevron mob_menu_css elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="2d79afe" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;dropdown&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-menu-toggle">
+			<i class="eicon-menu-bar" aria-hidden="true"></i>
+			<span class="elementor-screen-only">Menu</span>
+		</div>
+			<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container"><ul id="menu-2-2d79afe" class="elementor-nav-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-89486"><a href="https://www.formget.com/insert-data-in-database-using-php/#" class="elementor-item elementor-item-anchor">Products</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-89487"><a href="https://www.formget.com/formget/" class="elementor-sub-item">Form Builder</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-89491"><a href="https://www.formget.com/mailget-app/" class="elementor-sub-item">Email Marketing</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-89495"><a target="_blank" href="https://accounts.pabbly.com/signup/" class="elementor-item">SignUp</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-89500"><a target="_blank" href="https://accounts.pabbly.com/login/" class="elementor-item">SignIn</a></li>
+</ul></nav>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="has_ae_slider elementor-element elementor-element-e46ae33 ae-bg-gallery-type-default elementor-column elementor-col-25 elementor-top-column" data-id="e46ae33" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-48dec91 elementor-nav-menu__align-center elementor-nav-menu--dropdown-mobile elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-hidden-phone fg-green-btn elementor-nav-menu--indicator-classic elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="48dec91" data-element_type="widget" data-settings="{&quot;full_width&quot;:&quot;stretch&quot;,&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+						<nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none"><ul id="menu-1-48dec91" class="elementor-nav-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-79593"><a rel="nofollow" target="_blank" href="https://accounts.pabbly.com/signup/" class="elementor-item">Sign Up Free</a></li>
+</ul></nav>
+					<div class="elementor-menu-toggle">
+			<i class="eicon-menu-bar" aria-hidden="true"></i>
+			<span class="elementor-screen-only">Menu</span>
+		</div>
+			<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container"><ul id="menu-2-48dec91" class="elementor-nav-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-79593"><a rel="nofollow" target="_blank" href="https://accounts.pabbly.com/signup/" class="elementor-item">Sign Up Free</a></li>
+</ul></nav>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</div>
+				<div data-elementor-type="single" data-elementor-id="94227" class="elementor elementor-94227 elementor-location-single post-4857 post type-post status-publish format-standard has-post-thumbnail hentry category-php" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="has_ae_slider elementor-element elementor-element-1ab92c18 elementor-section-boxed elementor-section-height-default elementor-section-height-default ae-bg-gallery-type-default elementor-section elementor-top-section" data-id="1ab92c18" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="has_ae_slider elementor-element elementor-element-4acc7136 ae-bg-gallery-type-default elementor-column elementor-col-33 elementor-top-column" data-id="4acc7136" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="has_ae_slider elementor-element elementor-element-1260de31 elementor-hidden-phone elementor-section-full_width elementor-section-height-default elementor-section-height-default ae-bg-gallery-type-default elementor-section elementor-inner-section" data-id="1260de31" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="has_ae_slider elementor-element elementor-element-43244e30 ae-bg-gallery-type-default elementor-column elementor-col-100 elementor-inner-column" data-id="43244e30" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-9bce730 dependent_menu elementor-widget elementor-widget-shortcode" data-id="9bce730" data-element_type="widget" id="dependent_menu1" data-widget_type="shortcode.default">
+				<div class="elementor-widget-container">
+			<nav class="menu-blog-category-container"><ul id="menu-blog-category" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none"><li id="menu-item-94370" class="feature-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-94370"><a href="https://www.formget.com/insert-data-in-database-using-php/#">Categories</a></li>
+<li id="menu-item-31394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31394"><a href="https://www.formget.com/cheap-payment-collection-forms/">Form Builder</a></li>
+<li id="menu-item-52158" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52158"><a href="https://www.formget.com/subscription-payment-services/">Payment &amp; Subscriptions</a></li>
+<li id="menu-item-31467" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31467"><a href="https://www.formget.com/cheap-email-marketing-services/">Email Marketing</a></li>
+<li id="menu-item-58046" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58046"><a href="https://www.formget.com/free-hotel-email-marketing-templates/">Email Templates</a></li>
+<li id="menu-item-31399" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31399"><a href="https://www.formget.com/best-doctor-bulk-email-marketing/">Email Software (For All Business Type)</a></li>
+<li id="menu-item-89052" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-89052"><a href="https://www.formget.com/affiliate-marketing-software/">Affiliate Software</a></li>
+<li id="menu-item-62094" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62094"><a href="https://www.formget.com/seo-wordpress-plugins/">WordPress Plugins</a></li>
+<li id="menu-item-31395" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31395"><a href="https://www.formget.com/free-premium-wordpress-themes/">WordPress Themes</a></li>
+<li id="menu-item-31391" class="feature-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-31391"><a href="https://www.formget.com/insert-data-in-database-using-php/#">Technical Coding Blogs</a></li>
+<li id="menu-item-31890" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31890"><a href="https://www.formget.com/phonegap/">PhoneGap + Android</a></li>
+<li id="menu-item-31400" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31400"><a href="https://www.formget.com/css-active/">HTML/CSS + Bootstrap</a></li>
+<li id="menu-item-31402" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31402"><a href="https://www.formget.com/create-form-using-jquery/">jQuery + Ajax + Javascript</a></li>
+<li id="menu-item-31398" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31398"><a href="https://www.formget.com/codeigniter-mvc/">CodeIgniter</a></li>
+<li id="menu-item-31823" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31823"><a href="https://www.formget.com/what-is-angular-js/">Angular JS</a></li>
+<li id="menu-item-31403" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31403"><a href="https://www.formget.com/php-post-get/">PHP</a></li>
+</ul></nav>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="has_ae_slider elementor-element elementor-element-2655d58 elementor-hidden-phone elementor-section-full_width elementor-section-height-default elementor-section-height-default ae-bg-gallery-type-default elementor-section elementor-inner-section" data-id="2655d58" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="has_ae_slider elementor-element elementor-element-dababa2 ae-bg-gallery-type-default elementor-column elementor-col-100 elementor-inner-column" data-id="dababa2" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-22ef69b dependent_menu elementor-widget elementor-widget-shortcode" data-id="22ef69b" data-element_type="widget" id="dependent_menu" data-widget_type="shortcode.default">
+				<div class="elementor-widget-container">
+			<nav class="menu-php-container"><ul id="menu-php" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none"><li id="menu-item-94257" class="feature-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-94257"><a href="https://www.formget.com/insert-data-in-database-using-php/#">PHP</a></li>
+<li id="menu-item-31102" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31102"><a href="https://www.formget.com/php-post-get/">GET and POST</a></li>
+<li id="menu-item-31103" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31103"><a href="https://www.formget.com/php-select-option-and-php-radio-button/">Get Value of Select Option and Radio Button</a></li>
+<li id="menu-item-31104" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31104"><a href="https://www.formget.com/php-checkbox/">Get Values of Multiple Checked Checkboxes</a></li>
+<li id="menu-item-31105" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31105"><a href="https://www.formget.com/how-to-redirect-a-url-php-form/">Redirect To URL After Form Submission</a></li>
+<li id="menu-item-31106" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31106"><a href="https://www.formget.com/upload-images-using-php-and-jquery-via-form/">Upload Images Using PHP and jQuery via form</a></li>
+<li id="menu-item-31107" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31107"><a href="https://www.formget.com/php-fsockopen-function-using-post-method/">POST data using fsockopen() Function</a></li>
+<li id="menu-item-31108" class="feature-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-31108"><a href="https://www.formget.com/insert-data-in-database-using-php/#">Form</a></li>
+<li id="menu-item-31109" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31109"><a href="https://www.formget.com/multi-page-form-php/">Multi Page Form</a></li>
+<li id="menu-item-31110" class="feature-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-31110"><a href="https://www.formget.com/insert-data-in-database-using-php/#">Validation</a></li>
+<li id="menu-item-31111" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31111"><a href="https://www.formget.com/form-validation-using-php/">Form Validation</a></li>
+<li id="menu-item-31112" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31112"><a href="https://www.formget.com/php-contact-form/">Contact Form Validation</a></li>
+<li id="menu-item-31113" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31113"><a href="https://www.formget.com/sanitization-and-validation-using-php/">Sanitize and Validate Input Fields</a></li>
+<li id="menu-item-31114" class="feature-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-31114"><a href="https://www.formget.com/insert-data-in-database-using-php/#">Session</a></li>
+<li id="menu-item-31115" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31115"><a href="https://www.formget.com/login-form-in-php/">Login Form with Sessions</a></li>
+<li id="menu-item-31116" class="feature-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-31116"><a href="https://www.formget.com/insert-data-in-database-using-php/#">Miscellaneous</a></li>
+<li id="menu-item-31117" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31117"><a href="https://www.formget.com/send-an-email-on-form-submission-using-php/">Send an Email on Form Submission</a></li>
+<li id="menu-item-31118" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31118"><a href="https://www.formget.com/email-verification-using-php/">Email Verification for Registered User</a></li>
+<li id="menu-item-31119" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31119"><a href="https://www.formget.com/php-password-generator/">Strong Password Generator</a></li>
+<li id="menu-item-31120" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31120"><a href="https://www.formget.com/google-form-captcha/">Setup Google Captcha</a></li>
+<li id="menu-item-31121" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31121"><a href="https://www.formget.com/php-email-verification/">Email Verification Script for Downloading e-book</a></li>
+<li id="menu-item-36542" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36542"><a href="https://www.formget.com/php-read-more-link/">Read More Link</a></li>
+<li id="menu-item-31146" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31146"><a href="https://www.formget.com/php-rest-api/">PHP Rest API in Codeigniter</a></li>
+<li id="menu-item-31147" class="feature-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-31147"><a href="https://www.formget.com/insert-data-in-database-using-php/#">Paypal Integration</a></li>
+<li id="menu-item-31148" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31148"><a href="https://www.formget.com/paypal-oauth/">PayPal OAuth Login</a></li>
+<li id="menu-item-31149" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31149"><a href="https://www.formget.com/paypal-integration-in-php-using-pdo/">PayPal Integration Using PDO</a></li>
+<li id="menu-item-31150" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31150"><a href="https://www.formget.com/paypal-ipn-php/">PayPal IPN</a></li>
+<li id="menu-item-31151" class="feature-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-31151"><a href="https://www.formget.com/insert-data-in-database-using-php/#">Paypal Shopping Cart</a></li>
+<li id="menu-item-31152" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31152"><a href="https://www.formget.com/paypal-shopping-cart/">Shopping Cart</a></li>
+<li id="menu-item-31153" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31153"><a href="https://www.formget.com/paypal-express-checkout-api/">PayPal Express Checkout API</a></li>
+<li id="menu-item-31154" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31154"><a href="https://www.formget.com/paypal-pizza/">Pizza Order System</a></li>
+<li id="menu-item-31155" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31155"><a href="https://www.formget.com/paypal-coupon-code/">Coupon Code using PDO</a></li>
+<li id="menu-item-31156" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31156"><a href="https://www.formget.com/paypal-express-checkout/">PayPal Express Checkout for Single Product</a></li>
+<li id="menu-item-31157" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31157"><a href="https://www.formget.com/paypal-express-checkout-php/">PayPal Express Checkout for Digital Goods</a></li>
+<li id="menu-item-31158" class="feature-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-31158"><a href="https://www.formget.com/insert-data-in-database-using-php/#">Paypal Payments/Refunds</a></li>
+<li id="menu-item-31159" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31159"><a href="https://www.formget.com/paypal-credit-card-payment/">Credit Card Payment</a></li>
+<li id="menu-item-31160" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31160"><a href="https://www.formget.com/paypal-adaptive-payments/">Adaptive Payments for Marketplace</a></li>
+<li id="menu-item-31161" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31161"><a href="https://www.formget.com/paypal-mass-payment-php/">Mass Payment</a></li>
+<li id="menu-item-31162" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31162"><a href="https://www.formget.com/paypal-parallel-payments/">Parallel Payments</a></li>
+<li id="menu-item-31163" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31163"><a href="https://www.formget.com/paypal-subscription/">Subscription Button for Recurring Payments</a></li>
+<li id="menu-item-31164" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31164"><a href="https://www.formget.com/paypal-installment-plan/">Recurring Payments for Installment Plan</a></li>
+<li id="menu-item-31166" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31166"><a href="https://www.formget.com/paypal-donate-button/">Donate Button</a></li>
+<li id="menu-item-31167" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31167"><a href="https://www.formget.com/paypal-refund-api/">Refund Process</a></li>
+<li id="menu-item-31168" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31168"><a href="https://www.formget.com/paypal-transaction-details/">Transaction Details</a></li>
+<li id="menu-item-57984" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57984"><a href="https://www.formget.com/php-send-html-email-template/">Send HTML Email Template</a></li>
+<li id="menu-item-57986" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57986"><a href="https://www.formget.com/responsive-email-template/">Design Responsive Email Template</a></li>
+<li id="menu-item-57988" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57988"><a href="https://www.formget.com/php-newsletter/">Newsletter Script</a></li>
+<li id="menu-item-57990" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57990"><a href="https://www.formget.com/embed-video-in-email/">Embed A Video In An Email</a></li>
+<li id="menu-item-57993" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57993"><a href="https://www.formget.com/email-tracking-google-analytics/">Track Email Via Google Analytics</a></li>
+<li id="menu-item-57994" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57994"><a href="https://www.formget.com/how-to-stop-email-spam/">Stop Sending Email Spam</a></li>
+<li id="menu-item-57995" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57995"><a href="https://www.formget.com/how-to-add-attachment-to-email/">Send Multiple Attachment</a></li>
+<li id="menu-item-57997" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57997"><a href="https://www.formget.com/html-email-signature-generator/">Email Signature Generator</a></li>
+<li id="menu-item-58000" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58000"><a href="https://www.formget.com/send-personalized-email-to-multiple-recipients/">Email Personalization</a></li>
+<li id="menu-item-58003" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58003"><a href="https://www.formget.com/find-email-domain-exist-or-not/">Find Email Domain Exists Or Not</a></li>
+<li id="menu-item-58005" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58005"><a href="https://www.formget.com/tracking-email/">Email Open Tracking</a></li>
+<li id="menu-item-58007" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58007"><a href="https://www.formget.com/mx-record-check/">Check Email MX Record</a></li>
+<li id="menu-item-58008" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58008"><a href="https://www.formget.com/disposable-email-checker/">Disposable Email Address Checker</a></li>
+<li id="menu-item-58010" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58010"><a href="https://www.formget.com/duplicate-email-remover/">Remove Duplicate Email Addresses</a></li>
+<li id="menu-item-58012" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58012"><a href="https://www.formget.com/unsubscribe-php/">Add an Unsubscribe Link to an Email Using PHP</a></li>
+<li id="menu-item-58028" class="feature-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-58028"><a href="https://www.formget.com/insert-data-in-database-using-php/#">Gmail + PHP Tutorials</a></li>
+<li id="menu-item-58014" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58014"><a href="https://www.formget.com/send-email-via-gmail-smtp-server-in-php/">Send Email via Gmail SMTP</a></li>
+<li id="menu-item-58019" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58019"><a href="https://www.formget.com/gmail-contact-importer/">Insert Contacts in Gmail</a></li>
+<li id="menu-item-58022" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58022"><a href="https://www.formget.com/export-gmail-contacts/">Export Gmail Contacts</a></li>
+<li id="menu-item-58025" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58025"><a href="https://www.formget.com/verify-gmail-address/">Verify Gmail Address via SMTP</a></li>
+<li id="menu-item-58036" class="feature-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-58036"><a>Yahoo + PHP Tutorials</a></li>
+<li id="menu-item-58038" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58038"><a href="https://www.formget.com/yahoo-contact-importer/">Insert Contacts in Yahoo</a></li>
+<li id="menu-item-58039" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58039"><a href="https://www.formget.com/export-yahoo-contacts/">Export Yahoo Email Contacts</a></li>
+<li id="menu-item-58041" class="feature-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-58041"><a>Outlook + PHP Tutorials</a></li>
+<li id="menu-item-58043" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58043"><a href="https://www.formget.com/import-contacts-to-outlook/">Insert Contacts In Outlook</a></li>
+<li id="menu-item-58045" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58045"><a href="https://www.formget.com/export-hotmail-contacts/">Export Hotmail/Live/Outlook Contacts</a></li>
+<li id="menu-item-58048" class="feature-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-58048"><a href="https://www.formget.com/insert-data-in-database-using-php/#">Sendgrid SMTP/API</a></li>
+<li id="menu-item-58050" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58050"><a href="https://www.formget.com/sendgrid-php-api/">Send Email</a></li>
+<li id="menu-item-58051" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58051"><a href="https://www.formget.com/sendgrid-contacts/">Export Contacts</a></li>
+<li id="menu-item-58052" class="feature-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-58052"><a>MailGun SMTP/API</a></li>
+<li id="menu-item-58053" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58053"><a href="https://www.formget.com/mailgun-send-email/">Send Email</a></li>
+<li id="menu-item-58054" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58054"><a href="https://www.formget.com/php-mailgun/">Drip Email</a></li>
+<li id="menu-item-58055" class="feature-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-58055"><a>Mandrill SMTP/API</a></li>
+<li id="menu-item-58056" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58056"><a href="https://www.formget.com/mandrill-api-php/">Send Email</a></li>
+<li id="menu-item-58057" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58057"><a href="https://www.formget.com/mandrill-phpmailer/">Send Email via PHPMailer and Mandrill’s SMTP</a></li>
+<li id="menu-item-58058" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58058"><a href="https://www.formget.com/get-user-statistics-via-mandrill-api/">Mandrill API-Connected User’s Statistics</a></li>
+<li id="menu-item-58059" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58059"><a href="https://www.formget.com/mandrill-sender-statistics/">Sender’s Statistics</a></li>
+<li id="menu-item-58060" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58060"><a href="https://www.formget.com/mandrill-senders-list/">Sender’s Email List</a></li>
+<li id="menu-item-58062" class="feature-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-58062"><a>Mailjet SMTP/API</a></li>
+<li id="menu-item-58063" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58063"><a href="https://www.formget.com/mailjet-api-php/">Send Email</a></li>
+<li id="menu-item-58064" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58064"><a href="https://www.formget.com/mailjet-contact/">Export Mailjet Contacts</a></li>
+<li id="menu-item-58065" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58065"><a href="https://www.formget.com/insert-data-in-database-using-php/#">Postmark SMTP/API</a></li>
+<li id="menu-item-58067" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58067"><a href="https://www.formget.com/send-email-via-postmark-api-using-php/">Send Email</a></li>
+<li id="menu-item-58070" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58070"><a href="https://www.formget.com/retrieving-postmark-user-statistics/">Postmark API-Connected User’s Statistics</a></li>
+<li id="menu-item-58072" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58072"><a href="https://www.formget.com/postmark-api/">Export Postmark Contacts</a></li>
+<li id="menu-item-58075" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-58075"><a href="https://www.formget.com/find-bounced-email-via-postmark/">Find Bounced Email List</a></li>
+</ul></nav>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+				<div class="has_ae_slider elementor-element elementor-element-1c4a0038 ae-bg-gallery-type-default elementor-column elementor-col-33 elementor-top-column" data-id="1c4a0038" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="has_ae_slider elementor-element elementor-element-323ec08c elementor-section-full_width elementor-section-height-default elementor-section-height-default ae-bg-gallery-type-default elementor-section elementor-inner-section" data-id="323ec08c" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="has_ae_slider elementor-element elementor-element-2fa3de ae-bg-gallery-type-default elementor-column elementor-col-100 elementor-inner-column" data-id="2fa3de" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4322687 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-id="4322687" data-element_type="widget" data-widget_type="theme-post-title.default">
+				<div class="elementor-widget-container">
+			<h1 class="elementor-heading-title elementor-size-default">Insert Data in Database Using PHP</h1>		</div>
+				</div>
+				<div class="elementor-element elementor-element-4a97870a elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-ae-post-meta" data-id="4a97870a" data-element_type="widget" data-widget_type="ae-post-meta.default">
+				<div class="elementor-widget-container">
+			            <div class="ae-post-meta-list-wrapper ae-pm-layout-horizontal ae-pm-layout-tablet- ae-pm-layout-mobile-">
+                        <div class="ae-post-meta-item-wrapper">
+                        <span class="ae-element-post-date-label">
+                Updated on            </span>
+            <span class="ae-element-post-date" title="8:05 AM" rel="date">
+            <span>March 22, 2018</span>            </span>
+        </div>
+                                    <div class="item-separator"> </div>
+                                    <div class="ae-post-meta-item-wrapper">
+                        <span class="ae-element-post-author-label">
+                by            </span>
+            <span class="ae-element-post-author">
+                            <span>Neeraj Agarwal</span>                        </span>
+        </div>
+                    </div>
+            		</div>
+				</div>
+				<div class="elementor-element elementor-element-3a132a31 post-content elementor-widget elementor-widget-theme-post-content" data-id="3a132a31" data-element_type="widget" data-widget_type="theme-post-content.default">
+				<div class="elementor-widget-container">
+			<p>Php is a server side scripting language it allows to store data into database at server level. In this post I will illustrate&nbsp;you how insert data&nbsp;with Sql insert query in PHP.</p>
+<div class="syntax-highlighter" php="">
+<pre><code class="language-php">insert into tablename(column1,column2,...) values(value1,'value2',...); </code></pre>
+</div>
+<p>&nbsp;</p>
+<hr>
+<h5>&nbsp;<strong>&nbsp;Note :&nbsp;</strong>Value1 is written without single quotes, because it is an integer value and value2 is a string.</h5>
+<h5>&nbsp; &nbsp; &nbsp; For example : value1 = 1 and value2 = Albert.</h5>
+<p>&nbsp;</p>
+<hr>
+<p>First of all, I have created&nbsp; HTML form, in which method is set to <a title="PHP Post And Get Method" href="https://www.formget.com/php-post-get/" target="_blank"><strong>post</strong></a>&nbsp;,to hide values in URL which flows on form submission.</p>
+<p>Next, I wrote PHP code where the main functionality of insertion of values into database is performed.</p>
+<p>&nbsp;</p>
+<hr>
+<p>At MySql database I have created a database named “colleges” and table named “students” which consists of five fields viz. “student_id”, “student_name”, “student_email”, “student_contact”, “student_address”.</p>
+<p>Here in the download code provided below there is file naming <strong>db.sql</strong> in which sql queries are written for creating database, creating table and different columns in it.</p>
+<p>You just need to import it in your phpmyadmin&nbsp;it will create the required tables.</p>
+<p><strong>MY-SQL Code</strong></p>
+<div class="syntax-highlighter">
+<pre><code class="language-sql">CREATE DATABASE IF NOT EXISTS colleges;
+CREATE TABLE students(
+student_name varchar(255) NOT NULL,
+student_email varchar(255) NOT NULL,
+student_contact varchar(255) NOT NULL,
+student_address varchar(255) NOT NULL
+)</code></pre>
+</div>
+<p>&nbsp;</p>
+<p>After that use relevant path to run the program, like for example :</p>
+<div class="syntax-highlighter" php="">
+<pre><code class="language-php">localhost/insert.php</code></pre>
+</div>
+<p>&nbsp;</p>
+<p>Now fill the form fields and submit it,&nbsp;data will be saved to MySql database&nbsp;and a notification will be delivered “Data Submitted successfully”.</p>
+<hr>
+<p style="text-align: center;"><strong>&nbsp;Watch out the live demo or download the code to use it</strong></p>
+<p><img class="aligncenter wp-image-4921 size-full" title="Data Insertion" src="./Insert Data in Database Using PHP _ FormGet_files/data-insertion-using-php.png" alt="data insertion using php" width="595" height="417" srcset="https://www.formget.com/wp-content/uploads/2014/06/data-insertion-using-php.png 595w, https://www.formget.com/wp-content/uploads/2014/06/data-insertion-using-php-300x210.png 300w" sizes="(max-width: 595px) 100vw, 595px"></p>
+<div class="dlv_container"><a class="dlv_download" id="popup" data-download1="/wp-content/uploads/2014/11/insert_data_php.zip" href="javascript:void(0)">Download Code</a>&nbsp;&nbsp;&nbsp;<div id="abc"></div><div id="popupContact"></div></div><script type="text/javascript">var dl_script_content = "<div class='dl-info'><p class='pinfo'>This usually takes about 20 seconds for collecting your files and to send email.</p></div>";var dl_email_content = '';var dlv_loadeer = '<p style="visibility: hidden;margin-top: 20px;" class="loaderwrap"><img class="loader" src="https://www.formget.com/wp-content/plugins/content-upgrade/images/loader-small.gif"><span></span></p>';var dl_domain = "mailget";var dlv_close = '<img src = "https://www.formget.com/wp-content/plugins/content-upgrade/images/close.png\" onclick="dlv_close_popup(jQuery(this));" id ="close" / >';function create_popup() {output = "";output += '<div class="meter">';output += '<span style = "width: 100%"></span></div><div id="loading_submit"></div><form method="post" id="form">';output += '<label for="name">Your Name</label><span class="input_wrapper"><input type="text" name="name" id="name"/></span>';output += '<input type ="hidden" name="subs_id" id="subs_id" value="IjgwOTQ5MiI_3D"/>';output += '<input type ="hidden" name="download" id="download" value="/wp-content/uploads/2014/11/insert_data_php.zip"/>';output += '<label for="email">Your Email Address</label><span class="input_wrapper"><input onclick="dlv_email_validate(jQuery(this));" placeholder="joie@example.com" type ="text" required="" value="" name="email" id="email"/></span>';output += '<input type ="button" id="popup_submit" name="submit" value="Download File" />';output += '<p> Download link will be send to your Email.';output += '</form>';return output;}</script>
+<hr>
+<p><strong>HTML File – insert.php</strong></p>
+<ul>
+<li>Consists of form div “form”.</li>
+</ul>
+<div class="syntax-highlighter" html="">
+<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;PHP insertion&lt;/title&gt;
+&lt;link href="css/insert.css" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="maindiv"&gt;
+&lt;!--HTML Form --&gt;
+&lt;div class="form_div"&gt;
+&lt;div class="title"&gt;
+&lt;h2&gt;Insert Data In Database Using PHP.&lt;/h2&gt;
+&lt;/div&gt;
+&lt;form action="insert.php" method="post"&gt;
+&lt;!-- Method can be set as POST for hiding values in URL--&gt;
+&lt;h2&gt;Form&lt;/h2&gt;
+&lt;label&gt;Name:&lt;/label&gt;
+&lt;input class="input" name="name" type="text" value=""&gt;
+&lt;label&gt;Email:&lt;/label&gt;
+&lt;input class="input" name="email" type="text" value=""&gt;
+&lt;label&gt;Contact:&lt;/label&gt;
+&lt;input class="input" name="contact" type="text" value=""&gt;
+&lt;label&gt;Address:&lt;/label&gt;
+&lt;textarea cols="25" name="address" rows="5"&gt;&lt;/textarea&gt;&lt;br&gt;
+&lt;input class="submit" name="submit" type="submit" value="Insert"&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+<p>&nbsp;</p>
+<p><strong>PHP Code segment</strong></p>
+<ul>
+<li>Insert form information into database.</li>
+</ul>
+<div class="syntax-highlighter" php="">
+<pre><code class="language-php">
+&lt;?php
+$connection = mysql_connect("localhost", "root", ""); // Establishing Connection with Server
+$db = mysql_select_db("colleges", $connection); // Selecting Database from Server
+if(isset($_POST['submit'])){ // Fetching variables of the form which travels in URL
+$name = $_POST['name'];
+$email = $_POST['email'];
+$contact = $_POST['contact'];
+$address = $_POST['address'];
+if($name !=''||$email !=''){
+//Insert Query of SQL
+$query = mysql_query("insert into students(student_name, student_email, student_contact, student_address) values ('$name', '$email', '$contact', '$address')");
+echo "&lt;br/&gt;&lt;br/&gt;&lt;span&gt;Data Inserted successfully...!!&lt;/span&gt;";
+}
+else{
+echo "&lt;p&gt;Insertion Failed &lt;br/&gt; Some Fields are Blank....!!&lt;/p&gt;";
+}
+}
+mysql_close($connection); // Closing Connection with Server
+?&gt;
+</code></pre>
+</div>
+<p>&nbsp;</p>
+<p><strong>Css File – insert.css</strong></p>
+<ul>
+<li>Includes basic styling of &nbsp;HTML&nbsp;elements.</li>
+</ul>
+<div class="syntax-highlighter" css="">
+<pre><code class="language-css">
+@import "http://fonts.googleapis.com/css?family=Droid+Serif";
+/* The Above Line Is To Import Google Font Style */
+.maindiv {
+margin:30px auto;
+width:980px;
+height:500px;
+background:#fff;
+padding-top:20px;
+font-family:'Droid Serif',serif;
+font-size:14px
+}
+.title {
+width:500px;
+height:70px;
+text-shadow:2px 2px 2px #cfcfcf;
+font-size:16px;
+text-align:center
+}
+.form_div {
+width:70%;
+float:left
+}
+form {
+width:300px;
+border:1px dashed #aaa;
+padding:10px 30px 40px;
+margin-left:70px;
+background-color:#f0f8ff
+}
+form h2 {
+text-align:center;
+text-shadow:2px 2px 2px #cfcfcf
+}
+textarea {
+width:100%;
+height:60px;
+border-radius:1px;
+box-shadow:0 0 1px 2px #123456;
+margin-top:10px;
+padding:7px;
+border:none
+}
+.input {
+width:100%;
+height:30px;
+border-radius:2px;
+box-shadow:0 0 1px 2px #123456;
+margin-top:10px;
+padding:7px;
+border:none;
+margin-bottom:20px
+}
+.submit {
+color:#fff;
+border-radius:3px;
+background:#1F8DD6;
+padding:5px;
+margin-top:40px;
+border:none;
+width:100%;
+height:30px;
+box-shadow:0 0 1px 2px #123456;
+font-size:18px
+}
+p {
+color:red;
+text-align:center
+}
+span {
+text-align:center;
+color:green
+}
+</code></pre>
+</div>
+<p>&nbsp;</p>
+<h3><strong>Conclusion:</strong></h3>
+<p>I hope this tutorial helped you to insert data into database. If you want to share your feedback, you can easily do it via space provided&nbsp;below.</p>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="has_ae_slider elementor-element elementor-element-600e2c4 elementor-section-boxed elementor-section-height-default elementor-section-height-default ae-bg-gallery-type-default elementor-section elementor-inner-section" data-id="600e2c4" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="has_ae_slider elementor-element elementor-element-139d7a4 ae-bg-gallery-type-default elementor-column elementor-col-100 elementor-inner-column" data-id="139d7a4" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3409428 elementor-widget elementor-widget-spacer" data-id="3409428" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="has_ae_slider elementor-element elementor-element-c8372c2 elementor-section-full_width elementor-section-height-default elementor-section-height-default ae-bg-gallery-type-default elementor-section elementor-inner-section" data-id="c8372c2" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="has_ae_slider elementor-element elementor-element-a21a992 ae-bg-gallery-type-default elementor-column elementor-col-100 elementor-inner-column" data-id="a21a992" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-fd1e493 comment_list elementor-widget elementor-widget-post-comments" data-id="fd1e493" data-element_type="widget" data-widget_type="post-comments.theme_comments">
+				<div class="elementor-widget-container">
+			
+<div id="comments" class="comments-area">
+
+			<h2 class="comments-title">
+			44 Replies to “Insert Data in Database Using PHP”		</h2>
+
+		<ol class="comment-list">
+					<li id="comment-129953" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-129953" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/f13e65a783fa31bd87788af706cc9b8e.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">Wirawan Camilia</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-129953">
+							<time datetime="2014-09-29T12:42:47+00:00">
+								September 29, 2014 at 12:42 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Many thanks to you. This article helps me a lot. I’ve been searching the answer for my php problem and found this usefull article. Sorry for my bad english, thanks again. keep up the good work!!! God bless…</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-129953" data-commentid="129953" data-postid="4857" data-belowelement="div-comment-129953" data-respondelement="respond" aria-label="Reply to Wirawan Camilia"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-130862" class="comment byuser comment-author-admin bypostauthor odd alt depth-2">
+			<article id="div-comment-130862" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/admin_profile_pic.png" width="81" height="81" alt="admin" class="avatar avatar-100 wp-user-avatar wp-user-avatar-100 alignnone photo">						<b class="fn">admin</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-130862">
+							<time datetime="2014-10-07T09:37:11+00:00">
+								October 7, 2014 at 9:37 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Thanks for your appreciation …….!</p>
+<p>Keep reading our other blog posts.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-130862" data-commentid="130862" data-postid="4857" data-belowelement="div-comment-130862" data-respondelement="respond" aria-label="Reply to admin"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-133645" class="comment even thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-133645" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/243ddb8aed5c7ab49aff22fa4fb8d047.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">Anasty</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-133645">
+							<time datetime="2014-10-23T01:23:25+00:00">
+								October 23, 2014 at 1:23 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Can any one tell me what is wrong with my codes because is given error message undefined index first at line 16</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-133645" data-commentid="133645" data-postid="4857" data-belowelement="div-comment-133645" data-respondelement="respond" aria-label="Reply to Anasty"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-137288" class="comment byuser comment-author-admin bypostauthor odd alt depth-2">
+			<article id="div-comment-137288" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/admin_profile_pic.png" width="81" height="81" alt="admin" class="avatar avatar-100 wp-user-avatar wp-user-avatar-100 alignnone photo">						<b class="fn">admin</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-137288">
+							<time datetime="2014-11-10T10:47:06+00:00">
+								November 10, 2014 at 10:47 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Have you done any changes in the code ? As at my end it is working fine, you just need to download the code , extract the file in your local server file , go to your Phpmyadmin import db.sql file and then open the program , using syntax : localhost/insert.php</p>
+<p>Hope that will work for you.</p>
+<p>Regards,<br>
+FormGet Team.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-137288" data-commentid="137288" data-postid="4857" data-belowelement="div-comment-137288" data-respondelement="respond" aria-label="Reply to admin"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-136842" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-136842" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/a92714dd0917bfb5621f920dd901782c.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">Ambrose Maina Mungai</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-136842">
+							<time datetime="2014-11-08T14:27:03+00:00">
+								November 8, 2014 at 2:27 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Wonderful</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-136842" data-commentid="136842" data-postid="4857" data-belowelement="div-comment-136842" data-respondelement="respond" aria-label="Reply to Ambrose Maina Mungai"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-137290" class="comment byuser comment-author-admin bypostauthor odd alt depth-2">
+			<article id="div-comment-137290" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/admin_profile_pic.png" width="81" height="81" alt="admin" class="avatar avatar-100 wp-user-avatar wp-user-avatar-100 alignnone photo">						<b class="fn">admin</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-137290">
+							<time datetime="2014-11-10T10:52:43+00:00">
+								November 10, 2014 at 10:52 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hello Ambrose,</p>
+<p>Hope that above tutorial had helped you , thanks for reading the post.</p>
+<p>Regards,<br>
+FormGet Team</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-137290" data-commentid="137290" data-postid="4857" data-belowelement="div-comment-137290" data-respondelement="respond" aria-label="Reply to admin"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-139809" class="comment even thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-139809" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/6d6bf906cd09feda787004722e589864.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">Kelum Madusanka</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-139809">
+							<time datetime="2014-11-24T06:46:34+00:00">
+								November 24, 2014 at 6:46 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>This is great. I was searching a good tutorial for days,this found and this is very simple…thank you very much! Please keep up the good and simple tutorials for beginners like us,thanks again.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-139809" data-commentid="139809" data-postid="4857" data-belowelement="div-comment-139809" data-respondelement="respond" aria-label="Reply to Kelum Madusanka"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-140013" class="comment byuser comment-author-admin bypostauthor odd alt depth-2">
+			<article id="div-comment-140013" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/admin_profile_pic.png" width="81" height="81" alt="admin" class="avatar avatar-100 wp-user-avatar wp-user-avatar-100 alignnone photo">						<b class="fn">admin</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-140013">
+							<time datetime="2014-11-25T11:28:48+00:00">
+								November 25, 2014 at 11:28 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hello Kelum,</p>
+<p>That sounds really great ! Keep reading our other blog posts for getting more coding tricks.</p>
+<p>Catch up new posts from <a href="https://www.formget.com/blog/" rel="nofollow">here</a></p>
+<p>Regards,<br>
+FormGet Team</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-140013" data-commentid="140013" data-postid="4857" data-belowelement="div-comment-140013" data-respondelement="respond" aria-label="Reply to admin"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-141927" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-141927" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/03846c5403c687b64133ca8b2ec4eb94.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">ishaq</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-141927">
+							<time datetime="2014-12-04T15:59:28+00:00">
+								December 4, 2014 at 3:59 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>many thanks to its realy very helpful</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-141927" data-commentid="141927" data-postid="4857" data-belowelement="div-comment-141927" data-respondelement="respond" aria-label="Reply to ishaq"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-142080" class="comment byuser comment-author-admin bypostauthor odd alt depth-2">
+			<article id="div-comment-142080" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/admin_profile_pic.png" width="81" height="81" alt="admin" class="avatar avatar-100 wp-user-avatar wp-user-avatar-100 alignnone photo">						<b class="fn">admin</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-142080">
+							<time datetime="2014-12-05T11:04:01+00:00">
+								December 5, 2014 at 11:04 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hello Ishaq,</p>
+<p>That sounds really great ! Keep reading our other blog posts for getting more coding tricks.</p>
+<p>Catch up new posts from <a href="https://www.formget.com/blog/" rel="nofollow">here</a></p>
+<p>Regards,<br>
+FormGet Team</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-142080" data-commentid="142080" data-postid="4857" data-belowelement="div-comment-142080" data-respondelement="respond" aria-label="Reply to admin"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-142085" class="comment even thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-142085" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/d73c6db028a24afdad6f737c5f9275df.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">joseph</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-142085">
+							<time datetime="2014-12-05T11:32:46+00:00">
+								December 5, 2014 at 11:32 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>i read Ur code, the  code below its look the same as yours the problem is doesn’t work at all it’s give error when am try to insert into database<br>
+my code:<br>
+insert.php</p>
+<p><b>Write your ACADEMIC COMMENT here</b></p>
+<p>   &nbsp; </p>
+<p> <b>Write your SPORTS COMMENT here</b></p>
+<p>   &nbsp; </p>
+<p> <b>Write your HOSTEL COMMENT here</b></p>
+<p>    &nbsp; </p>
+<p> <b>Write OTHER INFOMATION you have here</b></p>
+<p>php code to insert into database</p>
+<p>&lt;?php<br>
+if(isset($_POST['submit'])){<br>
+   $message = $_POST['message'];<br>
+   $message1 = $_POST['message1'];<br>
+   $message2 = $_POST['message2'];<br>
+   $message3 = $_POST['message3'];<br>
+   if(empty($message)||empty($message1)||empty($message2)||empty($message3)){</p>
+<p>  $report = mysql_query("INSERT INTO civebox(sms_id, AcademicSms ,SportsSms ,HostelSms, OtherInfo)<br>
+  VALUES ('$message','$message1','$message2','$message3')");<br>
+    echo " message successfully sent ";<br>
+  }else<br>
+    { echo " error in your query ";}</p>
+<p>}</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-142085" data-commentid="142085" data-postid="4857" data-belowelement="div-comment-142085" data-respondelement="respond" aria-label="Reply to joseph"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-142090" class="comment byuser comment-author-admin bypostauthor odd alt depth-2">
+			<article id="div-comment-142090" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/admin_profile_pic.png" width="81" height="81" alt="admin" class="avatar avatar-100 wp-user-avatar wp-user-avatar-100 alignnone photo">						<b class="fn">admin</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-142090">
+							<time datetime="2014-12-05T12:14:41+00:00">
+								December 5, 2014 at 12:14 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hello Joseph,</p>
+<p>First you check for the above given code , then change it according to you.</p>
+<p>In your code you are lacking with database connections and all.</p>
+<p>Hope that will work for you.</p>
+<p>Regards,<br>
+Formget Team.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-142090" data-commentid="142090" data-postid="4857" data-belowelement="div-comment-142090" data-respondelement="respond" aria-label="Reply to admin"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-153600" class="comment even thread-even depth-1">
+			<article id="div-comment-153600" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/5159f40d89d1da8b74cd2d51d27a41da.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">prakash</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-153600">
+							<time datetime="2015-01-19T08:28:59+00:00">
+								January 19, 2015 at 8:28 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>This is a good website…….</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-153600" data-commentid="153600" data-postid="4857" data-belowelement="div-comment-153600" data-respondelement="respond" aria-label="Reply to prakash"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-156103" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-156103" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/211bfb6ba5aa42b7f501f0ea3691dcd2.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">Nachiketa</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-156103">
+							<time datetime="2015-01-26T14:37:43+00:00">
+								January 26, 2015 at 2:37 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi.. Thanks you for the Post… helped a lot….  But i need help with my code….<br>
+I have two database tables Contact_info and Staff_Details. Now I have a foreign Key to the ContactID of the Contact_Info table from the Staff_details table and while entering the data from the form I want both the table to get the data .. How do I do that. Kindly advise.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-156103" data-commentid="156103" data-postid="4857" data-belowelement="div-comment-156103" data-respondelement="respond" aria-label="Reply to Nachiketa"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-157926" class="comment even thread-even depth-1">
+			<article id="div-comment-157926" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/fa2092561489b13d89683f7932cb98bc.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">Bhavesh Pravin More</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-157926">
+							<time datetime="2015-01-31T06:05:31+00:00">
+								January 31, 2015 at 6:05 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>fantastic… have been trying since a month and you gave the right code… wow.. yess.. thanks</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-157926" data-commentid="157926" data-postid="4857" data-belowelement="div-comment-157926" data-respondelement="respond" aria-label="Reply to Bhavesh Pravin More"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-197805" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-197805" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/34218138a6901d0449422b9e82405e86.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">ismail khan</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-197805">
+							<time datetime="2015-03-30T09:48:44+00:00">
+								March 30, 2015 at 9:48 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>this is realy great tutorial for every biggners …thanks for sharing this ……</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-197805" data-commentid="197805" data-postid="4857" data-belowelement="div-comment-197805" data-respondelement="respond" aria-label="Reply to ismail khan"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-199382" class="comment even thread-even depth-1">
+			<article id="div-comment-199382" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/a6d2930c99cd54255fa715d830594156.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">Jack</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-199382">
+							<time datetime="2015-04-02T13:35:21+00:00">
+								April 2, 2015 at 1:35 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>It’s realy usefull.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-199382" data-commentid="199382" data-postid="4857" data-belowelement="div-comment-199382" data-respondelement="respond" aria-label="Reply to Jack"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-202280" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-202280" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/e705aaf94e018385ee1867d1df3219cf.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">Dodo6</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-202280">
+							<time datetime="2015-04-09T02:20:27+00:00">
+								April 9, 2015 at 2:20 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>wonderful!!!<br>
+thx</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-202280" data-commentid="202280" data-postid="4857" data-belowelement="div-comment-202280" data-respondelement="respond" aria-label="Reply to Dodo6"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-208725" class="comment even thread-even depth-1">
+			<article id="div-comment-208725" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/86f35f30dc941a011ab99efd51ce3e52.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">nitin</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-208725">
+							<time datetime="2015-05-04T11:15:08+00:00">
+								May 4, 2015 at 11:15 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Thanks…………</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-208725" data-commentid="208725" data-postid="4857" data-belowelement="div-comment-208725" data-respondelement="respond" aria-label="Reply to nitin"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-212358" class="comment odd alt thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-212358" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/8aa380e38628c7364b1addd35395ad0a.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">Anwar ul haq</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-212358">
+							<time datetime="2015-05-26T15:52:36+00:00">
+								May 26, 2015 at 3:52 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Sir its good but i need insertion to using classes which show MVC Model .Thanks</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-212358" data-commentid="212358" data-postid="4857" data-belowelement="div-comment-212358" data-respondelement="respond" aria-label="Reply to Anwar ul haq"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-212426" class="comment byuser comment-author-admin bypostauthor even depth-2">
+			<article id="div-comment-212426" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/admin_profile_pic.png" width="81" height="81" alt="Neeraj Agarwal" class="avatar avatar-100 wp-user-avatar wp-user-avatar-100 alignnone photo">						<b class="fn">Neeraj Agarwal</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-212426">
+							<time datetime="2015-05-27T05:13:27+00:00">
+								May 27, 2015 at 5:13 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hello Anwar,</p>
+<p>Thanks for your appreciation …….!</p>
+<p>For insertion data via MVC Model  see </p>
+<p><a href="https://www.formget.com/insert-data-into-database-using-codeigniter/" rel="nofollow ugc">https://www.formget.com/insert-data-into-database-using-codeigniter/</a></p>
+<p>Hope that will work for you.</p>
+<p>Regards,<br>
+Formget Team.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-212426" data-commentid="212426" data-postid="4857" data-belowelement="div-comment-212426" data-respondelement="respond" aria-label="Reply to Neeraj Agarwal"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-218448" class="comment odd alt thread-even depth-1">
+			<article id="div-comment-218448" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/a22f6e9c2ad945c5816991d13d33aa3f.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">Nivi</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-218448">
+							<time datetime="2015-07-16T05:20:05+00:00">
+								July 16, 2015 at 5:20 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I want to insert form data to MySQL db when i click submit button.datas  are not inserted,<br>
+this is my following code:<br>
+&lt;?php<br>
+$conn = mysql_connect("localhost", "root", "");<br>
+if(!$conn)<br>
+{<br>
+die('could not connect:'.mysql_error());<br>
+}<br>
+$db = mysql_select_db("student");<br>
+or die ("unable to select  to the database");<br>
+if(isset($_POST['submit']))<br>
+{<br>
+$name = $_POST['Name'];<br>
+$age = $_POST['Age_txt'];<br>
+$fathne = $_POST['Father_txt'];<br>
+$national = $_POST['nation_txt'];<br>
+$email = $_POST['Email'];<br>
+$mob= $_POST['mob_txt'];<br>
+}<br>
+if('$name'!=null)  ||('$age'!=null)||('$fathne'!=null) ||('$national'!=null)||('$email'!=null)||('$mob'!=null){<br>
+$query = mysql_query("INSERT INTO stud(student_name,student_age,student_father,student_nation,student_email,student_mob) values ('$name', '$age', '$fathne', '$national','$email','$mob')");<br>
+}<br>
+else<br>
+{<br>
+echo("unable to insert the data”);<br>
+}<br>
+$result = mysql_query($query,$conn);<br>
+if($result)<br>
+{<br>
+	echo(“Input data is succeed”);<br>
+} else<br>
+{<br>
+	echo(“Input data is fail”);<br>
+}<br>
+?&gt;</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-218448" data-commentid="218448" data-postid="4857" data-belowelement="div-comment-218448" data-respondelement="respond" aria-label="Reply to Nivi"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-221352" class="comment even thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-221352" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/be6be411baedb46166fc1d7345bae89e.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">James</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-221352">
+							<time datetime="2015-08-13T16:20:58+00:00">
+								August 13, 2015 at 4:20 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Thanks for the scripts @ admin.</p>
+<p>But, please is the code strong enough to prevent hackers from bringing down my site?</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-221352" data-commentid="221352" data-postid="4857" data-belowelement="div-comment-221352" data-respondelement="respond" aria-label="Reply to James"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-222476" class="comment byuser comment-author-admin bypostauthor odd alt depth-2">
+			<article id="div-comment-222476" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/admin_profile_pic.png" width="81" height="81" alt="Neeraj Agarwal" class="avatar avatar-100 wp-user-avatar wp-user-avatar-100 alignnone photo">						<b class="fn">Neeraj Agarwal</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-222476">
+							<time datetime="2015-08-24T06:44:21+00:00">
+								August 24, 2015 at 6:44 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Please check this article, We have write it especially for the security purpose.<br>
+<a href="https://www.formget.com/sql-injection-prevention-in-php-with-mysqli/" target="_blank" rel="nofollow">https://www.formget.com/sql-injection-prevention-in-php-with-mysqli/</a></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-222476" data-commentid="222476" data-postid="4857" data-belowelement="div-comment-222476" data-respondelement="respond" aria-label="Reply to Neeraj Agarwal"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-222158" class="comment even thread-even depth-1">
+			<article id="div-comment-222158" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/3cd9490775dadcefce81a599956b38ab.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">GASPAR</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-222158">
+							<time datetime="2015-08-21T05:53:59+00:00">
+								August 21, 2015 at 5:53 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>good work keep on</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-222158" data-commentid="222158" data-postid="4857" data-belowelement="div-comment-222158" data-respondelement="respond" aria-label="Reply to GASPAR"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-224716" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-224716" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/d3af62f2fc33417bbbba3a1a45986a98.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">eddy</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-224716">
+							<time datetime="2015-09-14T22:33:35+00:00">
+								September 14, 2015 at 10:33 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>hi..im getting this error :Parse error: syntax error, unexpected ‘password’ (T_STRING), expecting ‘]’ in C:\xampp\htdocs\tutorialApi\form.php on line 11</p>
+<p>i have this in my line 11  $password= [‘password’];</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-224716" data-commentid="224716" data-postid="4857" data-belowelement="div-comment-224716" data-respondelement="respond" aria-label="Reply to eddy"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-226144" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-226144" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/b1ddb4d1e88f0b3825b1171b340326d8.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">Tushar chakraborty</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-226144">
+							<time datetime="2015-09-30T09:43:00+00:00">
+								September 30, 2015 at 9:43 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>If i add password and username field ,then will it store the similar data in mysql Server??? Or if i create registration page, will it store data in mysql server? And keep increasing as per user register on it???</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-226144" data-commentid="226144" data-postid="4857" data-belowelement="div-comment-226144" data-respondelement="respond" aria-label="Reply to Tushar chakraborty"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-228230" class="comment byuser comment-author-admin bypostauthor odd alt depth-2">
+			<article id="div-comment-228230" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/admin_profile_pic.png" width="81" height="81" alt="Neeraj Agarwal" class="avatar avatar-100 wp-user-avatar wp-user-avatar-100 alignnone photo">						<b class="fn">Neeraj Agarwal</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-228230">
+							<time datetime="2015-10-19T09:54:15+00:00">
+								October 19, 2015 at 9:54 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi Tushar,</p>
+<p>If you want to add some additional field(username and password), then first you will have to make columns for these fields in the database table. Then, fetch the submitted values and insert the submitted values in the database table by adding the values and column name in the mysql query.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-228230" data-commentid="228230" data-postid="4857" data-belowelement="div-comment-228230" data-respondelement="respond" aria-label="Reply to Neeraj Agarwal"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-228902" class="comment even thread-odd thread-alt depth-1">
+			<article id="div-comment-228902" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/0dd1d62e99fe4c69f41ed440257fb528.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">shafiq</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-228902">
+							<time datetime="2015-10-22T15:59:56+00:00">
+								October 22, 2015 at 3:59 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>i want a dynamic form whose values gets added to the database can you please help me on that its quite urgent</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-228902" data-commentid="228902" data-postid="4857" data-belowelement="div-comment-228902" data-respondelement="respond" aria-label="Reply to shafiq"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-228904" class="comment odd alt thread-even depth-1">
+			<article id="div-comment-228904" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/0dd1d62e99fe4c69f41ed440257fb528.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">shafiq</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-228904">
+							<time datetime="2015-10-22T16:11:07+00:00">
+								October 22, 2015 at 4:11 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I have where user can add many field as he want now i want store that form in database any help on it plz</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-228904" data-commentid="228904" data-postid="4857" data-belowelement="div-comment-228904" data-respondelement="respond" aria-label="Reply to shafiq"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-231806" class="comment even thread-odd thread-alt depth-1">
+			<article id="div-comment-231806" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/b61b40ee8cb7375510f425e866d0bc70.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">saranya</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-231806">
+							<time datetime="2015-11-18T07:21:06+00:00">
+								November 18, 2015 at 7:21 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>its useful</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-231806" data-commentid="231806" data-postid="4857" data-belowelement="div-comment-231806" data-respondelement="respond" aria-label="Reply to saranya"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-232462" class="comment odd alt thread-even depth-1">
+			<article id="div-comment-232462" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/d2bf7a96ac2b4140bd88ae0213e31682.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">Marie</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-232462">
+							<time datetime="2015-11-25T08:58:06+00:00">
+								November 25, 2015 at 8:58 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I am using PHPStorm 8.0.3 C<br>
+,Codeigniter 3.0.3 and Wamp Server2.1ex32.<br>
+My OS is 32 bit with Windows 7 Ultimate and Processor:Intel(R)Core(TM)i3-2100 CPU<br>
+I have done with the above codes and all files…localhost/insert.php is displaying the same result as in the image above provided.But the problem I am facing is that my database is not inserted in MySQL database…The web page localhost/insert.php  is accepting all the values but its not displaying it into the database due to the issue that my db.sql says that<br>
+No data resources are configured to run this SQL and provide advanced configuration.<br>
+SQL dialect is not configured.<br>
+Please tell me how to proceed.This code is very useful for me…Please resolve my issue….</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-232462" data-commentid="232462" data-postid="4857" data-belowelement="div-comment-232462" data-respondelement="respond" aria-label="Reply to Marie"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-234171" class="comment even thread-odd thread-alt depth-1">
+			<article id="div-comment-234171" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/be5c51dae730db3b1f65c52f615186ff.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">yash rohan</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-234171">
+							<time datetime="2015-12-11T17:42:53+00:00">
+								December 11, 2015 at 5:42 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>the values entered in form inserts data into database everytime on refresh</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-234171" data-commentid="234171" data-postid="4857" data-belowelement="div-comment-234171" data-respondelement="respond" aria-label="Reply to yash rohan"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-237333" class="comment odd alt thread-even depth-1">
+			<article id="div-comment-237333" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/1b3f987afe57bfb0a10c5b75bf1fb0dd.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">Dilshani</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-237333">
+							<time datetime="2016-01-12T17:15:36+00:00">
+								January 12, 2016 at 5:15 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hey, I used this code and it was successful. Many thanks! Can you pls tell me how to insert data into two tables from one form?<br>
+For example, user registration form’s email and password should store in login table while other details are stored in user table.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-237333" data-commentid="237333" data-postid="4857" data-belowelement="div-comment-237333" data-respondelement="respond" aria-label="Reply to Dilshani"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-237435" class="comment even thread-odd thread-alt depth-1">
+			<article id="div-comment-237435" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/7a8504801f9ae569c1cfa3f67bba5deb.jpeg" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">jackson</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-237435">
+							<time datetime="2016-01-13T06:55:53+00:00">
+								January 13, 2016 at 6:55 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Awesome</p>
+<p>Thanks for this post…</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-237435" data-commentid="237435" data-postid="4857" data-belowelement="div-comment-237435" data-respondelement="respond" aria-label="Reply to jackson"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-237849" class="comment odd alt thread-even depth-1">
+			<article id="div-comment-237849" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/f943d649f7d2f1e5969fb52822a64a59.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">jane</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-237849">
+							<time datetime="2016-01-15T08:34:11+00:00">
+								January 15, 2016 at 8:34 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>i have problem w/ my add_process form at always say that i successfully added some data to my data base .. when i check my database table the data that i added was not found what maybe the wrong in my code<br>
+…</p>
+<p>&lt;?php<br>
+	if(isset($_POST['submit'])){<br>
+	$first=trim($_POST['fname']);<br>
+	$last=trim($_POST['lname']);<br>
+	$middle=trim($_POST['mname']);<br>
+	$address=trim($_POST['address']);<br>
+	$sex=trim($_POST['sex']);<br>
+	$bday=trim($_POST['bday']);<br>
+	$age=trim($_POST['age']);<br>
+	if($first !=''||$last !=''){</p>
+<p>	$query = mysql_query("INSERT INTO secretary(f_name,l_name,m_name,address,sex,birthdate,age)VALUES<br>
+									('$first','$last','$middle',$address','$sex',$bday','$age')");</p>
+<p>	echo "alert(‘Sucessfully added!’)”;</p>
+<p>	echo “window.open(‘index.php’,’_self’)”;<br>
+	}<br>
+	else{<br>
+	echo “Insertion Failed  Some Fields are Blank….!!”;<br>
+	}<br>
+	}<br>
+mysql_close($con); // Closing Connection with Server<br>
+?&gt;</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-237849" data-commentid="237849" data-postid="4857" data-belowelement="div-comment-237849" data-respondelement="respond" aria-label="Reply to jane"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-241546" class="comment even thread-odd thread-alt depth-1">
+			<article id="div-comment-241546" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/7f6ace44a65909315c69ecdcfc486e74.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">nishant bhati</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-241546">
+							<time datetime="2016-02-05T10:07:29+00:00">
+								February 5, 2016 at 10:07 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Many thanks to you.<br>
+This is great. I was searching a good tutorial for days,this found and this is very simple…thank you very much……</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-241546" data-commentid="241546" data-postid="4857" data-belowelement="div-comment-241546" data-respondelement="respond" aria-label="Reply to nishant bhati"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-241591" class="comment odd alt thread-even depth-1">
+			<article id="div-comment-241591" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/5c46ad6f2cf37cc3bbd18fb7c245216b.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">Asmitha</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-241591">
+							<time datetime="2016-02-05T13:52:39+00:00">
+								February 5, 2016 at 1:52 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hello sir can you pls tell me how to get table in php</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-241591" data-commentid="241591" data-postid="4857" data-belowelement="div-comment-241591" data-respondelement="respond" aria-label="Reply to Asmitha"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-242129" class="comment even thread-odd thread-alt depth-1">
+			<article id="div-comment-242129" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/5bc4feb40b8a75662e504d820193b4c2.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">jefuza</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-242129">
+							<time datetime="2016-02-08T14:00:57+00:00">
+								February 8, 2016 at 2:00 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Thanks a lot , it is working fine , but how to you add info to database</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-242129" data-commentid="242129" data-postid="4857" data-belowelement="div-comment-242129" data-respondelement="respond" aria-label="Reply to jefuza"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-243491" class="comment odd alt thread-even depth-1">
+			<article id="div-comment-243491" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/362b2aacb4b79df93184089a70a68bea.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">dinesh</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-243491">
+							<time datetime="2016-02-17T12:20:15+00:00">
+								February 17, 2016 at 12:20 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>This code is inserting only first record into database.not every time ?can you suggest what to add in this code.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-243491" data-commentid="243491" data-postid="4857" data-belowelement="div-comment-243491" data-respondelement="respond" aria-label="Reply to dinesh"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-247918" class="comment even thread-odd thread-alt depth-1">
+			<article id="div-comment-247918" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/1485fda88b076888e1408c4985e5772d.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">Tequila</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-247918">
+							<time datetime="2016-03-16T16:04:53+00:00">
+								March 16, 2016 at 4:04 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Your code works for MS SQL server too, I have this code which it works:</p>
+<p>$tsql = “INSERT INTO SCORES (ID, Supervisor, ACCT, QARDate, COMMENTS) VALUES (?,?,?,?,?)”;<br>
+$parameters = array($_POST[ID], $_POST[Supervisor], $_POST[ACCT], $_POST[QARDate], $_POST[COMMENTS]);<br>
+$stmt = sqlsrv_query($connection, $tsql, $parameters);</p>
+<p>My problem is QARDate is a datetime data type, and comments is varchar(MAX) in the database.  How can I define those two fields in my html code?  Do I need to change something in my PHP code to write to the table?  How about date validation?</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-247918" data-commentid="247918" data-postid="4857" data-belowelement="div-comment-247918" data-respondelement="respond" aria-label="Reply to Tequila"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-313279" class="comment odd alt thread-even depth-1">
+			<article id="div-comment-313279" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/46bdac9888e28aeab992c62209f4fd42.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">maha</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-313279">
+							<time datetime="2016-12-26T12:30:07+00:00">
+								December 26, 2016 at 12:30 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>i want to submit form by inserting data in multiple table using one query.<br>
+please, can any one help me.<br>
+this is my code:<br>
+&lt;?php</p>
+<p>require "common/session.php";</p>
+<p>if(isset($_POST['next']))<br>
+{<br>
+	$con = mysqli_connect('127.0.0.1', 'root', '');<br>
+	if ($con)<br>
+	{<br>
+		echo 'Connection works fine’;<br>
+	}<br>
+	if (mysqli_select_db($con, ‘pulse’))<br>
+	{<br>
+		echo ‘database selected ‘;<br>
+	}<br>
+	$csType = $_POST[‘csType’];<br>
+	$clubForm = $_POST[‘clubForm’];<br>
+	$nameEN = $_POST[‘nameEN’];<br>
+	$nameAR = $_POST[‘nameAR’];<br>
+	$descriptionEN = $_POST[‘descriptionEN’];<br>
+	$descriptionAR = $_POST[‘descriptionAR’];<br>
+	$subDuration = $_POST[‘subDuration’];<br>
+	$logo = $_POST[‘logo’];<br>
+	$phoneNumber = $_POST[‘phoneNumber’];<br>
+	$telNumber = $_POST[‘telNumber’];<br>
+	$email = $_POST[’email’];<br>
+	$facebook = $_POST[‘facebook’];<br>
+	$twitter = $_POST[‘twitter’];<br>
+	$instagram = $_POST[‘instagram’];<br>
+	$youtube = $_POST[‘youtube’];<br>
+	//$website = $_POST[‘website-link’];</p>
+<p>	$specialties_nameEN = implode(‘,’, $_POST[‘clubox’]);<br>
+	//$specialties_nameEN = $_POST[‘clubox[]’];<br>
+	$specialties_nameAR = $_POST[‘nameAR’];</p>
+<p>	$facilities_nameEN = implode(‘,’, $_POST[‘clubox’]);<br>
+	//$facilities_nameEN = $_POST[‘nameEN’];<br>
+	$facilities_nameAR = $_POST[‘nameAR’];</p>
+<p>	$categories_nameEN = implode(‘,’, $_POST[‘clubox’]);<br>
+	//$categories_nameEN = $_POST[‘nameEN’];<br>
+	$categories_nameAR = $_POST[‘nameAR’];</p>
+<p>	$timing = $_POST[‘timing’];<br>
+	$phoneNumber2 = $_POST[‘phoneNumber’];<br>
+	$gender = $_POST[‘gender’];</p>
+<p>	$sql1 = “INSERT INTO clubstore (csType, clubForm, nameEN, nameAR, descriptionEN, descriptionAR, subDuration, logo, phoneNumber, telNumber, email, facebook, twitter, instagram, youtube) VALUES(‘$csType’, ‘$clubForm’, ‘$nameEN’,’$nameAR’, ‘$descriptionEN’, ‘$descriptionAR’, ‘$subDuration’, ‘$logo’, ‘$phoneNumber’, ‘$telNumber’, ‘$email’, ‘$facebook’, ‘$twitter’, ‘$instagram’, ‘$youtube’)”;<br>
+	$sql2 = “INSERT INTO ‘specialties’ (‘nameEN’, ‘nameAR’) VALUES(‘$specialties_nameEN’, ‘$specialties_nameAR’)”;<br>
+	$sql3 = “INSERT INTO facilities (‘nameEN’, ‘nameAR’) VALUES(‘$facilities_nameEN’, ‘$facilities_nameAR’) “;<br>
+	$sql4 = “INSERT INTO categories (nameEN, nameAR) VALUES(‘$categories_nameEN’, ‘$categories_nameAR’)”;<br>
+	$sql5 = “INSERT INTO locations (timing, phoneNumber, gender) VALUES(‘$timing’, ‘$phoneNumber2’, ‘$gender’)”;</p>
+<p>	function addFunction($sql1, $sql2, $sql3, $sql4, $sql5) {<br>
+            $sql = $sql1 + $sql2 + $sql3 + $sql4 + $sql5;</p>
+<p>		if (mysqli_query($con, $sql))<br>
+		{<br>
+			//$_SESSION[‘username’]= $firstName.” “.$lastName;<br>
+			header (“refresh:1; url=info.php”);<br>
+		}<br>
+		else<br>
+		{<br>
+			mysqli_query($con,$sql) or die(mysqli_error($con));<br>
+			$_SESSION[‘username’]= “”;<br>
+			$errorToShow=”there is something wrong”;</p>
+<p>		}<br>
+	}<br>
+}</p>
+<p>?&gt;</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-313279" data-commentid="313279" data-postid="4857" data-belowelement="div-comment-313279" data-respondelement="respond" aria-label="Reply to maha"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-316503" class="comment even thread-odd thread-alt depth-1">
+			<article id="div-comment-316503" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/afac7e36a9c4b8dbe986985a21acf023.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">Amarnath thakur</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-316503">
+							<time datetime="2017-01-06T08:56:33+00:00">
+								January 6, 2017 at 8:56 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>SIR,<br>
+        it is humble request you to please solve my problem.<br>
+It is showing an error. error is “Fatal error: Uncaught Error: Call to undefined function mysql_connect() in /opt/lampp/htdocs/insert.php:34 Stack trace: #0 {main} thrown in /opt/lampp/htdocs/insert.php on line 34” . I am facing this problem from long time.<br>
+please give me a solution.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-316503" data-commentid="316503" data-postid="4857" data-belowelement="div-comment-316503" data-respondelement="respond" aria-label="Reply to Amarnath thakur"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-318311" class="comment odd alt thread-even depth-1">
+			<article id="div-comment-318311" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img src="./Insert Data in Database Using PHP _ FormGet_files/53737a9f21d4357a39ea7fdb4cbb9deb.png" width="100" height="100" alt="Avatar" class="avatar avatar-100wp-user-avatar wp-user-avatar-100 alignnone photo avatar-default">						<b class="fn">Samuel</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://www.formget.com/insert-data-in-database-using-php/#comment-318311">
+							<time datetime="2017-01-12T16:44:19+00:00">
+								January 12, 2017 at 4:44 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>thank you formget team…. It is useful</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#comment-318311" data-commentid="318311" data-postid="4857" data-belowelement="div-comment-318311" data-respondelement="respond" aria-label="Reply to Samuel"><svg class="icon icon-mail-reply" aria-hidden="true" role="img"> <use href="#icon-mail-reply" xlink:href="#icon-mail-reply"></use> </svg>Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		</ol>
+
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://www.formget.com/insert-data-in-database-using-php/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://www.formget.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate=""><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="4857" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="35ecaa3242"></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="55"></p></form>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="has_ae_slider elementor-element elementor-element-afc185f elementor-section-boxed elementor-section-height-default elementor-section-height-default ae-bg-gallery-type-default elementor-section elementor-inner-section" data-id="afc185f" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="has_ae_slider elementor-element elementor-element-d1bed6a ae-bg-gallery-type-default elementor-column elementor-col-100 elementor-inner-column" data-id="d1bed6a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a3252ae elementor-widget elementor-widget-spacer" data-id="a3252ae" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<div class="elementor-element elementor-element-573f457c elementor-widget elementor-widget-spacer" data-id="573f457c" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="has_ae_slider elementor-element elementor-element-4d6f062 ae-bg-gallery-type-default elementor-column elementor-col-33 elementor-top-column" data-id="4d6f062" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="has_ae_slider elementor-element elementor-element-9f07cb8 elementor-hidden-phone elementor-section-full_width elementor-section-height-default elementor-section-height-default ae-bg-gallery-type-default elementor-section elementor-inner-section" data-id="9f07cb8" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="has_ae_slider elementor-element elementor-element-66cffce ae-bg-gallery-type-default elementor-column elementor-col-100 elementor-inner-column" data-id="66cffce" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-131a91d elementor-widget elementor-widget-image" data-id="131a91d" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img src="./Insert Data in Database Using PHP _ FormGet_files/2019-09-18.png" title="2019-09-18" alt="2019-09-18">											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-9e6b5fd sticky elementor-widget elementor-widget-heading" data-id="9e6b5fd" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<span class="elementor-heading-title elementor-size-default">I need help with..</span>		</div>
+				</div>
+				<div class="elementor-element elementor-element-af12564 elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="af12564" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="https://www.pabbly.com/out/subscriptions" target="_blank"><img width="32" height="32" src="./Insert Data in Database Using PHP _ FormGet_files/billing.png" class="attachment-full size-full" alt="" sizes="100vw"></a></figure><div class="elementor-image-box-content"><div class="elementor-image-box-title"><a href="https://www.pabbly.com/out/subscriptions" target="_blank">Subscription<br>Billing</a></div></div></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-21a84c2 elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="21a84c2" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="https://www.pabbly.com/out/form-builder" target="_blank"><img width="30" height="32" src="./Insert Data in Database Using PHP _ FormGet_files/form-builder.png" class="attachment-full size-full" alt="" sizes="100vw"></a></figure><div class="elementor-image-box-content"><div class="elementor-image-box-title"><a href="https://www.pabbly.com/out/form-builder" target="_blank">Form<br>Building</a></div></div></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-2e8bdb4 elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="2e8bdb4" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="https://www.pabbly.com/out/email-marketing" target="_blank"><img width="32" height="30" src="./Insert Data in Database Using PHP _ FormGet_files/email-marketing.png" class="attachment-full size-full" alt="" sizes="100vw"></a></figure><div class="elementor-image-box-content"><div class="elementor-image-box-title"><a href="https://www.pabbly.com/out/email-marketing" target="_blank">Email<br>Marketing</a></div></div></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-191c4e2 elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="191c4e2" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="https://www.pabbly.com/out/email-list-cleaning" target="_blank"><img width="32" height="32" src="./Insert Data in Database Using PHP _ FormGet_files/2019-10-22.png" class="attachment-full size-full" alt="" sizes="100vw"></a></figure><div class="elementor-image-box-content"><div class="elementor-image-box-title"><a href="https://www.pabbly.com/out/email-list-cleaning" target="_blank">Email<br>Verification</a></div></div></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-e5cb77a elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="e5cb77a" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><a href="https://www.inkthemes.com/out/sidebar" target="_blank"><img width="32" height="32" src="./Insert Data in Database Using PHP _ FormGet_files/Website-Creation.png" class="attachment-full size-full" alt="" sizes="100vw"></a></figure><div class="elementor-image-box-content"><div class="elementor-image-box-title"><a href="https://www.inkthemes.com/out/sidebar" target="_blank">Website <br>Creation</a></div></div></div>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="has_ae_slider elementor-element elementor-element-5732bf4 elementor-section-boxed elementor-section-height-default elementor-section-height-default ae-bg-gallery-type-default elementor-section elementor-top-section" data-id="5732bf4" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="has_ae_slider elementor-element elementor-element-ead91cc ae-bg-gallery-type-default elementor-column elementor-col-100 elementor-top-column" data-id="ead91cc" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7776c93 modal_section elementor-widget elementor-widget-html" data-id="7776c93" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div class="ajax-filter-spinner"></div>
+<div id="myModal" class="modal">
+ <!-- Modal content -->
+ <div class="modal-content">
+ </div>
+</div>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="has_ae_slider elementor-element elementor-element-774f93d elementor-section-boxed elementor-section-height-default elementor-section-height-default ae-bg-gallery-type-default elementor-section elementor-top-section" data-id="774f93d" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="has_ae_slider elementor-element elementor-element-1e8fdd8 ae-bg-gallery-type-default elementor-column elementor-col-100 elementor-top-column" data-id="1e8fdd8" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="has_ae_slider elementor-element elementor-element-e626c31 elementor-section-boxed elementor-section-height-default elementor-section-height-default ae-bg-gallery-type-default elementor-section elementor-inner-section" data-id="e626c31" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="has_ae_slider elementor-element elementor-element-db8d264 ae-bg-gallery-type-default elementor-column elementor-col-100 elementor-inner-column" data-id="db8d264" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5e0bccc elementor-widget elementor-widget-heading" data-id="5e0bccc" data-element_type="widget" id="next_level_block" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Take Your Email Marketing To The Next Level!</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-38b2f77 try_for_free elementor-widget elementor-widget-heading" data-id="38b2f77" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Start using MailGet and experience world class email builder, create email newsletters in a snap and send great <br>emails to your audience. Do amazing email marketing at an affordable price.</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-bfea05b elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="bfea05b" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="https://www.formget.com/out/mailget-sign-up" class="elementor-button-link elementor-button elementor-size-lg" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">try It For Free</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+				<div data-elementor-type="footer" data-elementor-id="79562" class="elementor elementor-79562 elementor-location-footer" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="has_ae_slider elementor-element elementor-element-76bc7f9b sticky-stopper elementor-section-boxed elementor-section-height-default elementor-section-height-default ae-bg-gallery-type-default elementor-section elementor-top-section" data-id="76bc7f9b" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="has_ae_slider elementor-element elementor-element-4430c254 ae-bg-gallery-type-default elementor-column elementor-col-100 elementor-top-column" data-id="4430c254" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="has_ae_slider elementor-element elementor-element-341cf66f elementor-section-boxed elementor-section-height-default elementor-section-height-default ae-bg-gallery-type-default elementor-section elementor-inner-section" data-id="341cf66f" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="has_ae_slider elementor-element elementor-element-7b966019 ae-bg-gallery-type-default elementor-column elementor-col-20 elementor-inner-column" data-id="7b966019" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6a52ef5e elementor-widget elementor-widget-heading" data-id="6a52ef5e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<span class="elementor-heading-title elementor-size-default">Products</span>		</div>
+				</div>
+				<div class="elementor-element elementor-element-6f910c18 elementor-align-left elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="6f910c18" data-element_type="widget" id="footer_products" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+					<a target="_blank" href="https://www.pabbly.com/subscriptions/">					<span class="elementor-icon-list-text">Subscription Billing</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://www.formget.com/formget/">					<span class="elementor-icon-list-text">Form Builder</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="has_ae_slider elementor-element elementor-element-1bafb77c ae-bg-gallery-type-default elementor-column elementor-col-20 elementor-inner-column" data-id="1bafb77c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6f83debd elementor-widget elementor-widget-heading" data-id="6f83debd" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<span class="elementor-heading-title elementor-size-default">Products</span>		</div>
+				</div>
+				<div class="elementor-element elementor-element-58f55081 elementor-align-left elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="58f55081" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+					<a href="https://www.formget.com/mailget-app/">					<span class="elementor-icon-list-text">Email Marketing</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://www.formget.com/list-cleaning/">					<span class="elementor-icon-list-text">Email List Cleaning</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="has_ae_slider elementor-element elementor-element-1a2155d2 ae-bg-gallery-type-default elementor-column elementor-col-20 elementor-inner-column" data-id="1a2155d2" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-597d7d86 elementor-widget elementor-widget-heading" data-id="597d7d86" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<span class="elementor-heading-title elementor-size-default">Terms of Usage</span>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3d699c14 elementor-align-left elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="3d699c14" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+					<a href="https://www.formget.com/terms-conditions/" rel="nofollow">					<span class="elementor-icon-list-text">Terms and Conditions</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://www.formget.com/privacy-policy/" rel="nofollow">					<span class="elementor-icon-list-text">Privacy Policy</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://www.formget.com/formget-branding/" rel="nofollow">					<span class="elementor-icon-list-text">Branding</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://www.formget.com/affiliate/" rel="nofollow">					<span class="elementor-icon-list-text">Affiliate</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://www.formget.com/contact-us/" rel="nofollow">					<span class="elementor-icon-list-text">Contact Us</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="has_ae_slider elementor-element elementor-element-68fe2400 ae-bg-gallery-type-default elementor-column elementor-col-20 elementor-inner-column" data-id="68fe2400" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3b84b3bb elementor-widget elementor-widget-heading" data-id="3b84b3bb" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<span class="elementor-heading-title elementor-size-default">About</span>		</div>
+				</div>
+				<div class="elementor-element elementor-element-5f9cf620 elementor-align-left elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="5f9cf620" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+					<a target="_blank" href="http://www.magnetbrains.com/">					<span class="elementor-icon-list-text">Who we are?</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a target="_blank" href="http://www.magnetbrains.com/careers/">					<span class="elementor-icon-list-text">Careers</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://www.formget.com/blog-categories/">						<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-check"></i>						</span>
+										<span class="elementor-icon-list-text">Blog Categories</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://www.formget.com/formget-feature-categories/">						<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-check"></i>						</span>
+										<span class="elementor-icon-list-text">FormGet Features</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://www.formget.com/email-template-categories/">						<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-check"></i>						</span>
+										<span class="elementor-icon-list-text">Email Templates</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+					<a href="https://www.formget.com/form-template-categories/">						<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-check"></i>						</span>
+										<span class="elementor-icon-list-text">Form Templates</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="has_ae_slider elementor-element elementor-element-55100d68 ae-bg-gallery-type-default elementor-column elementor-col-20 elementor-inner-column" data-id="55100d68" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-36b51df5 elementor-widget elementor-widget-image" data-id="36b51df5" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a href="https://www.formget.com/" data-elementor-open-lightbox="">
+							<img width="127" height="50" src="./Insert Data in Database Using PHP _ FormGet_files/FormGet-Logo-2.png" class="attachment-full size-full" alt="FormGet Logo" sizes="100vw">								</a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-fb441c9 elementor-shape-rounded elementor-widget elementor-widget-social-icons" data-id="fb441c9" data-element_type="widget" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-social-icons-wrapper">
+							<a rel="nofollow" href="https://www.facebook.com/FormGet/" class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-8d8072f" target="_blank">
+					<span class="elementor-screen-only">Facebook-f</span>
+					<i class="fab fa-facebook-f"></i>				</a>
+							<a rel="nofollow" href="https://twitter.com/formgetcom?lang=en" class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-ddb5ad8" target="_blank">
+					<span class="elementor-screen-only">Twitter</span>
+					<i class="fab fa-twitter"></i>				</a>
+							<a rel="nofollow" href="https://plus.google.com/+Formget" class="elementor-icon elementor-social-icon elementor-social-icon-google-plus-g elementor-repeater-item-d1190d0" target="_blank">
+					<span class="elementor-screen-only">Google-plus-g</span>
+					<i class="fab fa-google-plus-g"></i>				</a>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-47ac647 elementor-widget elementor-widget-heading" data-id="47ac647" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<span class="elementor-heading-title elementor-size-default">Analytics</span>		</div>
+				</div>
+				<div class="elementor-element elementor-element-6953ff4 elementor-widget elementor-widget-image" data-id="6953ff4" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="100" height="38" src="./Insert Data in Database Using PHP _ FormGet_files/heap-logo.png" class="attachment-full size-full" alt="Insert" sizes="100vw">											</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<div class="elementor-element elementor-element-06804ec elementor-widget elementor-widget-html" data-id="06804ec" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./Insert Data in Database Using PHP _ FormGet_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-43981329-1');
+</script>
+		</div>
+				</div>
+				<section class="has_ae_slider elementor-element elementor-element-62c04a8c elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default ae-bg-gallery-type-default elementor-section elementor-inner-section" data-id="62c04a8c" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="has_ae_slider elementor-element elementor-element-3d0c9a54 ae-bg-gallery-type-default elementor-column elementor-col-50 elementor-inner-column" data-id="3d0c9a54" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-fbff2e8 elementor-widget elementor-widget-heading" data-id="fbff2e8" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">FormGet © 2019. All rights reserved.</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="has_ae_slider elementor-element elementor-element-67b2b6ec ae-bg-gallery-type-default elementor-column elementor-col-50 elementor-inner-column" data-id="67b2b6ec" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-633d7067 elementor-widget elementor-widget-heading" data-id="633d7067" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Made with <span style="color: #ff0000;width:15px;height:15px"><img width="15px" height="15px" draggable="false" class="emoji" alt="❤" src="./Insert Data in Database Using PHP _ FormGet_files/2764.svg"></span> for You.</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+		
+
+
+
+    <div id="wpfront-scroll-top-container" style="opacity: 0; right: 20px; bottom: 20px;">
+        <img src="./Insert Data in Database Using PHP _ FormGet_files/1.png" alt="Back to top" style="width: auto; height: auto;">    </div>
+    <script type="text/javascript">function wpfront_scroll_top_init() {if(typeof wpfront_scroll_top == "function" && typeof jQuery !== "undefined") {wpfront_scroll_top({"scroll_offset":100,"button_width":0,"button_height":0,"button_opacity":0.8,"button_fade_duration":200,"scroll_duration":400,"location":1,"marginX":20,"marginY":20,"hide_iframe":false,"auto_hide":false,"auto_hide_after":2,"button_action":"top","button_action_element_selector":"","button_action_container_selector":"html, body","button_action_element_offset":0});} else {setTimeout(wpfront_scroll_top_init, 100);}}wpfront_scroll_top_init();</script><script type="text/javascript">jQuery(".tabel_cross").click(function(){
+  jQuery("#floating_prod_tab").css("display", "none");
+  jQuery(this).closest(".elementor-shortcode").css("display", "none");
+});
+
+jQuery(".af-submit-button").each(function () {
+	jQuery(this).attr("onclick", "submit_post_review(this,event)");
+	jQuery(this).attr("site-url", "https://www.formget.com");
+	jQuery(this).attr("post-id", "4857");
+});
+</script><script type="text/javascript">
+/* <![CDATA[ */
+var aepro = {"ajaxurl":"https:\/\/www.formget.com\/wp-admin\/admin-ajax.php","current_url":"aHR0cHM6Ly93d3cuZm9ybWdldC5jb20vaW5zZXJ0LWRhdGEtaW4tZGF0YWJhc2UtdXNpbmctcGhwLw=="};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/ae-pro.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var aepro_editor = {"plugin_url":"https:\/\/www.formget.com\/wp-content\/plugins\/anywhere-elementor-pro"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/common.min.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/vegas.min.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/imagesloaded.min.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/masonry.min.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/jquery.masonry.min.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/masonry.pkgd.min.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/dynamic-conditions-public.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/sh.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/wpfront-scroll-top.min.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/sticky-js.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/jquery-ui.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/jquery.datatables.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var follow_ajax = {"ajax_url":"https:\/\/www.formget.com\/wp-admin\/admin-ajax.php","site_url":"https:\/\/www.formget.com","login_url":"https:\/\/www.formget.com\/wp-login.php","user_email":"","user_first_name":"","user_last_name":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/custom.js(2).download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var twentyseventeenScreenReaderText = {"quote":"<svg class=\"icon icon-quote-right\" aria-hidden=\"true\" role=\"img\"> <use href=\"#icon-quote-right\" xlink:href=\"#icon-quote-right\"><\/use> <\/svg>"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/skip-link-focus-fix.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/jquery.scrollTo.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/comment-reply.min.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/prism-js.min.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/jquery.smartmenus.min.js.download"></script>
+<script async="async" type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/form.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/frontend-modules.min.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/jquery.sticky.min.js.download"></script>
+<script type="text/javascript">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/www.formget.com\/wp-admin\/admin-ajax.php","nonce":"7a3ed8a23a","shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""}};
+</script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/frontend.min.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/position.min.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/dialog.min.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/waypoints.min.js.download"></script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/swiper.min.js.download"></script>
+<script type="text/javascript">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.7.5","urls":{"assets":"https:\/\/www.formget.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes","elementor_enable_lightbox_in_editor":"yes"}},"post":{"id":4857,"title":"Insert Data in Database Using PHP","excerpt":"Php is a server side scripting language it allows to store data in database at server level. In this post i will show you how this can be done.\r\n\r\nFor this, I have created\u00a0 HTML form, method \u00a0is set to post to hide values in URL which flows on form submission."}};
+</script>
+<script type="text/javascript" src="./Insert Data in Database Using PHP _ FormGet_files/frontend.min.js(1).download"></script></body></html>
